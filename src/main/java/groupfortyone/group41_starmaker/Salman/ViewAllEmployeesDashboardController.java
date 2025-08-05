@@ -1,5 +1,9 @@
 package groupfortyone.group41_starmaker.Salman;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+
 public class ViewAllEmployeesDashboardController
 {
     @javafx.fxml.FXML

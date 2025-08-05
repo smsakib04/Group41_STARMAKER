@@ -1,5 +1,9 @@
 package groupfortyone.group41_starmaker.Salman;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
 public class SendGlobalMessageDashboardController
 {
     @javafx.fxml.FXML
