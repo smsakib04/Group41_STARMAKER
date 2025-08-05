@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Samanta.MyStreamsDashboardController">
+   <children>
+      <Label layoutX="213.0" layoutY="14.0" text="My Streams">
+         <font>
+            <Font name="Arial Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="74.0" text="streams" />
+      <Button fx:id="broadcastHistoryBT" layoutX="111.0" layoutY="70.0" mnemonicParsing="false" onAction="#broadcastHistoryOA" text="broadcast history" />
+      <Button fx:id="broadcastShareBT" layoutX="238.0" layoutY="71.0" mnemonicParsing="false" onAction="#broadcastShareOA" text="Share" />
+      <Button fx:id="broadcastDeleteBT" layoutX="300.0" layoutY="70.0" mnemonicParsing="false" onAction="#broadcastDeleteOA" text="Delete" />
+   </children>
+</AnchorPane>

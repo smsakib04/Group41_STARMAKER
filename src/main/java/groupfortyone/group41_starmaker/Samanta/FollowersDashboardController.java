@@ -1,24 +1,26 @@
 package groupfortyone.group41_starmaker.Samanta;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
-public class LiveBroadcasterDashboardController
+public class FollowersDashboardController
 {
     @javafx.fxml.FXML
-    private Button meBt;
+    private Label followerNameLB;
     @javafx.fxml.FXML
-    private Button liveSearchBT;
+    private Button followBT;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void meOA(ActionEvent actionEvent) {
+    public void followOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void liveSearchOA(ActionEvent actionEvent) {
+    public void followerNameOA(Event event) {
     }
 }
