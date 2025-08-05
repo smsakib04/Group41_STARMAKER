@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="groupfortyone.group41_starmaker.Salman.CSODashboardController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Salman.CSODashboardController">
+   <children>
+      <Label layoutX="70.0" layoutY="14.0" text="Customer Service Officer Dashboard">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="86.0" layoutY="93.0" mnemonicParsing="false" onAction="#readQuery" prefHeight="26.0" prefWidth="147.0" text="Read Query" />
+      <Button layoutX="86.0" layoutY="128.0" mnemonicParsing="false" onAction="#replyToQuery" prefHeight="26.0" prefWidth="147.0" text="Reply to Query" />
+      <Button layoutX="86.0" layoutY="197.0" mnemonicParsing="false" onAction="#viewSolvedQueries" prefHeight="26.0" prefWidth="147.0" text="View Solved Queries" />
+      <Button layoutX="86.0" layoutY="230.0" mnemonicParsing="false" onAction="#markQueryAsPriority" prefHeight="26.0" prefWidth="147.0" text="Mark Query as Priority" />
+      <Button layoutX="86.0" layoutY="163.0" mnemonicParsing="false" onAction="#markQueryAsSolved" prefHeight="26.0" prefWidth="147.0" text="Mark Query as Solved" />
+      <Button layoutX="86.0" layoutY="265.0" mnemonicParsing="false" onAction="#deleteASolvedQuery" prefHeight="26.0" prefWidth="147.0" text="Delete a Solved Query" />
+      <Button layoutX="85.0" layoutY="299.0" mnemonicParsing="false" onAction="#searchQuery" prefHeight="26.0" prefWidth="147.0" text="Search Query" />
+      <Button layoutX="85.0" layoutY="331.0" mnemonicParsing="false" onAction="#updateFAQ" prefHeight="26.0" prefWidth="147.0" text="Update FAQ" />
+      <Button layoutX="512.0" layoutY="360.0" mnemonicParsing="false" onAction="#logout" text="&lt;-Logout" />
+   </children>
 </AnchorPane>
