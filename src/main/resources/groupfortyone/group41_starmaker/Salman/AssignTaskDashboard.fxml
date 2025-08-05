@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Salman.AssignTaskDashboardController">
+   <children>
+      <Label layoutX="217.0" layoutY="14.0" text="Assign Tasks">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="csoTaskTF" layoutX="56.0" layoutY="62.0" prefHeight="26.0" prefWidth="242.0" promptText="Type CSO's Task Here..." />
+      <TextField fx:id="marketingExecutiveTaskTF" layoutX="56.0" layoutY="174.0" prefHeight="26.0" prefWidth="242.0" promptText="Type Marketing Executive's Tasks Here..." />
+      <TextField fx:id="accountantTaskTF" layoutX="56.0" layoutY="138.0" prefHeight="26.0" prefWidth="242.0" promptText="Type Accountant's Tasks Here..." />
+      <TextField fx:id="hrmTaskTF" layoutX="56.0" layoutY="100.0" prefHeight="26.0" prefWidth="242.0" promptText="Type HRM's Tasks Here..." />
+      <Button layoutX="329.0" layoutY="63.0" mnemonicParsing="false" onAction="#csoTaskOA" prefHeight="26.0" prefWidth="172.0" text="Send to CSO" />
+      <Button layoutX="329.0" layoutY="100.0" mnemonicParsing="false" onAction="#hrmTaskOA" prefHeight="26.0" prefWidth="172.0" text="Send to HRM" />
+      <Button layoutX="329.0" layoutY="138.0" mnemonicParsing="false" onAction="#acountantTaskOA" prefHeight="26.0" prefWidth="172.0" text="Send to Accountant" />
+      <Button layoutX="329.0" layoutY="174.0" mnemonicParsing="false" onAction="#marketingExecutiveOA" text="Send to Marketing Executive" />
+      <Label fx:id="confirmationLabel" layoutX="135.0" layoutY="226.0" prefHeight="92.0" prefWidth="327.0" text="Label" />
+   </children>
+</AnchorPane>
