@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Salman.AssignTaskDashboardController">
    <children>
       <Label layoutX="217.0" layoutY="14.0" text="Assign Tasks">
@@ -23,5 +22,6 @@
       <Button layoutX="329.0" layoutY="138.0" mnemonicParsing="false" onAction="#acountantTaskOA" prefHeight="26.0" prefWidth="172.0" text="Send to Accountant" />
       <Button layoutX="329.0" layoutY="174.0" mnemonicParsing="false" onAction="#marketingExecutiveOA" text="Send to Marketing Executive" />
       <Label fx:id="confirmationLabel" layoutX="135.0" layoutY="226.0" prefHeight="92.0" prefWidth="327.0" text="Label" />
+      <Button layoutX="501.0" layoutY="337.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
    </children>
 </AnchorPane>
