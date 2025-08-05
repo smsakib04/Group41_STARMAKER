@@ -3,16 +3,13 @@ package groupfortyone.group41_starmaker.Raghib;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 
-public class ViewTotalNumberOfLikesOfASongController
+public class SearchASongByTitleController
 {
     @javafx.fxml.FXML
-    private Label totallikesofasonglabel;
+    private TableColumn genrecolumn;
     @javafx.fxml.FXML
-    private TableView songlisttableview;
-    @javafx.fxml.FXML
-    private TableColumn numberoflikescolumn;
+    private Label searchsongnamelabel;
     @javafx.fxml.FXML
     private TableColumn descriptioncolumn;
     @javafx.fxml.FXML
@@ -26,7 +23,7 @@ public class ViewTotalNumberOfLikesOfASongController
     public void gobackOnAction(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void showOnAction(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void searchOnAction(ActionEvent actionEvent) {
     }
 }

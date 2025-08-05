@@ -5,14 +5,14 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class ViewTotalNumberOfLikesOfASongController
+public class MarkASongAsFavouriteController
 {
-    @javafx.fxml.FXML
-    private Label totallikesofasonglabel;
     @javafx.fxml.FXML
     private TableView songlisttableview;
     @javafx.fxml.FXML
-    private TableColumn numberoflikescolumn;
+    private TableColumn genrecolumn;
+    @javafx.fxml.FXML
+    private Label confirmationlabel;
     @javafx.fxml.FXML
     private TableColumn descriptioncolumn;
     @javafx.fxml.FXML
@@ -26,7 +26,7 @@ public class ViewTotalNumberOfLikesOfASongController
     public void gobackOnAction(ActionEvent actionEvent) {
     }
 
-    @Deprecated
-    public void showOnAction(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void markasfavouriteOnAction(ActionEvent actionEvent) {
     }
 }
