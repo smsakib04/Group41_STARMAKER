@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Salman.MonthlyIncomeReportDashboardController">
    <children>
       <Label layoutX="154.0" layoutY="14.0" text="Monthly Income Report">
@@ -17,5 +16,6 @@
       <ComboBox fx:id="chooseMonthCB" layoutX="148.0" layoutY="100.0" prefWidth="150.0" promptText="Choose Month" />
       <Label fx:id="monthlyIncomeReportLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" layoutY="154.0" prefHeight="136.0" prefWidth="382.0" text="Label" />
       <Button layoutX="362.0" layoutY="100.0" mnemonicParsing="false" onAction="#viewMonthlyIncomeOA" text="View" />
+      <Button layoutX="506.0" layoutY="335.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
    </children>
 </AnchorPane>
