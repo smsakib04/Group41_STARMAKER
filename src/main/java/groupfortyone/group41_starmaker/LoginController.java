@@ -121,7 +121,7 @@ public class LoginController
             }
             loginLabel.setText("Login Successful");
         } else {
-            loginLabel.setText("ID or Password is incorrect!");
+            loginLabel.setText("Incorrect Password and ID");
         }
     }
 }
