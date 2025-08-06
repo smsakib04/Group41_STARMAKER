@@ -4,10 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TextField;
 
-public class SongSearchDashboardController
+public class SearchSingerToFollowGiftController
 {
-    @javafx.fxml.FXML
-    private TableColumn genrecolumn;
     @javafx.fxml.FXML
     private TextField nameofthesongtextfield;
     @javafx.fxml.FXML
@@ -24,10 +22,10 @@ public class SongSearchDashboardController
     }
 
     @javafx.fxml.FXML
-    public void previousOA(ActionEvent actionEvent) {
+    public void moreOptionsToLikeCommentShareOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void moreOptionsToLikeCommentShareOA(ActionEvent actionEvent) {
+    public void previousOA(ActionEvent actionEvent) {
     }
 }

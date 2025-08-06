@@ -15,4 +15,20 @@ public class ViewerDashboardController
     @javafx.fxml.FXML
     public void searchSongOA(ActionEvent actionEvent) {
     }
+
+    @Deprecated
+    public void giftSingerOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void repostSongOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void reportSingerOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void logoutOA(ActionEvent actionEvent) {
+    }
 }
