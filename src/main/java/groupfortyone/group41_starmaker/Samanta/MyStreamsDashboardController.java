@@ -2,29 +2,38 @@ package groupfortyone.group41_starmaker.Samanta;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
 
 public class MyStreamsDashboardController
 {
+
     @javafx.fxml.FXML
-    private Button broadcastHistoryBT;
+    private TableColumn StreamNameTC;
     @javafx.fxml.FXML
-    private Button broadcastShareBT;
+    private TableColumn StreamDateTC;
     @javafx.fxml.FXML
-    private Button broadcastDeleteBT;
+    private TableColumn totalGiftRecievedTC;
+    @javafx.fxml.FXML
+    private ComboBox shareStreamCB;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void broadcastHistoryOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void broadcastShareOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void broadcastDeleteOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void ShareStreamBT(ActionEvent actionEvent) {
     }
 }

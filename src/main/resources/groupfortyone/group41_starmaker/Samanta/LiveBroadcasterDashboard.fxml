@@ -7,16 +7,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Samanta.LiveBroadcasterDashboardController">
    <children>
-      <Button fx:id="liveSearchBT" layoutX="44.0" layoutY="86.0" mnemonicParsing="false" onAction="#liveSearchOA" prefHeight="26.0" prefWidth="183.0" text="Live Search" />
+      <Button layoutX="44.0" layoutY="86.0" mnemonicParsing="false" onAction="#liveSearchOA" prefHeight="26.0" prefWidth="183.0" text="Live Search" />
       <Label layoutX="96.0" layoutY="14.0" text="Live Broadcaster Dashboard">
          <font>
             <Font name="SansSerif Bold" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="logoutBt" layoutX="512.0" layoutY="344.0" mnemonicParsing="false" onAction="#logoutOA" text="Logout" />
-      <Button fx:id="myRankBT" layoutX="44.0" layoutY="121.0" mnemonicParsing="false" onAction="#myRankOA" prefHeight="15.0" prefWidth="183.0" text="My Rank" />
-      <Button fx:id="myFollowersBT" layoutX="41.0" layoutY="158.0" mnemonicParsing="false" onAction="#myFollowerOA" prefHeight="19.0" prefWidth="190.0" text="My Followers" />
-      <Button fx:id="messageAFollowerBT" layoutX="41.0" layoutY="200.0" mnemonicParsing="false" onAction="#messageAFolloweroA" prefHeight="26.0" prefWidth="190.0" text="Message A Follower" />
-      <Button fx:id="myStreamsBT" layoutX="41.0" layoutY="235.0" mnemonicParsing="false" onAction="#myStreamsBT" prefHeight="26.0" prefWidth="190.0" text="My Streams" />
+      <Button layoutX="512.0" layoutY="344.0" mnemonicParsing="false" onAction="#logoutOA" text="Logout" />
+      <Button layoutX="44.0" layoutY="121.0" mnemonicParsing="false" onAction="#myRankOA" prefHeight="15.0" prefWidth="183.0" text="My Rank" />
+      <Button layoutX="41.0" layoutY="158.0" mnemonicParsing="false" onAction="#myFollowerOA" prefHeight="19.0" prefWidth="190.0" text="My Followers" />
+      <Button layoutX="41.0" layoutY="200.0" mnemonicParsing="false" onAction="#messageAFolloweroA" prefHeight="26.0" prefWidth="190.0" text="Message A Follower" />
+      <Button layoutX="41.0" layoutY="235.0" mnemonicParsing="false" onAction="#myStreamsOA" prefHeight="26.0" prefWidth="190.0" text="My Streams" />
    </children>
 </AnchorPane>

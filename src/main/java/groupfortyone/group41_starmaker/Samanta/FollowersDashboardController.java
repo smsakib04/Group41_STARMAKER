@@ -4,13 +4,15 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 
 public class FollowersDashboardController
 {
+
     @javafx.fxml.FXML
-    private Label followerNameLB;
+    private TableColumn followerNameTC;
     @javafx.fxml.FXML
-    private Button followBT;
+    private TableColumn followerIDTC;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -20,7 +22,15 @@ public class FollowersDashboardController
     public void followOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void followerNameOA(Event event) {
+    }
+
+    @javafx.fxml.FXML
+    public void messageFollowerOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void blockOA(ActionEvent actionEvent) {
     }
 }

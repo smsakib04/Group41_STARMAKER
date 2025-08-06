@@ -5,18 +5,6 @@ import javafx.scene.control.Button;
 
 public class LiveBroadcasterDashboardController
 {
-    @javafx.fxml.FXML
-    private Button liveSearchBT;
-    @javafx.fxml.FXML
-    private Button myRankBT;
-    @javafx.fxml.FXML
-    private Button myStreamsBT;
-    @javafx.fxml.FXML
-    private Button myFollowersBT;
-    @javafx.fxml.FXML
-    private Button messageAFollowerBT;
-    @javafx.fxml.FXML
-    private Button logoutBt;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -34,7 +22,7 @@ public class LiveBroadcasterDashboardController
     public void myRankOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void myStreamsBT(ActionEvent actionEvent) {
     }
 
@@ -48,5 +36,9 @@ public class LiveBroadcasterDashboardController
 
     @javafx.fxml.FXML
     public void myFollowerOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void myStreamsOA(ActionEvent actionEvent) {
     }
 }
