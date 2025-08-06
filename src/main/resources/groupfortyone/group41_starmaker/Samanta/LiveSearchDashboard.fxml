@@ -12,7 +12,7 @@
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="455.0" prefWidth="653.0">
          <children>
-            <Button layoutX="543.0" layoutY="385.0" mnemonicParsing="false" onAction="#gobackOA" text="Go Back" />
+            <Button layoutX="543.0" layoutY="385.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
             <Label layoutX="197.0" layoutY="14.0" prefHeight="50.0" prefWidth="260.0" text="Search A Live By Title">
                <font>
                   <Font name="Arial Bold" size="24.0" />

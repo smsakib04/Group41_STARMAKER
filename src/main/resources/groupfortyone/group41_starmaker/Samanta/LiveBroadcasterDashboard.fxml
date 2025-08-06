@@ -16,7 +16,7 @@
       <Button layoutX="512.0" layoutY="344.0" mnemonicParsing="false" onAction="#logoutOA" text="Logout" />
       <Button layoutX="44.0" layoutY="121.0" mnemonicParsing="false" onAction="#myRankOA" prefHeight="15.0" prefWidth="183.0" text="My Rank" />
       <Button layoutX="41.0" layoutY="158.0" mnemonicParsing="false" onAction="#myFollowerOA" prefHeight="19.0" prefWidth="190.0" text="My Followers" />
-      <Button layoutX="41.0" layoutY="200.0" mnemonicParsing="false" onAction="#messageAFolloweroA" prefHeight="26.0" prefWidth="190.0" text="Message A Follower" />
-      <Button layoutX="41.0" layoutY="235.0" mnemonicParsing="false" onAction="#myStreamsOA" prefHeight="26.0" prefWidth="190.0" text="My Streams" />
+      <Button layoutX="41.0" layoutY="200.0" mnemonicParsing="false" onAction="#myStreamsOA" prefHeight="26.0" prefWidth="190.0" text="My Streams" />
    </children>
 </AnchorPane>
+
