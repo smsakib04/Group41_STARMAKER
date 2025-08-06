@@ -7,16 +7,21 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ViewUserFeedbackDashboardController
+public class SearchQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableView userfeedbackTV;
+    private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableColumn nameTV;
+    private TextField searchQueryTF;
     @javafx.fxml.FXML
-    private TableColumn feedbackTV;
+    private TableColumn nameCol;
+    @javafx.fxml.FXML
+    private TableView searchTV;
+    @javafx.fxml.FXML
+    private TableColumn queryCol;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -37,5 +42,9 @@ public class ViewUserFeedbackDashboardController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void searchOA(ActionEvent actionEvent) {
     }
 }

@@ -5,25 +5,23 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-public class ViewUserFeedbackDashboardController
+public class UpdateFAQDashboardController
 {
     @javafx.fxml.FXML
-    private TableView userfeedbackTV;
+    private TextArea updateFAQTA;
     @javafx.fxml.FXML
-    private TableColumn nameTV;
-    @javafx.fxml.FXML
-    private TableColumn feedbackTV;
+    private Label updateFAQLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void viewOA(ActionEvent actionEvent) {
+    public void updateFAQOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

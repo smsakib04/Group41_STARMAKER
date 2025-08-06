@@ -5,25 +5,29 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-public class ViewUserFeedbackDashboardController
+public class ReplyToQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableView userfeedbackTV;
+    private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableColumn nameTV;
+    private TableColumn queryNameCol;
     @javafx.fxml.FXML
-    private TableColumn feedbackTV;
+    private TableView replyQueryTV;
+    @javafx.fxml.FXML
+    private Label confirmationMessageLabel;
+    @javafx.fxml.FXML
+    private TextArea replyTA;
+    @javafx.fxml.FXML
+    private TableColumn queryCol;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void viewOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -37,5 +41,9 @@ public class ViewUserFeedbackDashboardController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void sendOA(ActionEvent actionEvent) {
     }
 }

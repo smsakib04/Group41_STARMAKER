@@ -1,5 +1,7 @@
 module groupfortyone.group41_starmaker {
     requires javafx.controls;
+
+    opens groupfortyone.group41_starmaker.Samanta to javafx.fxml;
     requires javafx.fxml;
 
 

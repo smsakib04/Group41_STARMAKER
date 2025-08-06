@@ -9,14 +9,16 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class ViewUserFeedbackDashboardController
+public class ViewSolvedQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableView userfeedbackTV;
+    private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableColumn nameTV;
+    private TableView solvedQueryTV;
     @javafx.fxml.FXML
-    private TableColumn feedbackTV;
+    private TableColumn nameCol;
+    @javafx.fxml.FXML
+    private TableColumn queryCol;
 
     @javafx.fxml.FXML
     public void initialize() {

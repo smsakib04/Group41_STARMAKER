@@ -2,24 +2,28 @@ package groupfortyone.group41_starmaker.Salman;
 
 import groupfortyone.group41_starmaker.HelloApplication;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class ViewUserFeedbackDashboardController
+public class ReadUserQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableView userfeedbackTV;
+    private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableColumn nameTV;
+    private TableColumn nameCol;
     @javafx.fxml.FXML
-    private TableColumn feedbackTV;
+    private TableColumn QueryCol;
 
     @javafx.fxml.FXML
     public void initialize() {
+    }
+
+    @javafx.fxml.FXML
+    public void userQueryTV(Event event) {
     }
 
     @javafx.fxml.FXML

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="559.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.SalarySheetDashboard">
+   <children>
+      <Label layoutX="174.0" layoutY="21.0" prefHeight="69.0" prefWidth="346.0" text="Salary Sheet Dashboard" textFill="#0af25b">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="520.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleCreateSalarySheetButton" prefHeight="26.0" prefWidth="172.0" text="Create Salary Sheet" />
+      <Button layoutX="563.0" layoutY="193.0" mnemonicParsing="false" onAction="#handleAddbutton" prefHeight="26.0" prefWidth="109.0" text="Add" />
+      <TextField fx:id="EmployeeNameTextFielld" layoutX="162.0" layoutY="107.0" prefHeight="26.0" prefWidth="259.0" />
+      <Label layoutX="462.0" layoutY="106.0" prefHeight="26.0" prefWidth="230.0" />
+      <TextField fx:id="EmployeeRoleTextField" layoutX="162.0" layoutY="147.0" prefHeight="26.0" prefWidth="250.0" />
+      <Label layoutX="44.0" layoutY="107.0" prefHeight="26.0" prefWidth="95.0" text="Employee Name:" />
+      <TextField fx:id="SalaryTextField" layoutX="162.0" layoutY="193.0" prefHeight="26.0" prefWidth="130.0" />
+      <Label layoutX="42.0" layoutY="147.0" prefHeight="26.0" prefWidth="95.0" text="Employee Role:" />
+      <Label layoutX="42.0" layoutY="193.0" prefHeight="26.0" prefWidth="95.0" text="Salary:" />
+      <TableView fx:id="SalarySheetTableView" layoutX="38.0" layoutY="254.0" prefHeight="200.0" prefWidth="655.0">
+        <columns>
+          <TableColumn fx:id="EmplyeeNameColumn" prefWidth="212.00002670288086" text="Employee Name" />
+          <TableColumn fx:id="EmployeeRoleColumn" prefWidth="256.8000030517578" text="Employee Role" />
+            <TableColumn fx:id="SalaryColumn" prefWidth="186.40008544921875" text="Salary" />
+        </columns>
+      </TableView>
+      <Button layoutX="594.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleLoadbutton" prefHeight="26.0" prefWidth="109.0" text="Load" />
+      <Button layoutX="38.0" layoutY="21.0" mnemonicParsing="false" onAction="#handlePreviousPagebutton" prefHeight="26.0" prefWidth="109.0" text="Previous Page" />
+      <Label fx:id="SuccessfulLabel" layoutX="44.0" layoutY="505.0" prefHeight="18.0" prefWidth="366.0" />
+   </children>
+</AnchorPane>

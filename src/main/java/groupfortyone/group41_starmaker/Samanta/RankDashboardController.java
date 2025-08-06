@@ -5,41 +5,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class MyStreamsDashboardController
+public class RankDashboardController
 {
-
     @javafx.fxml.FXML
-    private TableColumn StreamNameTC;
-    @javafx.fxml.FXML
-    private TableColumn StreamDateTC;
-    @javafx.fxml.FXML
-    private TableColumn totalGiftRecievedTC;
-    @javafx.fxml.FXML
-    private ComboBox shareStreamCB;
+    private Label rankLabelLB;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @Deprecated
-    public void broadcastHistoryOA(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void broadcastShareOA(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void broadcastDeleteOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void ShareStreamBT(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

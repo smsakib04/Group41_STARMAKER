@@ -5,25 +5,30 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class ViewUserFeedbackDashboardController
+public class DeleteSolvedQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableView userfeedbackTV;
+    private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableColumn nameTV;
+    private TableColumn nameCol;
     @javafx.fxml.FXML
-    private TableColumn feedbackTV;
+    private TableView deleteQueryTV;
+    @javafx.fxml.FXML
+    private Label confirmationMessageLabel;
+    @javafx.fxml.FXML
+    private TableColumn queryCol;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void viewOA(ActionEvent actionEvent) {
+    public void deleteOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
