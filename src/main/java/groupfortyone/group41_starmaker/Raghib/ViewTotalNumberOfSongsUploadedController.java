@@ -19,4 +19,8 @@ public class ViewTotalNumberOfSongsUploadedController
     @javafx.fxml.FXML
     public void gobackOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void viewOnAction(ActionEvent actionEvent) {
+    }
 }

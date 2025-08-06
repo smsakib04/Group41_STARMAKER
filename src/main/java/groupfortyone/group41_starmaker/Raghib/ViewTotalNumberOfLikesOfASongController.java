@@ -17,6 +17,8 @@ public class ViewTotalNumberOfLikesOfASongController
     private TableColumn descriptioncolumn;
     @javafx.fxml.FXML
     private TableColumn songtitlecolumn;
+    @javafx.fxml.FXML
+    private TableColumn genrecolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
