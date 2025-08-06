@@ -1,5 +1,9 @@
 package groupfortyone.group41_starmaker.Samanta;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
 public class FollowerProfileDashboardController
 {
     @javafx.fxml.FXML
