@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="488.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.ViewTotalNumberOfSongsUploadedController">
    <children>
       <Button layoutX="513.0" layoutY="407.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
@@ -18,5 +17,6 @@
       <Label fx:id="totalnoofsongsuploadedlabel" layoutX="273.0" layoutY="166.0" prefHeight="17.0" prefWidth="77.0" />
       <Label fx:id="totalnoofsongsuploadedlabel1" layoutX="84.0" layoutY="260.0" prefHeight="17.0" prefWidth="125.0" text="Confirmation Message:" />
       <Label fx:id="confirmationlabel" layoutX="209.0" layoutY="260.0" prefHeight="17.0" prefWidth="77.0" />
+      <Button layoutX="251.0" layoutY="344.0" mnemonicParsing="false" onAction="#viewOnAction" prefHeight="25.0" prefWidth="87.0" text="View" />
    </children>
 </AnchorPane>
