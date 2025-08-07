@@ -6,25 +6,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ShareASongController
+public class ReportSingerDashboardController
 {
     @javafx.fxml.FXML
-    private ComboBox sharePlatformCB;
+    private ComboBox reportCategoryCB;
+    @javafx.fxml.FXML
+    private TextField reportSingerUsernameTF;
+    @javafx.fxml.FXML
+    private TextField reportCommentTF;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void enterShareOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void previousOA(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MoreOptionsDashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/ViewerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
@@ -32,5 +33,9 @@ public class ShareASongController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void reportbtOA(ActionEvent actionEvent) {
     }
 }

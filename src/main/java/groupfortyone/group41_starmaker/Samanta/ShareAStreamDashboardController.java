@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-public class ShareASongController
+public class ShareAStreamDashboardController
 {
     @javafx.fxml.FXML
     private ComboBox sharePlatformCB;
@@ -24,7 +24,7 @@ public class ShareASongController
     @javafx.fxml.FXML
     public void previousOA(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MoreOptionsDashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MyStreamsDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
