@@ -40,4 +40,8 @@ public class MarkQueryTopPriorityDashboardController
             throw new RuntimeException(e);
         }
     }
+
+    @javafx.fxml.FXML
+    public void viewOA(ActionEvent actionEvent) {
+    }
 }

@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Salman.MarkQueryTopPriorityDashboardController">
    <children>
-      <Label layoutX="132.0" layoutY="14.0" text="Mark Query As Top Priority">
+      <Label layoutX="161.0" layoutY="14.0" text="Mark Query As Priority">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -27,5 +26,6 @@
       </TableView>
       <Button layoutX="468.0" layoutY="79.0" mnemonicParsing="false" onAction="#markAsPriorityOA" text="Mark As Priority" />
       <Button layoutX="468.0" layoutY="335.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
+      <Button layoutX="269.0" layoutY="79.0" mnemonicParsing="false" onAction="#viewOA" prefHeight="26.0" prefWidth="64.0" text="View" />
    </children>
 </AnchorPane>

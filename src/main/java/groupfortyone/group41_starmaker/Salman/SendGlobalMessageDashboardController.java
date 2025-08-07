@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -14,7 +15,7 @@ public class SendGlobalMessageDashboardController
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
     @javafx.fxml.FXML
-    private TextField globalMessageTF;
+    private TextArea globalMessageTA;
 
     @javafx.fxml.FXML
     public void initialize() {
