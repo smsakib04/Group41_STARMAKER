@@ -6,22 +6,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class RecruitmentRequisitionDashboardController
+public class ApproveSalarySheetDashboardController
 {
     @javafx.fxml.FXML
-    private TableView recruitmentRequisitionTV;
+    private TableColumn salaryAmountCol;
+    @javafx.fxml.FXML
+    private TableColumn nameCol;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
+    @javafx.fxml.FXML
+    private TableView approveSalarySheetTV;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @Deprecated
-    public void confirmOA(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void approveOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -35,10 +40,6 @@ public class RecruitmentRequisitionDashboardController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @javafx.fxml.FXML
-    public void approveOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

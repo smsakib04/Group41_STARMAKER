@@ -17,11 +17,11 @@ public class SearchQueryDashboardController
     @javafx.fxml.FXML
     private TextField searchQueryTF;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
-    @javafx.fxml.FXML
     private TableView searchTV;
     @javafx.fxml.FXML
     private TableColumn queryCol;
+    @javafx.fxml.FXML
+    private TableColumn nameCol;
 
     @javafx.fxml.FXML
     public void initialize() {

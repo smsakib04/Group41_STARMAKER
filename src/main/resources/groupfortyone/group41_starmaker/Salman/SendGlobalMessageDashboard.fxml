@@ -2,10 +2,9 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Salman.SendGlobalMessageDashboardController">
    <children>
@@ -14,9 +13,9 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="globalMessageTF" layoutX="220.0" layoutY="175.0" promptText="Type your message here..." />
-      <Button layoutX="277.0" layoutY="230.0" mnemonicParsing="false" onAction="#sendOA" text="Send" />
-      <Label fx:id="confirmationMessageLabel" layoutX="200.0" layoutY="271.0" prefHeight="98.0" prefWidth="200.0" text="Label" />
+      <Button layoutX="277.0" layoutY="245.0" mnemonicParsing="false" onAction="#sendOA" text="Send" />
+      <Label fx:id="confirmationMessageLabel" layoutX="200.0" layoutY="277.0" prefHeight="98.0" prefWidth="200.0" text="Label" />
       <Button layoutX="508.0" layoutY="349.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
+      <TextArea fx:id="globalMessageTA" layoutX="200.0" layoutY="94.0" prefHeight="136.0" prefWidth="200.0" promptText="Type your message here..." />
    </children>
 </AnchorPane>

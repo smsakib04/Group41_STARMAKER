@@ -62,7 +62,7 @@ public class LoginController
             loginLabel.setText("Login Successful");
         } else if ((idTextField.getText().equals("00003")) && (passwordTextField.getText().equals("12345"))){
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/HRMDashboard.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/HumanResourceManagerDashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
                 nextStage.setTitle("Human Resource Manager Dashboard");
@@ -133,7 +133,7 @@ public class LoginController
             }
             loginLabel.setText("Login Successful");
         } else {
-            loginLabel.setText("Incorrect Username and Password");
+            loginLabel.setText("Incorrect Username or Password!");
         }
     }
 }

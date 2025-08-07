@@ -16,8 +16,6 @@ public class ReplyToQueryDashboardController
     @javafx.fxml.FXML
     private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableColumn queryNameCol;
-    @javafx.fxml.FXML
     private TableView replyQueryTV;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
@@ -25,6 +23,8 @@ public class ReplyToQueryDashboardController
     private TextArea replyTA;
     @javafx.fxml.FXML
     private TableColumn queryCol;
+    @javafx.fxml.FXML
+    private TableColumn nameCol;
 
     @javafx.fxml.FXML
     public void initialize() {

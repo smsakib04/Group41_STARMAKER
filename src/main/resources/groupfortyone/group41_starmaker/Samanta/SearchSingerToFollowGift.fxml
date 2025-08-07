@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Samanta.SearchSingerToFollowGiftController">
    <children>
       <AnchorPane prefHeight="455.0" prefWidth="653.0">
@@ -28,8 +27,8 @@
             <Button layoutX="337.0" layoutY="118.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
             <Label layoutX="37.0" layoutY="123.0" prefHeight="17.0" prefWidth="119.0" text="Name of the Singer:" />
             <TextField fx:id="nameofthesongtextfield" layoutX="159.0" layoutY="118.0" />
-            <Button layoutX="393.0" layoutY="228.0" mnemonicParsing="false" onAction="#moreOptionsToLikeCommentShareOA" prefHeight="26.0" prefWidth="126.0" text="Follow" />
-            <Button layoutX="393.0" layoutY="267.0" mnemonicParsing="false" onAction="#moreOptionsToLikeCommentShareOA" prefHeight="26.0" prefWidth="126.0" text="Gift" />
+            <Button layoutX="393.0" layoutY="228.0" mnemonicParsing="false" onAction="#followOA" prefHeight="26.0" prefWidth="126.0" text="Follow" />
+            <Button layoutX="393.0" layoutY="267.0" mnemonicParsing="false" onAction="#giftOA" prefHeight="26.0" prefWidth="126.0" text="Gift" />
          </children>
       </AnchorPane>
    </children>

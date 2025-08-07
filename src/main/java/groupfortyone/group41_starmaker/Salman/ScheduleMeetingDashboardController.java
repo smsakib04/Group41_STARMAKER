@@ -6,13 +6,23 @@ import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 public class ScheduleMeetingDashboardController
 {
     @javafx.fxml.FXML
     private DatePicker meetingDateDP;
+    @javafx.fxml.FXML
+    private TableColumn meetingTopicCol;
+    @javafx.fxml.FXML
+    private TableColumn meetingDateCol;
+    @javafx.fxml.FXML
+    private TableView meetingTV;
+    @javafx.fxml.FXML
+    private Label confirmationMessageLabel;
+    @javafx.fxml.FXML
+    private TextField meetingTopicTF;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -35,7 +45,7 @@ public class ScheduleMeetingDashboardController
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void confirmationMessageLabel(Event event) {
     }
 }

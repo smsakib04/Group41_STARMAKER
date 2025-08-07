@@ -1,33 +1,30 @@
-package groupfortyone.group41_starmaker.Salman;
+package groupfortyone.group41_starmaker.Samanta;
 
 import groupfortyone.group41_starmaker.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class RecruitmentRequisitionDashboardController
+public class RepostSongController
 {
     @javafx.fxml.FXML
-    private TableView recruitmentRequisitionTV;
-    @javafx.fxml.FXML
-    private Label confirmationMessageLabel;
+    private TextField repostCaptionTF;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @Deprecated
-    public void confirmOA(ActionEvent actionEvent) {
+    @javafx.fxml.FXML
+    public void repostToProfileOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void previousOA(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Salman/CEO_Dashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MoreOptionsDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
@@ -35,13 +32,5 @@ public class RecruitmentRequisitionDashboardController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @javafx.fxml.FXML
-    public void approveOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void rejectOA(ActionEvent actionEvent) {
     }
 }

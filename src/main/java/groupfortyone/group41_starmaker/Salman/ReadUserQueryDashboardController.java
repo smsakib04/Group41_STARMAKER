@@ -14,9 +14,9 @@ public class ReadUserQueryDashboardController
     @javafx.fxml.FXML
     private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
-    @javafx.fxml.FXML
     private TableColumn QueryCol;
+    @javafx.fxml.FXML
+    private TableColumn nameCol;
 
     @javafx.fxml.FXML
     public void initialize() {
