@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Salman.UpdateFAQDashboardController">
+   <children>
+      <Label layoutX="222.0" layoutY="14.0" text="Update FAQ">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="updateFAQTA" layoutX="100.0" layoutY="78.0" prefHeight="133.0" prefWidth="200.0" />
+      <Button layoutX="509.0" layoutY="338.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
+      <Label fx:id="updateFAQLabel" layoutX="116.0" layoutY="240.0" prefHeight="124.0" prefWidth="327.0" text="Label" />
+      <Button layoutX="401.0" layoutY="132.0" mnemonicParsing="false" onAction="#updateFAQOA" text="Update FAQ" />
+   </children>
+</AnchorPane>

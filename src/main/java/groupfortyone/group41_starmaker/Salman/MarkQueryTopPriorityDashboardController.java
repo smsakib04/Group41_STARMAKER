@@ -9,14 +9,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class ViewSolvedQueryDashboardController
+public class MarkQueryTopPriorityDashboardController
 {
     @javafx.fxml.FXML
     private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableView solvedQueryTV;
-    @javafx.fxml.FXML
     private TableColumn nameCol;
+    @javafx.fxml.FXML
+    private TableView markTopPriorityTV;
     @javafx.fxml.FXML
     private TableColumn queryCol;
 
@@ -25,7 +25,7 @@ public class ViewSolvedQueryDashboardController
     }
 
     @javafx.fxml.FXML
-    public void viewOA(ActionEvent actionEvent) {
+    public void markAsPriorityOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

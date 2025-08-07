@@ -7,16 +7,19 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ViewSolvedQueryDashboardController
+public class SearchQueryDashboardController
 {
     @javafx.fxml.FXML
     private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableView solvedQueryTV;
+    private TextField searchQueryTF;
     @javafx.fxml.FXML
     private TableColumn nameCol;
+    @javafx.fxml.FXML
+    private TableView searchTV;
     @javafx.fxml.FXML
     private TableColumn queryCol;
 
@@ -39,5 +42,9 @@ public class ViewSolvedQueryDashboardController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @javafx.fxml.FXML
+    public void searchOA(ActionEvent actionEvent) {
     }
 }

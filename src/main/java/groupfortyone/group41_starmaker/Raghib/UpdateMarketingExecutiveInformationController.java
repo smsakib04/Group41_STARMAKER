@@ -1,41 +1,40 @@
-package groupfortyone.group41_starmaker.Salman;
+package groupfortyone.group41_starmaker.Raghib;
 
 import groupfortyone.group41_starmaker.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ReplyToQueryDashboardController
+public class UpdateMarketingExecutiveInformationController
 {
     @javafx.fxml.FXML
-    private TableColumn queryNoCol;
+    private DatePicker dobdatepicker;
     @javafx.fxml.FXML
-    private TableColumn queryNameCol;
+    private TextField nametextfield;
     @javafx.fxml.FXML
-    private TableView replyQueryTV;
+    private TextField emailtextfield;
     @javafx.fxml.FXML
-    private Label confirmationMessageLabel;
+    private TextField biotextfield;
     @javafx.fxml.FXML
-    private TextArea replyTA;
-    @javafx.fxml.FXML
-    private TableColumn queryCol;
+    private Label confirmationmessagelabel;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void previousOA(ActionEvent actionEvent) {
+    public void gobackOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Salman/CSO_Dashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/MarketingExecutiveDashboard.fxml"));
+
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Marketing Executive Dashboard");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -44,6 +43,6 @@ public class ReplyToQueryDashboardController
     }
 
     @javafx.fxml.FXML
-    public void sendOA(ActionEvent actionEvent) {
+    public void saveOnAction(ActionEvent actionEvent) {
     }
 }

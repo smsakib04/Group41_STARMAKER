@@ -5,15 +5,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Samanta.ViewerDashboardController">
    <children>
-      <Label layoutX="180.0" layoutY="42.0" text="Viewer Dashboard">
+      <Label layoutX="170.0" layoutY="20.0" text="Viewer Dashboard">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Label>
-      <Button layoutX="62.0" layoutY="129.0" mnemonicParsing="false" onAction="#searchSongOA" prefHeight="38.0" prefWidth="178.0" text="Search A Song" />
-      <Button layoutX="65.0" layoutY="193.0" mnemonicParsing="false" onAction="#searchSingerOA" prefHeight="38.0" prefWidth="171.0" text="Search A Singer" />
+      <Button layoutX="39.0" layoutY="73.0" mnemonicParsing="false" onAction="#searchSongOA" prefHeight="38.0" prefWidth="178.0" text="Search A Song">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="39.0" layoutY="124.0" mnemonicParsing="false" onAction="#searchSingerOA" prefHeight="38.0" prefWidth="178.0" text="Search A Singer">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button layoutX="39.0" layoutY="181.0" mnemonicParsing="false" onAction="#reportSingerOA" prefHeight="38.0" prefWidth="178.0" text="Report A Singer">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="39.0" layoutY="236.0" mnemonicParsing="false" onAction="#repostSongOA" prefHeight="38.0" prefWidth="178.0" text="Repost ">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="503.0" layoutY="350.0" mnemonicParsing="false" onAction="#logoutOA" prefHeight="28.0" prefWidth="59.0" text="Logout" />
    </children>
 </AnchorPane>
