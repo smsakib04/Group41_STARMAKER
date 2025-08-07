@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -15,6 +16,8 @@ public class AddCampaignNotesController
     private TextField addcampaignnotestextfield;
     @javafx.fxml.FXML
     private Label confirmationlabel;
+    @javafx.fxml.FXML
+    private ListView campaignnoteslistview;
 
     @javafx.fxml.FXML
     public void initialize() {
