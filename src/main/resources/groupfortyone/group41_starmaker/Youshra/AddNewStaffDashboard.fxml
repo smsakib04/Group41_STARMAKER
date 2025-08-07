@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="684.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.AddNewStaffDashboard">
+   <children>
+      <Label layoutX="259.0" layoutY="22.0" prefHeight="46.0" prefWidth="267.0" text="Add New Staff Dashboard">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="StaffListTableView" layoutX="54.0" layoutY="111.0" prefHeight="303.0" prefWidth="742.0">
+        <columns>
+          <TableColumn fx:id="StaffNameColumn" prefWidth="164.00002670288086" text="Staff Name" />
+          <TableColumn fx:id="StaffIDColumn" prefWidth="174.3999786376953" text="Staff ID" />
+            <TableColumn fx:id="StaffRoleColumn" prefWidth="193.5999755859375" text="Staff Role" />
+            <TableColumn fx:id="DepartmentColumn" prefWidth="230.40008544921875" text="Department" />
+        </columns>
+      </TableView>
+      <Label layoutX="54.0" layoutY="76.0" prefHeight="27.0" prefWidth="142.0" text="Staff List:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="455.0" prefHeight="18.0" prefWidth="82.0" text="Staff Name:" />
+      <Label layoutX="58.0" layoutY="492.0" prefHeight="18.0" prefWidth="74.0" text="Staff ID:" />
+      <Label layoutX="58.0" layoutY="533.0" prefHeight="18.0" prefWidth="74.0" text="Staff Role:" />
+      <Label layoutX="54.0" layoutY="573.0" prefHeight="18.0" prefWidth="82.0" text="Department:" />
+      <TextField fx:id="StaffNameTextField" layoutX="153.0" layoutY="452.0" />
+      <TextField fx:id="StaffIDTextField" layoutX="153.0" layoutY="489.0" />
+      <TextField fx:id="StaffRoleTextField" layoutX="153.0" layoutY="530.0" />
+      <TextField fx:id="DepartmentTextField" layoutX="153.0" layoutY="570.0" />
+      <Button layoutX="711.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleLoadbutton" prefHeight="26.0" prefWidth="98.0" text="Load" />
+      <Button layoutX="370.0" layoutY="569.0" mnemonicParsing="false" onAction="#handleAddbutton" prefHeight="26.0" prefWidth="98.0" text="Add" />
+      <Label fx:id="SuccessfulLabel" layoutX="548.0" layoutY="551.0" prefHeight="40.0" prefWidth="250.0" />
+   </children>
+</AnchorPane>

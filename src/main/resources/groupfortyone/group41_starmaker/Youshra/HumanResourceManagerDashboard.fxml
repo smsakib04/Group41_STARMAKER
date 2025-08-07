@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="568.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.HumanResourceManagerDashboard">
+   <children>
+      <Label layoutX="173.0" layoutY="26.0" prefHeight="64.0" prefWidth="344.0" text="Human Resource Manager Dashboard" textFill="#0952fc">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button layoutX="65.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleAddNewStaffbutton" prefHeight="34.0" prefWidth="171.0" text="Add New Staff" textFill="#ef0505">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="65.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleRemoveStaffbutton" prefHeight="34.0" prefWidth="171.0" text="Remove Staff" textFill="#fa1818">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="65.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleUpdateEmployeeDetailsbutton" prefHeight="34.0" prefWidth="171.0" text="Update Employee Details" textFill="#fa1212">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="65.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleRolesofEmployeesbutton" prefHeight="34.0" prefWidth="171.0" text="Roles of Employees" textFill="#f40808">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="402.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleViewEmployeebutton" prefHeight="34.0" prefWidth="171.0" text="View Employee List" textFill="#f20b0b">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="402.0" layoutY="163.0" mnemonicParsing="false" onAction="#handleSearchEmployeebutton" prefHeight="34.0" prefWidth="171.0" text="Search Employee" textFill="#f20404">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="402.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleNewRecruitmentRequestbutton" prefHeight="34.0" prefWidth="171.0" text="New Recruitment Request" textFill="#ec0404">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="402.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleAnnouncementbutton" prefHeight="38.0" prefWidth="171.0" text="Announcement" textFill="#f40e0e">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="622.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleReloadbutton" prefHeight="26.0" prefWidth="85.0" text="Reload" textFill="#0f06fa">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="560.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleLogOutbutton" prefHeight="26.0" prefWidth="145.0" text="Log Out" textFill="#4207f2">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
