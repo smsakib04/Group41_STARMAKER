@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.LoginController">
    <children>
       <TextField fx:id="idTextField" layoutX="220.0" layoutY="169.0" promptText="Enter your ID" />
       <PasswordField fx:id="passwordTextField" layoutX="220.0" layoutY="218.0" promptText="Enter your password" />
@@ -18,6 +17,6 @@
          </font>
       </Label>
       <Button layoutX="404.0" layoutY="219.0" mnemonicParsing="false" onAction="#loginButton" text="Login" />
-      <Label fx:id="loginLabel" layoutX="217.0" layoutY="265.0" prefHeight="44.0" prefWidth="160.0" />
+      <Label fx:id="loginLabel" layoutX="190.0" layoutY="265.0" prefHeight="44.0" prefWidth="224.0" />
    </children>
 </AnchorPane>
