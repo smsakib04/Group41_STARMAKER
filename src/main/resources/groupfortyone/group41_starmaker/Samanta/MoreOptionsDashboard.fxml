@@ -13,7 +13,7 @@
             <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="59.0" layoutY="88.0" prefHeight="19.0" prefWidth="79.0" text="SongTitle">
+      <Label layoutX="59.0" layoutY="89.0" prefHeight="19.0" prefWidth="79.0" text="SongTitle">
          <font>
             <Font name="Arial Black" size="15.0" />
          </font>
