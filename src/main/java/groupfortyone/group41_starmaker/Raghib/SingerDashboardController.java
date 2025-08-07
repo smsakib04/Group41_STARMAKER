@@ -127,16 +127,17 @@ public class SingerDashboardController
     }
 
     @javafx.fxml.FXML
-    public void myprofileOnAction(ActionEvent actionEvent) {
+    public void sendquerytocsoOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/ManageSingerProfile.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/SendQueryToCSO.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Manage Singer Profile");
+            nextStage.setTitle("Send Query To CSO");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
     }
 }
