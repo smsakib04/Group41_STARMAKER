@@ -20,7 +20,7 @@ public class RecruitmentRequisitionDashboardController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void confirmOA(ActionEvent actionEvent) {
     }
 
@@ -37,11 +37,11 @@ public class RecruitmentRequisitionDashboardController
         }
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void approveOA(ActionEvent actionEvent) {
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void rejectOA(ActionEvent actionEvent) {
     }
 }
