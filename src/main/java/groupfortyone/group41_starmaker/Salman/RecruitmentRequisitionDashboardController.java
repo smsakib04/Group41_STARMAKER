@@ -12,17 +12,15 @@ import javafx.stage.Stage;
 public class RecruitmentRequisitionDashboardController
 {
     @javafx.fxml.FXML
-    private Label recruitmentAcceptanceLabel;
-    @javafx.fxml.FXML
     private TableView recruitmentRequisitionTV;
     @javafx.fxml.FXML
-    private Label recruitmentRejectedLabel;
+    private Label confirmationMessageLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @Deprecated
+    @javafx.fxml.FXML
     public void confirmOA(ActionEvent actionEvent) {
     }
 
@@ -39,11 +37,11 @@ public class RecruitmentRequisitionDashboardController
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void approveOA(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void rejectOA(ActionEvent actionEvent) {
     }
 }
