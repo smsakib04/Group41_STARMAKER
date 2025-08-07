@@ -5,20 +5,20 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ShareASongController
+public class RepostSongController
 {
     @javafx.fxml.FXML
-    private ComboBox sharePlatformCB;
+    private TextField repostCaptionTF;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void enterShareOA(ActionEvent actionEvent) {
+    public void repostToProfileOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

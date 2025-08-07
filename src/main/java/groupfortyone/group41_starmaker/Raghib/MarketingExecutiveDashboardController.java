@@ -46,7 +46,7 @@ public class MarketingExecutiveDashboardController
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/Login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
 
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();

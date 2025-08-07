@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="492.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.CreateAPromotionalMessageController">
    <children>
       <TextField fx:id="usernametextfield" layoutX="165.0" layoutY="114.0" />
@@ -15,7 +14,7 @@
       <Label layoutX="85.0" layoutY="118.0" text="Username:" />
       <Label layoutX="330.0" layoutY="118.0" text="Message Content:" />
       <Label layoutX="49.0" layoutY="214.0" prefHeight="17.0" prefWidth="127.0" text="Confirmation Message:" />
-      <Label fx:id="confirmationmessagelabel" layoutX="176.0" layoutY="214.0" prefHeight="17.0" prefWidth="105.0" />
+      <Label fx:id="confirmationmessagelabel" layoutX="176.0" layoutY="214.0" prefHeight="17.0" prefWidth="213.0" />
       <Label layoutX="214.0" layoutY="30.0" prefHeight="43.0" prefWidth="310.0" text="Create A Promotional Message">
          <font>
             <Font size="18.0" />

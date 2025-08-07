@@ -19,27 +19,24 @@ public class MyStreamsDashboardController
     private TableColumn StreamDateTC;
     @javafx.fxml.FXML
     private TableColumn totalGiftRecievedTC;
-    @javafx.fxml.FXML
-    private ComboBox shareStreamCB;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-    @Deprecated
-    public void broadcastHistoryOA(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void broadcastShareOA(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void broadcastDeleteOA(ActionEvent actionEvent) {
-    }
 
     @javafx.fxml.FXML
     public void ShareStreamBT(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/ShareAStreamDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     @javafx.fxml.FXML

@@ -8,23 +8,23 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
-public class ShareASongController
+public class GiftSenderFromViewerDashboard
 {
     @javafx.fxml.FXML
-    private ComboBox sharePlatformCB;
+    private ComboBox giftCB;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void enterShareOA(ActionEvent actionEvent) {
+    public void giftSendOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void previousOA(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MoreOptionsDashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/SearchSingerToFollowGift.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
@@ -33,4 +33,5 @@ public class ShareASongController
             throw new RuntimeException(e);
         }
     }
+
 }

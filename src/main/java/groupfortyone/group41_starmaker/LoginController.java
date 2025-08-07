@@ -24,6 +24,18 @@ public class LoginController
 
     @javafx.fxml.FXML
     public void loginButton(ActionEvent actionEvent) {
+        if((idTextField.getText().isEmpty()) && (passwordTextField.getText().isEmpty())){
+            loginLabel.setText("Please give valid ID and Password");
+            return;
+        }
+        if (idTextField.getText().isEmpty()){
+            loginLabel.setText("Please give a valid ID");
+            return;
+        }
+        if (passwordTextField.getText().isEmpty()){
+            loginLabel.setText("Please give a valid Password");
+            return;
+        }
         if ((idTextField.getText().equals("00001")) && (passwordTextField.getText().equals("12345"))){
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Salman/CEO_Dashboard.fxml"));
@@ -50,7 +62,7 @@ public class LoginController
             loginLabel.setText("Login Successful");
         } else if ((idTextField.getText().equals("00003")) && (passwordTextField.getText().equals("12345"))){
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/HumanResourceManagerDashboard.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/HRMDashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
                 nextStage.setTitle("Human Resource Manager Dashboard");
@@ -121,7 +133,7 @@ public class LoginController
             }
             loginLabel.setText("Login Successful");
         } else {
-            loginLabel.setText("Incorrect Username or Password!");
+            loginLabel.setText("Incorrect Username and Password");
         }
     }
 }
