@@ -15,13 +15,13 @@ public class MarkQuerySolvedDashboardController
     @javafx.fxml.FXML
     private TableColumn queryNoCol;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
-    @javafx.fxml.FXML
     private TableView replyQueryTV;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
     @javafx.fxml.FXML
     private TableColumn queryCol;
+    @javafx.fxml.FXML
+    private TableColumn nameCol;
 
     @javafx.fxml.FXML
     public void initialize() {
