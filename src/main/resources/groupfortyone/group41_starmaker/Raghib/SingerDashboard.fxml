@@ -12,14 +12,14 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="39.0" layoutY="178.0" mnemonicParsing="false" onAction="#uploadasongOnAction" prefHeight="25.0" prefWidth="248.0" text="Upload A Song" />
-      <Button layoutX="39.0" layoutY="227.0" mnemonicParsing="false" onAction="#editsongtitleOnAction" prefHeight="25.0" prefWidth="248.0" text="Edit Song Title" />
-      <Button layoutX="39.0" layoutY="270.0" mnemonicParsing="false" onAction="#deleteasongOnAction" prefHeight="25.0" prefWidth="248.0" text="Delete A Song" />
-      <Button layoutX="39.0" layoutY="312.0" mnemonicParsing="false" onAction="#viewtotalnooflikesofasongOnAction" prefHeight="25.0" prefWidth="248.0" text="View Total Number Of Likes Of A Song" />
-      <Button layoutX="39.0" layoutY="359.0" mnemonicParsing="false" onAction="#markasongasfavouriteOnAction" prefHeight="25.0" prefWidth="248.0" text="Mark A Song As Favourite" />
+      <Button layoutX="39.0" layoutY="184.0" mnemonicParsing="false" onAction="#uploadasongOnAction" prefHeight="25.0" prefWidth="248.0" text="Upload A Song" />
+      <Button layoutX="39.0" layoutY="221.0" mnemonicParsing="false" onAction="#editsongtitleOnAction" prefHeight="25.0" prefWidth="248.0" text="Edit Song Title" />
+      <Button layoutX="39.0" layoutY="257.0" mnemonicParsing="false" onAction="#deleteasongOnAction" prefHeight="25.0" prefWidth="248.0" text="Delete A Song" />
+      <Button layoutX="39.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewtotalnooflikesofasongOnAction" prefHeight="25.0" prefWidth="248.0" text="View Total Number Of Likes Of A Song" />
+      <Button layoutX="39.0" layoutY="328.0" mnemonicParsing="false" onAction="#markasongasfavouriteOnAction" prefHeight="25.0" prefWidth="248.0" text="Mark A Song As Favourite" />
       <Button layoutX="39.0" layoutY="403.0" mnemonicParsing="false" onAction="#viewtotalnumberofsongsuploadedOnAction" prefHeight="25.0" prefWidth="248.0" text="View total number of songs uploaded" />
-      <Button layoutX="39.0" layoutY="446.0" mnemonicParsing="false" onAction="#searchasongbytitleOnAction" prefHeight="25.0" prefWidth="248.0" text="Search a song by title." />
+      <Button layoutX="39.0" layoutY="293.0" mnemonicParsing="false" onAction="#searchasongbytitleOnAction" prefHeight="25.0" prefWidth="248.0" text="Search a song by title." />
       <Button layoutX="466.0" layoutY="486.0" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="25.0" prefWidth="151.0" text="Logout" />
-      <Button layoutX="39.0" layoutY="136.0" mnemonicParsing="false" onAction="#sendquerytocsoOnAction" prefHeight="25.0" prefWidth="248.0" text="Send Query To CSO" />
+      <Button layoutX="39.0" layoutY="149.0" mnemonicParsing="false" onAction="#sendquerytocsoOnAction" prefHeight="25.0" prefWidth="248.0" text="Send Query To CSO" />
    </children>
 </AnchorPane>

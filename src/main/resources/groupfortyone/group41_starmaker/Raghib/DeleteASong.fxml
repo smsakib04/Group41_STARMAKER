@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -14,7 +15,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="533.0" layoutY="363.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
+      <Button layoutX="529.0" layoutY="360.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
       <TableView fx:id="songlisttableview" layoutX="51.0" layoutY="152.0" prefHeight="200.0" prefWidth="538.0">
         <columns>
             <TableColumn fx:id="songtitlecolumn" prefWidth="177.99996948242188" text="Song Title" />
@@ -22,8 +23,9 @@
             <TableColumn fx:id="genrecolumn" prefWidth="168.0" text="Genre" />
         </columns>
       </TableView>
-      <Button layoutX="538.0" layoutY="87.0" mnemonicParsing="false" onAction="#deleteOnAction" text="Delete" />
+      <Button layoutX="51.0" layoutY="110.0" mnemonicParsing="false" onAction="#deleteOnAction" text="Delete" />
       <Label layoutX="51.0" layoutY="376.0" text="Confirmation Message:" />
       <Label fx:id="confirmationlabel" layoutX="181.0" layoutY="376.0" prefHeight="17.0" prefWidth="139.0" />
+      <TextArea fx:id="confirmationtextarea" layoutX="181.0" layoutY="373.0" prefHeight="17.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

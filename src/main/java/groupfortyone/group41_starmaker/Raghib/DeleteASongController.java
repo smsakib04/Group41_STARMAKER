@@ -5,26 +5,34 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
 public class DeleteASongController
 {
     @javafx.fxml.FXML
-    private TableView songlisttableview;
+    private TableView<Song> songlisttableview;
     @javafx.fxml.FXML
-    private TableColumn genrecolumn;
+    private TableColumn<Song,String> genrecolumn;
     @javafx.fxml.FXML
     private Label confirmationlabel;
     @javafx.fxml.FXML
-    private TableColumn descriptioncolumn;
+    private TableColumn<Song,String> descriptioncolumn;
     @javafx.fxml.FXML
-    private TableColumn songtitlecolumn;
+    private TableColumn<Song,String> songtitlecolumn;
+    @javafx.fxml.FXML
+    private TextArea confirmationtextarea;
 
     @javafx.fxml.FXML
     public void initialize() {
+        songtitlecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("songtitle"));
+        descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("description"));
+        genrecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("genre"));
+
+        songlisttableview.getItems().addAll(songs);
     }
 
     @javafx.fxml.FXML
@@ -44,5 +52,16 @@ public class DeleteASongController
 
     @javafx.fxml.FXML
     public void deleteOnAction(ActionEvent actionEvent) {
+        Song song=songlisttableview.getSelectionModel().getSelectedItem();
+        if (song==null){
+            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Select a song to delete");
+            erroralert.show();
+            return;
+        }
+        songlisttableview.getItems().remove(song);
+        songlisttableview.refresh();
+        confirmationtextarea.setText("Song has been deleted");
+        confirmationtextarea.setStyle("-fx-background-color: green");
     }
 }
