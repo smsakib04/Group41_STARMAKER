@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="450.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.DeleteASongController">
    <children>
       <Label layoutX="251.0" layoutY="30.0" prefHeight="17.0" prefWidth="253.0" text="Delete A Song">
@@ -15,7 +14,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="517.0" layoutY="360.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
+      <Button layoutX="533.0" layoutY="363.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
       <TableView fx:id="songlisttableview" layoutX="51.0" layoutY="152.0" prefHeight="200.0" prefWidth="538.0">
         <columns>
             <TableColumn fx:id="songtitlecolumn" prefWidth="177.99996948242188" text="Song Title" />
@@ -23,8 +22,8 @@
             <TableColumn fx:id="genrecolumn" prefWidth="168.0" text="Genre" />
         </columns>
       </TableView>
-      <Button layoutX="521.0" layoutY="86.0" mnemonicParsing="false" onAction="#deleteOnAction" text="Delete" />
-      <Label layoutX="139.0" layoutY="385.0" text="Confirmation Message:" />
-      <Label fx:id="confirmationlabel" layoutX="270.0" layoutY="385.0" prefHeight="17.0" prefWidth="139.0" />
+      <Button layoutX="538.0" layoutY="87.0" mnemonicParsing="false" onAction="#deleteOnAction" text="Delete" />
+      <Label layoutX="51.0" layoutY="376.0" text="Confirmation Message:" />
+      <Label fx:id="confirmationlabel" layoutX="181.0" layoutY="376.0" prefHeight="17.0" prefWidth="139.0" />
    </children>
 </AnchorPane>

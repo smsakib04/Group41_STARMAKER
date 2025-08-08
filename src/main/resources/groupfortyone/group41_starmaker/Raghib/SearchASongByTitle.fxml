@@ -4,19 +4,20 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="455.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.SearchASongByTitleController">
+<AnchorPane prefHeight="487.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.SearchASongByTitleController">
    <children>
-      <Button layoutX="543.0" layoutY="385.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
+      <Button layoutX="519.0" layoutY="383.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
       <Label layoutX="219.0" layoutY="57.0" prefHeight="17.0" prefWidth="247.0" text="Search A Song By Title">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TableView layoutX="59.0" layoutY="173.0" prefHeight="200.0" prefWidth="520.0">
+      <TableView fx:id="songlisttableview" layoutX="59.0" layoutY="173.0" prefHeight="200.0" prefWidth="520.0">
         <columns>
           <TableColumn fx:id="songtitlecolumn" prefWidth="173.99997329711914" text="Song Title" />
           <TableColumn fx:id="descriptioncolumn" prefWidth="182.0000457763672" text="Description" />
@@ -26,5 +27,7 @@
       <Button layoutX="519.0" layoutY="130.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
       <Label layoutX="59.0" layoutY="122.0" prefHeight="17.0" prefWidth="99.0" text="Name of the song:" />
       <TextField fx:id="nameofthesongtextfield" layoutX="159.0" layoutY="118.0" />
+      <Label layoutX="59.0" layoutY="408.0" prefHeight="17.0" prefWidth="125.0" text="Confirmation Message:" />
+      <TextArea fx:id="confirmationtextarea" layoutX="184.0" layoutY="405.0" prefHeight="17.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

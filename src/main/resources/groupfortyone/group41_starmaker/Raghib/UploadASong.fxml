@@ -15,22 +15,22 @@
       <Label layoutX="43.0" layoutY="63.0" text="Song Title:" />
       <Label layoutX="43.0" layoutY="99.0" text="Description:" />
       <Label layoutX="43.0" layoutY="133.0" text="Genre:" />
-      <TextField fx:id="descriptiontextfield" layoutX="114.0" layoutY="59.0" />
-      <TextField fx:id="songtitletextfield" layoutX="114.0" layoutY="95.0" />
+      <TextField fx:id="songtitletextfield" layoutX="114.0" layoutY="59.0" />
+      <TextField fx:id="descriptiontextfield" layoutX="114.0" layoutY="95.0" />
       <ComboBox fx:id="genrecombobox" layoutX="114.0" layoutY="129.0" prefWidth="150.0" />
-      <Button layoutX="470.0" layoutY="120.0" mnemonicParsing="false" onAction="#uploadasongOnAction" text="Upload Song" />
+      <Button layoutX="531.0" layoutY="116.0" mnemonicParsing="false" onAction="#uploadasongOnAction" text="Upload Song" />
       <Label fx:id="confirmationlabel" layoutX="235.0" layoutY="251.0" prefHeight="17.0" prefWidth="191.0" />
-      <Button layoutX="597.0" layoutY="436.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
+      <Button layoutX="557.0" layoutY="405.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
       <Label layoutX="275.0" layoutY="14.0" text="Upload A Song">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="songlisttableview" layoutX="60.0" layoutY="177.0" prefHeight="200.0" prefWidth="496.0">
+      <TableView fx:id="songlisttableview" layoutX="60.0" layoutY="177.0" prefHeight="200.0" prefWidth="557.0">
         <columns>
-          <TableColumn fx:id="songtitlecolumn" prefWidth="153.99999237060547" text="Song Title" />
-          <TableColumn fx:id="descriptioncolumn" prefWidth="173.3333282470703" text="Description" />
-            <TableColumn fx:id="genrecolumn" prefWidth="168.66659545898438" text="Genre" />
+          <TableColumn fx:id="songtitlecolumn" prefWidth="162.66668319702148" text="Song Title" />
+          <TableColumn fx:id="descriptioncolumn" prefWidth="218.66664123535156" text="Description" />
+            <TableColumn fx:id="genrecolumn" prefWidth="175.33334350585938" text="Genre" />
         </columns>
       </TableView>
       <Label layoutX="60.0" layoutY="401.0" text="Confirmation Message:" />

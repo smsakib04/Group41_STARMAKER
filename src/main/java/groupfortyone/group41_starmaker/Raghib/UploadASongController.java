@@ -29,6 +29,8 @@ public class UploadASongController {
     private TextArea confirmationtextarea;
     @javafx.fxml.FXML
     private TextField descriptiontextfield;
+    @javafx.fxml.FXML
+    private Label confirmationlabel;
 
 
     @javafx.fxml.FXML
@@ -39,13 +41,10 @@ public class UploadASongController {
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("genre"));
     }
-
-
     @javafx.fxml.FXML
     public void gobackOnAction(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/SingerDashboard.fxml"));
-
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setTitle("Singer Dashboard");
