@@ -5,19 +5,24 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Raghib.Query.queryList;
 
 public class SendQueryToCSOController
 {
     @javafx.fxml.FXML
     private AnchorPane querytextarea;
     @javafx.fxml.FXML
-    private Label confirmationlabel;
-    @javafx.fxml.FXML
     private TextField usernametextfield;
+    @javafx.fxml.FXML
+    private TextArea querytextArea;
+    @javafx.fxml.FXML
+    private TextArea confirmationtextarea;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -39,5 +44,30 @@ public class SendQueryToCSOController
 
     @javafx.fxml.FXML
     public void sendOnAction(ActionEvent actionEvent) {
+        if((usernametextfield.getText().isEmpty())&&(querytextArea.getText().isEmpty())) {
+            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("FIllup the username and query");
+            erroralert.show();
+            return;
+        }
+
+        if (usernametextfield.getText().isEmpty()){
+            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("FIllup the username");
+            erroralert.show();
+            return;
+        }
+        if (querytextArea.getText().isEmpty()){
+            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("FIllup the query");
+            erroralert.show();
+            return;
+        }
+        queryList.add(querytextArea.getText());
+        confirmationtextarea.setText("Query has been sent successfully!");
+        confirmationtextarea.setStyle("-fx-background-color: Green");
+
+        usernametextfield.clear();
+        querytextArea.clear();
     }
 }
