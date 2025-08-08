@@ -63,7 +63,9 @@ public class SendQueryToCSOController
             erroralert.show();
             return;
         }
+        queryList.add(usernametextfield.getText());
         queryList.add(querytextArea.getText());
+        System.out.println(queryList);
         confirmationtextarea.setText("Query has been sent successfully!");
         confirmationtextarea.setStyle("-fx-background-color: Green");
 
