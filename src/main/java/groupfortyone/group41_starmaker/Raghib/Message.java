@@ -3,23 +3,22 @@ package groupfortyone.group41_starmaker.Raghib;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Campaign {
+public class Message {
     private String title;
     private String content;
     private LocalDate date;
     private String status;
 
-    public static ArrayList<Campaign>campaignList=new ArrayList<>();
+    public static ArrayList<String> messageList= new ArrayList<>();
 
-
-    public Campaign(String title, String content, LocalDate date, String status) {
+    public Message(String title, String content, LocalDate date, String status) {
         this.title = title;
         this.content = content;
         this.date = date;
         this.status = status;
     }
 
-    public Campaign() {
+    public Message() {
     }
 
     public String getTitle() {
@@ -54,14 +53,6 @@ public class Campaign {
         this.status = status;
     }
 
-    public static ArrayList<Campaign> getCampaignList() {
-        return campaignList;
-    }
-
-    public static void setCampaignList(ArrayList<Campaign> campaignList) {
-        Campaign.campaignList = campaignList;
-    }
-
     @Override
     public String toString() {
         return "Campaign{" +
@@ -71,4 +62,7 @@ public class Campaign {
                 ", status='" + status + '\'' +
                 '}';
     }
+
+
+
 }

@@ -118,13 +118,13 @@ public class MarketingExecutiveDashboardController
     }
 
     @javafx.fxml.FXML
-    public void updatemarketingexecutiveinformationOnAction(ActionEvent actionEvent) {
+    public void showallcampaignpostsOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/UpdateMarketingExecutiveInformation.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/ShowAllCampaignPosts.fxml"));
 
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Update Marketing Executive Information");
+            nextStage.setTitle("Show All Campaign Posts");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -133,13 +133,13 @@ public class MarketingExecutiveDashboardController
     }
 
     @javafx.fxml.FXML
-    public void showallcampaignpostsOnAction(ActionEvent actionEvent) {
+    public void myprofileOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/ShowAllCampaignPosts.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/MyProfile.fxml"));
 
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Show All Campaign Posts");
+            nextStage.setTitle("My Profile");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {

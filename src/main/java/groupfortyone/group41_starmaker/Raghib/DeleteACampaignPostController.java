@@ -5,24 +5,35 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class DeleteACampaignPostController
 {
     @javafx.fxml.FXML
-    private TableView campaignlisttableview;
+    private TableView<Campaign> campaignlisttableview;
     @javafx.fxml.FXML
-    private TableColumn tablecolumn;
+    private TableColumn<Campaign,String> contentcolumn;
     @javafx.fxml.FXML
-    private TableColumn contentcolumn;
+    private TableColumn<Campaign,String> poststatuscolumn;
     @javafx.fxml.FXML
-    private Label confirmationlabel;
+    private TableColumn<Campaign,String> datecolumn;
+    @javafx.fxml.FXML
+    private TextArea confirmationtextarea;
+    @javafx.fxml.FXML
+    private TableColumn<Campaign,String> titlecolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("title"));
+        contentcolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("content"));
+        datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("date"));
+        poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("status"));
+
+        campaignlisttableview.getItems().addAll();
     }
 
     @javafx.fxml.FXML
@@ -42,5 +53,16 @@ public class DeleteACampaignPostController
 
     @javafx.fxml.FXML
     public void deleteOnAction(ActionEvent actionEvent) {
+        Campaign campaign=campaignlisttableview.getSelectionModel().getSelectedItem();
+        if (campaign==null){
+            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Select a campaign post");
+            erroralert.show();
+            return;
+        }
+        campaignlisttableview.getItems().remove(campaign);
+        campaignlisttableview.refresh();
+        confirmationtextarea.setText("Campaign post has been removed");
+        confirmationtextarea.setStyle("-fx-background-color: green");
     }
 }

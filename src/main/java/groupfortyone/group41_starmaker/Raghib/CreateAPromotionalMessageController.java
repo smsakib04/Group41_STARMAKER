@@ -10,7 +10,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import static groupfortyone.group41_starmaker.Raghib.Campaign.messageList;
+import static groupfortyone.group41_starmaker.Raghib.Message.messageList;
 
 public class CreateAPromotionalMessageController
 {
@@ -52,10 +52,8 @@ public class CreateAPromotionalMessageController
             return;
 
         }
+        messageList.add(usernametextfield.getText());
         messageList.add(messagecontenttextarea.getText());
         confirmationmessagelabel.setText("Message has been added successfully!");
-
-
-
     }
 }

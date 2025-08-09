@@ -12,14 +12,14 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="60.0" layoutY="135.0" mnemonicParsing="false" onAction="#addingacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Adding a Campaign Post" />
-      <Button layoutX="60.0" layoutY="170.0" mnemonicParsing="false" onAction="#deleteacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Delete a campaign Post" />
-      <Button layoutX="60.0" layoutY="209.0" mnemonicParsing="false" onAction="#searchacampaignpostbytitleOnAction" prefHeight="25.0" prefWidth="257.0" text="Search a Campaign Post By Title" />
-      <Button layoutX="60.0" layoutY="247.0" mnemonicParsing="false" onAction="#createapromotionalmessageOnAction" prefHeight="25.0" prefWidth="257.0" text="Create a Promotional Message" />
-      <Button layoutX="60.0" layoutY="286.0" mnemonicParsing="false" onAction="#showallcampaignpostsOnAction" prefHeight="25.0" prefWidth="257.0" text="Show All Campaign Posts" />
-      <Button layoutX="60.0" layoutY="327.0" mnemonicParsing="false" onAction="#updatemarketingexecutiveinformationOnAction" prefHeight="25.0" prefWidth="257.0" text="Update Marketing Executive Information" />
-      <Button layoutX="60.0" layoutY="367.0" mnemonicParsing="false" onAction="#filtercampaignpostsbystatusOnAction" prefHeight="25.0" prefWidth="257.0" text="Filter Campaign Posts By Status" />
-      <Button layoutX="60.0" layoutY="408.0" mnemonicParsing="false" onAction="#addcampaignnotesOnAction" prefHeight="25.0" prefWidth="257.0" text="Add Campaign Notes" />
+      <Button layoutX="60.0" layoutY="190.0" mnemonicParsing="false" onAction="#addingacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Adding a Campaign Post" />
+      <Button layoutX="60.0" layoutY="228.0" mnemonicParsing="false" onAction="#deleteacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Delete a campaign Post" />
+      <Button layoutX="60.0" layoutY="263.0" mnemonicParsing="false" onAction="#searchacampaignpostbytitleOnAction" prefHeight="25.0" prefWidth="257.0" text="Search a Campaign Post By Title" />
+      <Button layoutX="60.0" layoutY="335.0" mnemonicParsing="false" onAction="#createapromotionalmessageOnAction" prefHeight="25.0" prefWidth="257.0" text="Create a Promotional Message" />
+      <Button layoutX="60.0" layoutY="410.0" mnemonicParsing="false" onAction="#showallcampaignpostsOnAction" prefHeight="25.0" prefWidth="257.0" text="Show All Campaign Posts" />
+      <Button layoutX="60.0" layoutY="153.0" mnemonicParsing="false" onAction="#myprofileOnAction" prefHeight="25.0" prefWidth="257.0" text="My Profile" />
+      <Button layoutX="60.0" layoutY="299.0" mnemonicParsing="false" onAction="#filtercampaignpostsbystatusOnAction" prefHeight="25.0" prefWidth="257.0" text="Filter Campaign Posts By Status" />
+      <Button layoutX="60.0" layoutY="371.0" mnemonicParsing="false" onAction="#addcampaignnotesOnAction" prefHeight="25.0" prefWidth="257.0" text="Add Campaign Notes" />
       <Button layoutX="536.0" layoutY="449.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" />
    </children>
 </AnchorPane>

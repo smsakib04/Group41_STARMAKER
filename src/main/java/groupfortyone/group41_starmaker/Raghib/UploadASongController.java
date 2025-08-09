@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 import static groupfortyone.group41_starmaker.Raghib.Song.songs;
+
+
 public class UploadASongController {
     @javafx.fxml.FXML
     private TextField songtitletextfield;
@@ -29,8 +31,6 @@ public class UploadASongController {
     private TextArea confirmationtextarea;
     @javafx.fxml.FXML
     private TextField descriptiontextfield;
-    @javafx.fxml.FXML
-    private Label confirmationlabel;
 
 
     @javafx.fxml.FXML
@@ -58,21 +58,31 @@ public class UploadASongController {
     public void uploadasongOnAction(ActionEvent actionEvent) {
         if (songtitletextfield.getText().isEmpty()) {
             Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-            erroralert.setContentText("Fillup the above informations");
+            erroralert.setContentText("Fillup the song title");
             erroralert.show();
             return;
         }
         if (descriptiontextfield.getText().isEmpty()){
             Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-            erroralert.setContentText("Fillup the above informations");
+            erroralert.setContentText("Fillup the song description");
             erroralert.show();
             return;
         }
         if (genrecombobox.getValue() == null) {
             Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-            erroralert.setContentText("Fillup the above informations");
+            erroralert.setContentText("Choose the song genre");
             erroralert.show();
             return;
+        }
+
+        for (Song s:songs){
+            if (s.getSongtitle().equals(songtitletextfield.getText())){
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Song title should be unique");
+                erroralert.show();
+                return;
+            }
+
         }
         Song s = new Song(
                 songtitletextfield.getText(),
