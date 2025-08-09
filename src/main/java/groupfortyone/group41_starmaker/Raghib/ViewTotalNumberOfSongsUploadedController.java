@@ -53,5 +53,7 @@ public class ViewTotalNumberOfSongsUploadedController
     public void viewallsongsOnAction(ActionEvent actionEvent) {
         songlisttableview.getItems().clear();
         songlisttableview.getItems().addAll(songs);
+        confirmationtextarea.setText("All songs are shown above");
+        confirmationtextarea.setStyle("-fx-background-color: green");
     }
 }

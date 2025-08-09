@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+import static groupfortyone.group41_starmaker.Raghib.Campaign.campaignList;
+
 public class DeleteACampaignPostController
 {
     @javafx.fxml.FXML
@@ -33,7 +35,7 @@ public class DeleteACampaignPostController
         datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("date"));
         poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("status"));
 
-        campaignlisttableview.getItems().addAll();
+        campaignlisttableview.getItems().addAll(campaignList);
     }
 
     @javafx.fxml.FXML

@@ -8,12 +8,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Raghib.Campaign.campaignList;
 
 public class ShowAllCampaignPostsController
 {
-    @javafx.fxml.FXML
-    private TableColumn statuscolumn;
     @javafx.fxml.FXML
     private TableView campaignlisttableview;
     @javafx.fxml.FXML
@@ -23,10 +25,16 @@ public class ShowAllCampaignPostsController
     @javafx.fxml.FXML
     private TableColumn datecolumn;
     @javafx.fxml.FXML
-    private Label confirmationlabel;
+    private TextArea confirmationtextarea;
+    @javafx.fxml.FXML
+    private TableColumn poststatuscolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("title"));
+        contentcolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("content"));
+        datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("date"));
+        poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("status"));
     }
 
     @javafx.fxml.FXML
@@ -46,5 +54,9 @@ public class ShowAllCampaignPostsController
 
     @javafx.fxml.FXML
     public void showOnAction(ActionEvent actionEvent) {
+        campaignlisttableview.getItems().clear();
+        campaignlisttableview.getItems().add(campaignList);
+        confirmationtextarea.setText("All posts have been shown");
+        confirmationtextarea.setStyle("-fx-background-color: green");
     }
 }

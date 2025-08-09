@@ -5,18 +5,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Raghib.Campaign.campaignList;
 
 public class FilterCampaignPostByStatusController
 {
-    @javafx.fxml.FXML
-    private TableColumn statuscolumn;
-    @javafx.fxml.FXML
-    private CheckBox expiredcheckbox;
     @javafx.fxml.FXML
     private TableView campaignlisttableview;
     @javafx.fxml.FXML
@@ -26,12 +22,26 @@ public class FilterCampaignPostByStatusController
     @javafx.fxml.FXML
     private TableColumn datecolumn;
     @javafx.fxml.FXML
-    private CheckBox activecheckbox;
+    private RadioButton expiredradiobutton;
     @javafx.fxml.FXML
-    private Label confirmationlabel;
+    private RadioButton activeradiobutton;
+    @javafx.fxml.FXML
+    private TextArea confirmationtextarea;
+    @javafx.fxml.FXML
+    private TableColumn poststatuscolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+        ToggleGroup tg=new ToggleGroup();
+        activeradiobutton.setToggleGroup(tg);
+        expiredradiobutton.setToggleGroup(tg);
+
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("title"));
+        contentcolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("content"));
+        datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("date"));
+        poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("status"));
+
+        campaignlisttableview.getItems().addAll(campaignList);
     }
 
     @javafx.fxml.FXML
@@ -51,5 +61,25 @@ public class FilterCampaignPostByStatusController
 
     @javafx.fxml.FXML
     public void filterOnAction(ActionEvent actionEvent) {
+        campaignlisttableview.getItems().clear();
+        if ((!activeradiobutton.isSelected()) && (!expiredradiobutton.isSelected())){
+            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Select Post Status");
+            erroralert.show();
+            return;
+        }
+        String SelectStatus=" ";
+        if (activeradiobutton.isSelected()){
+            SelectStatus="Active";
+        }
+        if (expiredradiobutton.isSelected()){
+            SelectStatus="Expired";
+        }
+        for (Campaign c:campaignList){
+            if (c.getStatus().equals(SelectStatus)){
+                campaignlisttableview.getItems().add(c);
+
+            }
+        }
     }
 }

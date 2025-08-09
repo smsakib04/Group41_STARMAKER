@@ -12,7 +12,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="60.0" layoutY="190.0" mnemonicParsing="false" onAction="#addingacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Adding a Campaign Post" />
+      <Button layoutX="60.0" layoutY="190.0" mnemonicParsing="false" onAction="#addingacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Add a Campaign Post" />
       <Button layoutX="60.0" layoutY="228.0" mnemonicParsing="false" onAction="#deleteacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Delete a campaign Post" />
       <Button layoutX="60.0" layoutY="263.0" mnemonicParsing="false" onAction="#searchacampaignpostbytitleOnAction" prefHeight="25.0" prefWidth="257.0" text="Search a Campaign Post By Title" />
       <Button layoutX="60.0" layoutY="335.0" mnemonicParsing="false" onAction="#createapromotionalmessageOnAction" prefHeight="25.0" prefWidth="257.0" text="Create a Promotional Message" />
