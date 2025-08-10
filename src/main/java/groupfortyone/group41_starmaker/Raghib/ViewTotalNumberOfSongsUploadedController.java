@@ -5,10 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -51,6 +48,12 @@ public class ViewTotalNumberOfSongsUploadedController
 
     @javafx.fxml.FXML
     public void viewallsongsOnAction(ActionEvent actionEvent) {
+        if (songs.isEmpty()) {
+            Alert erroralert= new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("There are no songs to show");
+            erroralert.show();
+            return;
+        }
         songlisttableview.getItems().clear();
         songlisttableview.getItems().addAll(songs);
         confirmationtextarea.setText("All songs are shown above");

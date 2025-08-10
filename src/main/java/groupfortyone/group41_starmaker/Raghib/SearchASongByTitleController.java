@@ -51,20 +51,19 @@ public class SearchASongByTitleController
 
     @javafx.fxml.FXML
     public void searchOnAction(ActionEvent actionEvent) {
-        songlisttableview.getItems().clear();
         if (nameofthesongtextfield.getText().isEmpty()){
             Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Provide a name");
             erroralert.show();
+            return;
         }
+        songlisttableview.getItems().clear();
         for (Song s:songs){
             if (s.getSongtitle().equals(nameofthesongtextfield.getText())){
                 songlisttableview.getItems().add(s);
-                songlisttableview.refresh();;
-                confirmationtextarea.setText("Required song has been shown");
-                confirmationtextarea.setStyle("-fx-background-color: green");
-
             }
         }
+        confirmationtextarea.setText("Required song has been shown");
+        confirmationtextarea.setStyle("-fx-background-color: green");
     }
 }

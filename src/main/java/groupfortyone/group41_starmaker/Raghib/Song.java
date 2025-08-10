@@ -8,6 +8,7 @@ public class Song {
     private String genre;
 
     public static ArrayList<Song>songs=new ArrayList<>();
+    public static ArrayList<Song> favSongs = new ArrayList<>();
 
     public Song(String songtitle, String description, String genre) {
         this.songtitle = songtitle;
