@@ -27,22 +27,6 @@ public class MarketingExecutiveDashboardController
             throw new RuntimeException(e);
         }
     }
-
-    @javafx.fxml.FXML
-    public void searchacampaignpostbytitleOnAction(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/SearchACampaignPostByTitle.fxml"));
-
-            Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Search A Campaign Post By Title");
-            nextStage.setScene(nextScene);
-            nextStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     @javafx.fxml.FXML
     public void logoutOnAction(ActionEvent actionEvent) {
         try {
@@ -66,21 +50,6 @@ public class MarketingExecutiveDashboardController
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setTitle("Delete A Campaign Post");
-            nextStage.setScene(nextScene);
-            nextStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @javafx.fxml.FXML
-    public void addcampaignnotesOnAction(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/AddCampaignNotes.fxml"));
-
-            Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Add Campaign Notes");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -140,6 +109,35 @@ public class MarketingExecutiveDashboardController
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setTitle("My Profile");
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void SendCampaignUpdatesOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/SendCampaignUpdatesToTeamMembers.fxml"));
+
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Send Campaign Updates To Team Members");
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    @javafx.fxml.FXML
+    public void searchacampaignpostbytmonthandstatusOnAction(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/SearchACampaignPostByMonthAndStatus.fxml"));
+
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Search Campaign Posts By Month And Status");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {

@@ -7,19 +7,19 @@
 
 <AnchorPane prefHeight="526.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.MarketingExecutiveDashboardController">
    <children>
-      <Label layoutX="60.0" layoutY="32.0" prefHeight="79.0" prefWidth="559.0" text="Marketing Executive's Dashboard">
+      <Label layoutX="41.0" layoutY="25.0" prefHeight="79.0" prefWidth="571.0" text="Marketing Executive's Dashboard">
          <font>
-            <Font size="36.0" />
+            <Font name="System Bold" size="36.0" />
          </font>
       </Label>
       <Button layoutX="60.0" layoutY="190.0" mnemonicParsing="false" onAction="#addingacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Add a Campaign Post" />
       <Button layoutX="60.0" layoutY="228.0" mnemonicParsing="false" onAction="#deleteacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Delete a campaign Post" />
-      <Button layoutX="60.0" layoutY="263.0" mnemonicParsing="false" onAction="#searchacampaignpostbytitleOnAction" prefHeight="25.0" prefWidth="257.0" text="Search a Campaign Post By Title" />
+      <Button layoutX="60.0" layoutY="263.0" mnemonicParsing="false" onAction="#searchacampaignpostbytmonthandstatusOnAction" prefHeight="25.0" prefWidth="257.0" text="Search Campaign Posts By Month And Status" />
       <Button layoutX="60.0" layoutY="335.0" mnemonicParsing="false" onAction="#createapromotionalmessageOnAction" prefHeight="25.0" prefWidth="257.0" text="Create a Promotional Message" />
       <Button layoutX="60.0" layoutY="410.0" mnemonicParsing="false" onAction="#showallcampaignpostsOnAction" prefHeight="25.0" prefWidth="257.0" text="Show All Campaign Posts" />
       <Button layoutX="60.0" layoutY="153.0" mnemonicParsing="false" onAction="#myprofileOnAction" prefHeight="25.0" prefWidth="257.0" text="Add A Team Member" />
       <Button layoutX="60.0" layoutY="299.0" mnemonicParsing="false" onAction="#filtercampaignpostsbystatusOnAction" prefHeight="25.0" prefWidth="257.0" text="Filter Campaign Posts By Status" />
-      <Button layoutX="60.0" layoutY="371.0" mnemonicParsing="false" onAction="#addcampaignnotesOnAction" prefHeight="25.0" prefWidth="257.0" text="Add Campaign Notes" />
+      <Button layoutX="60.0" layoutY="371.0" mnemonicParsing="false" onAction="#SendCampaignUpdatesOnAction" prefHeight="25.0" prefWidth="257.0" text="Send Campaign Updates To Team Members" />
       <Button layoutX="536.0" layoutY="449.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" />
    </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
 package groupfortyone.group41_starmaker.Raghib;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 
 public class Campaign {
@@ -60,6 +61,9 @@ public class Campaign {
 
     public static void setCampaignList(ArrayList<Campaign> campaignList) {
         Campaign.campaignList = campaignList;
+    }
+    public int getPostMonth(){
+        return this.date.getMonthValue();
     }
 
     @Override
