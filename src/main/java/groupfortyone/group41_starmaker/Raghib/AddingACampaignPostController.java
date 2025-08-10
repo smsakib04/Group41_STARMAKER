@@ -122,8 +122,10 @@ public class AddingACampaignPostController
                 contenttextfield.getText(),
                 datedatepicker.getValue(),
                 SelectStatus);
+
         campaignList.add(c);
-        campaignlisttableview.getItems().add(c);
+        campaignlisttableview.getItems().clear();
+        campaignlisttableview.getItems().addAll(campaignList);
         confirmationtextarea.setText("Campaign Post has been added");
         confirmationtextarea.setStyle("-fx-background-color: green");
 

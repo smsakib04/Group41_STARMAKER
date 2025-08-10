@@ -62,8 +62,9 @@ public class DeleteACampaignPostController
             erroralert.show();
             return;
         }
-        campaignlisttableview.getItems().remove(campaign);
-        campaignlisttableview.refresh();
+        campaignList.remove(campaign);
+        campaignlisttableview.getItems().clear();
+        campaignlisttableview.getItems().addAll(campaignList);
         confirmationtextarea.setText("Campaign post has been removed");
         confirmationtextarea.setStyle("-fx-background-color: green");
     }
