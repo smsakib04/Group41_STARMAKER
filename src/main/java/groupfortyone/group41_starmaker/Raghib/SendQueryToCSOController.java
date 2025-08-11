@@ -46,7 +46,7 @@ public class SendQueryToCSOController
     public void sendOnAction(ActionEvent actionEvent) {
         if((usernametextfield.getText().isEmpty())&&(querytextArea.getText().isEmpty())) {
             Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
-            erroralert.setContentText("FIllup the username and query");
+            erroralert.setContentText("Fillup the username and query");
             erroralert.show();
             return;
         }
@@ -65,7 +65,6 @@ public class SendQueryToCSOController
         }
         queryList.add(usernametextfield.getText());
         queryList.add(querytextArea.getText());
-        System.out.println(queryList);
         confirmationtextarea.setText("Query has been sent successfully!");
         confirmationtextarea.setStyle("-fx-background-color: Green");
 

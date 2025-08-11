@@ -72,21 +72,6 @@ public class MarketingExecutiveDashboardController
     }
 
     @javafx.fxml.FXML
-    public void filtercampaignpostsbystatusOnAction(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/FilterCampaignPostByStatus.fxml"));
-
-            Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Filter Campaign Post By Status");
-            nextStage.setScene(nextScene);
-            nextStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @javafx.fxml.FXML
     public void showallcampaignpostsOnAction(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/ShowAllCampaignPosts.fxml"));

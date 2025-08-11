@@ -5,21 +5,48 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.SingerDashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.SingerDashboardController">
    <children>
-      <Label layoutX="189.0" layoutY="42.0" prefHeight="81.0" prefWidth="490.0" text="Singer's  Dashboard">
+      <Label layoutX="180.0" layoutY="14.0" prefHeight="81.0" prefWidth="345.0" text="Singer's Dashboard">
          <font>
-            <Font size="36.0" />
+            <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="39.0" layoutY="184.0" mnemonicParsing="false" onAction="#uploadasongOnAction" prefHeight="25.0" prefWidth="248.0" text="Upload A Song" />
-      <Button layoutX="39.0" layoutY="221.0" mnemonicParsing="false" onAction="#editsongtitleOnAction" prefHeight="25.0" prefWidth="248.0" text="Edit Song Title" />
-      <Button layoutX="39.0" layoutY="257.0" mnemonicParsing="false" onAction="#deleteasongOnAction" prefHeight="25.0" prefWidth="248.0" text="Delete A Song" />
-      <Button layoutX="39.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewtotalnooflikesofasongOnAction" prefHeight="25.0" prefWidth="248.0" text="View Total Number Of Likes Of A Song" />
-      <Button layoutX="39.0" layoutY="328.0" mnemonicParsing="false" onAction="#markasongasfavouriteOnAction" prefHeight="25.0" prefWidth="248.0" text="Mark A Song As Favourite" />
-      <Button layoutX="39.0" layoutY="403.0" mnemonicParsing="false" onAction="#viewtotalnumberofsongsuploadedOnAction" prefHeight="25.0" prefWidth="248.0" text="View total number of songs uploaded" />
-      <Button layoutX="39.0" layoutY="293.0" mnemonicParsing="false" onAction="#searchasongbytitleOnAction" prefHeight="25.0" prefWidth="248.0" text="Search a song by title." />
-      <Button layoutX="466.0" layoutY="486.0" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="25.0" prefWidth="151.0" text="Logout" />
-      <Button layoutX="39.0" layoutY="149.0" mnemonicParsing="false" onAction="#sendquerytocsoOnAction" prefHeight="25.0" prefWidth="248.0" text="Send Query To CSO" />
+      <Button layoutX="250.0" layoutY="149.0" mnemonicParsing="false" onAction="#uploadasongOnAction" prefHeight="32.0" prefWidth="216.0" text="Upload A Song">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="477.0" layoutY="149.0" mnemonicParsing="false" onAction="#editsongtitleOnAction" prefHeight="32.0" prefWidth="209.0" text="Edit Song Title">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="39.0" layoutY="213.0" mnemonicParsing="false" onAction="#deleteasongOnAction" prefHeight="32.0" prefWidth="201.0" text="Delete A Song">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="213.0" layoutY="274.0" mnemonicParsing="false" onAction="#viewtotalnooflikesofasongOnAction" prefHeight="32.0" prefWidth="293.0" text="View Total Number Of Likes Of A Song">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="477.0" layoutY="213.0" mnemonicParsing="false" onAction="#markasongasfavouriteOnAction" prefHeight="32.0" prefWidth="209.0" text="Mark A Song As Favourite">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="216.0" layoutY="329.0" mnemonicParsing="false" onAction="#viewtotalnumberofsongsuploadedOnAction" prefHeight="32.0" prefWidth="293.0" text="Show All Songs Uploaded">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="252.0" layoutY="213.0" mnemonicParsing="false" onAction="#searchasongbytitleOnAction" prefHeight="32.0" prefWidth="216.0" text="Search a song by title">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="534.0" layoutY="469.0" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="25.0" prefWidth="151.0" text="Logout">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="39.0" layoutY="149.0" mnemonicParsing="false" onAction="#sendquerytocsoOnAction" prefHeight="32.0" prefWidth="201.0" text="Send Query To CSO">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
    </children>
 </AnchorPane>
