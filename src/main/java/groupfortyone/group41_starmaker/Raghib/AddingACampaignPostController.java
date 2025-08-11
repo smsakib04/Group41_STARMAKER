@@ -103,12 +103,6 @@ public class AddingACampaignPostController
             erroralert.show();
             return;
         }
-        if (datedatepicker.getValue().isAfter(LocalDate.now())){
-            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
-            erroralert.setContentText("Provide valid date");
-            erroralert.show();
-            return;
-        }
         for (Campaign c:campaignList){
             if (c.getTitle().equals(titletextfield.getText())){
                 Alert erroralert = new Alert(Alert.AlertType.INFORMATION);

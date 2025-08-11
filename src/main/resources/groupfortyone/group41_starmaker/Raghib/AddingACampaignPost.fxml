@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="564.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.AddingACampaignPostController">
+<AnchorPane prefHeight="577.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.AddingACampaignPostController">
    <children>
       <Label layoutX="193.0" layoutY="21.0" prefHeight="27.0" prefWidth="251.0" text="Adding A Campaign Post">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="504.0" layoutY="516.0" mnemonicParsing="false" onAction="#gobackOnAction" prefHeight="25.0" prefWidth="65.0" text="Go Back" />
+      <Button layoutX="504.0" layoutY="482.0" mnemonicParsing="false" onAction="#gobackOnAction" prefHeight="25.0" prefWidth="65.0" text="Go Back" />
       <Button layoutX="35.0" layoutY="476.0" mnemonicParsing="false" onAction="#saveOnaction" prefHeight="25.0" prefWidth="65.0" text="Save" />
       <Label layoutX="39.0" layoutY="83.0" prefHeight="17.0" prefWidth="29.0" text="Title:" />
       <TextField fx:id="titletextfield" layoutX="108.0" layoutY="79.0" />
@@ -37,7 +37,7 @@
       <Label layoutX="35.0" layoutY="204.0" prefHeight="17.0" prefWidth="65.0" text="Post Status: " />
       <Label layoutX="39.0" layoutY="519.0" prefHeight="17.0" prefWidth="149.0" text="Confirmation Message:" />
       <Label fx:id="confirmationlabel" layoutX="169.0" layoutY="442.0" prefHeight="17.0" prefWidth="96.0" />
-      <TextArea fx:id="confirmationtextarea" layoutX="165.0" layoutY="509.0" prefHeight="17.0" prefWidth="200.0" />
+      <TextArea fx:id="confirmationtextarea" layoutX="165.0" layoutY="517.0" prefHeight="17.0" prefWidth="200.0" />
       <RadioButton fx:id="activeradiobutton" layoutX="108.0" layoutY="204.0" mnemonicParsing="false" text="Active" />
       <RadioButton fx:id="expiredradiobutton" layoutX="174.0" layoutY="204.0" mnemonicParsing="false" text="Expired" />
    </children>

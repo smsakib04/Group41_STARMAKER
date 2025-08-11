@@ -13,12 +13,13 @@
          </font>
       </Label>
       <Button layoutX="60.0" layoutY="190.0" mnemonicParsing="false" onAction="#addingacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Add a Campaign Post" />
-      <Button layoutX="60.0" layoutY="228.0" mnemonicParsing="false" onAction="#deleteacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Delete a campaign Post" />
+      <Button layoutX="60.0" layoutY="228.0" mnemonicParsing="false" onAction="#deleteacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Delete a Campaign Post" />
       <Button layoutX="60.0" layoutY="263.0" mnemonicParsing="false" onAction="#searchacampaignpostbytmonthandstatusOnAction" prefHeight="25.0" prefWidth="257.0" text="Search Campaign Posts By Month And Status" />
       <Button layoutX="60.0" layoutY="335.0" mnemonicParsing="false" onAction="#createapromotionalmessageOnAction" prefHeight="25.0" prefWidth="257.0" text="Create a Promotional Message" />
       <Button layoutX="60.0" layoutY="410.0" mnemonicParsing="false" onAction="#showallcampaignpostsOnAction" prefHeight="25.0" prefWidth="257.0" text="Show All Campaign Posts" />
       <Button layoutX="60.0" layoutY="153.0" mnemonicParsing="false" onAction="#myprofileOnAction" prefHeight="25.0" prefWidth="257.0" text="Add A Team Member" />
       <Button layoutX="60.0" layoutY="371.0" mnemonicParsing="false" onAction="#SendCampaignUpdatesOnAction" prefHeight="25.0" prefWidth="257.0" text="Send Campaign Updates To Team Members" />
       <Button layoutX="536.0" layoutY="449.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" />
+      <Button layoutX="60.0" layoutY="297.0" mnemonicParsing="false" onAction="#editacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Edit a Campaign Post" />
    </children>
 </AnchorPane>
