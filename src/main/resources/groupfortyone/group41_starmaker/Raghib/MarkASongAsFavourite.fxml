@@ -33,7 +33,7 @@
             <TableColumn fx:id="genrecolumn2" prefWidth="152.00003051757812" text="Genre" />
          </columns>
       </TableView>
-      <Label layoutX="243.0" layoutY="324.0" prefHeight="27.0" prefWidth="212.0" text="Favourite Songs List">
+      <Label layoutX="226.0" layoutY="324.0" prefHeight="27.0" prefWidth="212.0" text="Favourite Songs Table">
          <font>
             <Font size="18.0" />
          </font>

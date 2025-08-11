@@ -36,7 +36,7 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="252.0" layoutY="213.0" mnemonicParsing="false" onAction="#searchasongbytitleOnAction" prefHeight="32.0" prefWidth="216.0" text="Search a song by title">
+      <Button layoutX="252.0" layoutY="213.0" mnemonicParsing="false" onAction="#searchasongbytitleOnAction" prefHeight="32.0" prefWidth="216.0" text="Search A Song By Title">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
