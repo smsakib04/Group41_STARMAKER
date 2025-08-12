@@ -27,7 +27,7 @@
       <TextField fx:id="agetextfield" layoutX="103.0" layoutY="138.0" />
       <Label layoutX="25.0" layoutY="177.0" text="Date Of Birth:" />
       <DatePicker fx:id="dobdatepicker" layoutX="102.0" layoutY="173.0" />
-      <Button layoutX="473.0" layoutY="430.0" mnemonicParsing="false" onAction="#saveOnAction" text="Save" />
+      <Button layoutX="473.0" layoutY="430.0" mnemonicParsing="false" onAction="#saveOnAction" text="Add" />
       <Label layoutX="52.0" layoutY="446.0" prefHeight="17.0" prefWidth="122.0" text="Confirmation Message:" />
       <Label layoutX="71.0" layoutY="142.0" text="Age:" />
       <ComboBox fx:id="bloodgroupcombobox" layoutX="398.0" layoutY="68.0" prefWidth="150.0" />
