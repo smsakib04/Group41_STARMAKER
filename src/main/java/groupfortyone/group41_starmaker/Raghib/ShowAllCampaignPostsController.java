@@ -5,25 +5,24 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import java.time.LocalDate;
 
 import static groupfortyone.group41_starmaker.Raghib.Campaign.campaignList;
 
 public class ShowAllCampaignPostsController
 {
     @javafx.fxml.FXML
-    private TableView campaignlisttableview;
+    private TableView<Campaign> campaignlisttableview;
     @javafx.fxml.FXML
-    private TableColumn titlecolumn;
+    private TableColumn<Campaign,String> titlecolumn;
     @javafx.fxml.FXML
-    private TableColumn contentcolumn;
+    private TableColumn<Campaign,String> contentcolumn;
     @javafx.fxml.FXML
-    private TableColumn datecolumn;
+    private TableColumn <Campaign,LocalDate>datecolumn;
     @javafx.fxml.FXML
     private TextArea confirmationtextarea;
     @javafx.fxml.FXML
@@ -33,7 +32,7 @@ public class ShowAllCampaignPostsController
     public void initialize() {
         titlecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("title"));
         contentcolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("content"));
-        datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("date"));
+        datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign, LocalDate>("date"));
         poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("status"));
     }
 
@@ -54,8 +53,14 @@ public class ShowAllCampaignPostsController
 
     @javafx.fxml.FXML
     public void showOnAction(ActionEvent actionEvent) {
+        if (campaignList.isEmpty()){
+            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("There are no campaigns");
+            erroralert.show();
+            return;
+        }
         campaignlisttableview.getItems().clear();
-        campaignlisttableview.getItems().add(campaignList);
+        campaignlisttableview.getItems().addAll(campaignList);
         confirmationtextarea.setText("All posts have been shown");
         confirmationtextarea.setStyle("-fx-background-color: green");
     }

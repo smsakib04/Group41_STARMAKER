@@ -59,8 +59,9 @@ public class DeleteASongController
             erroralert.show();
             return;
         }
-        songlisttableview.getItems().remove(song);
-        songlisttableview.refresh();
+        songs.remove(song);
+        songlisttableview.getItems().clear();
+        songlisttableview.getItems().addAll(songs);
         confirmationtextarea.setText("Song has been deleted");
         confirmationtextarea.setStyle("-fx-background-color: green");
     }

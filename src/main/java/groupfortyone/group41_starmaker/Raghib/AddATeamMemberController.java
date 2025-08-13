@@ -13,7 +13,7 @@ import java.time.LocalDate;
 
 import static groupfortyone.group41_starmaker.Raghib.Profile.profileList;
 
-public class MyProfileController
+public class AddATeamMemberController
 {
     @javafx.fxml.FXML
     private DatePicker dobdatepicker;
@@ -97,6 +97,15 @@ public class MyProfileController
             erroralert.show();
             return;
         }
+        int age;
+        try{
+            age = Integer.parseInt(agetextfield.getText());
+        } catch (NumberFormatException e) {
+            Alert erroralert= new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Enter an integer number");
+            erroralert.show();
+            return;
+        }
         if (dobdatepicker.getValue()==null){
             Alert erroralert= new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Provide DOB");
@@ -141,12 +150,12 @@ public class MyProfileController
         Profile p=new Profile(
                 nametextfield.getText(),
                 emailtextfield.getText(),
-                Integer.parseInt(agetextfield.getText()),
+                age,
                 dobdatepicker.getValue(),
                 bloodgroupcombobox.getValue(),
                 maritalStatus);
         profileList.add(p);
-        profiletableview.getItems().add(p);
+        profiletableview.getItems().addAll(profileList);
         confirmationtextarea.setText("Profile has been added successfully");
         confirmationtextarea.setStyle("-fx-background-color: green");
 

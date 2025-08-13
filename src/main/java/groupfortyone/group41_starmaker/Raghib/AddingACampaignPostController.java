@@ -103,12 +103,6 @@ public class AddingACampaignPostController
             erroralert.show();
             return;
         }
-        if (datedatepicker.getValue().isAfter(LocalDate.now())){
-            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
-            erroralert.setContentText("Provide valid date");
-            erroralert.show();
-            return;
-        }
         for (Campaign c:campaignList){
             if (c.getTitle().equals(titletextfield.getText())){
                 Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
@@ -122,8 +116,10 @@ public class AddingACampaignPostController
                 contenttextfield.getText(),
                 datedatepicker.getValue(),
                 SelectStatus);
+
         campaignList.add(c);
-        campaignlisttableview.getItems().add(c);
+        campaignlisttableview.getItems().clear();
+        campaignlisttableview.getItems().addAll(campaignList);
         confirmationtextarea.setText("Campaign Post has been added");
         confirmationtextarea.setStyle("-fx-background-color: green");
 

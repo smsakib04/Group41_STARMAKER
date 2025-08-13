@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import static groupfortyone.group41_starmaker.Raghib.Song.favSongs;
 import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
 
@@ -44,6 +45,7 @@ public class MarkASongAsFavouriteController
         songtitlecolumn2.setCellValueFactory(new PropertyValueFactory<Song, String>("songtitle"));
         descriptioncolumn2.setCellValueFactory(new PropertyValueFactory<Song, String>("description"));
         genrecolumn2.setCellValueFactory(new PropertyValueFactory<Song, String>("genre"));
+        songlisttableview2.getItems().addAll(favSongs);
     }
 
     @javafx.fxml.FXML
@@ -67,9 +69,20 @@ public class MarkASongAsFavouriteController
             Alert erroralert= new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Select a song");
             erroralert.show();
+            return;
         }
-        songlisttableview.getItems().add(song);
-        songlisttableview2.getItems().add(song);
+        for (Song s : favSongs) {
+            if (s == song) {
+                Alert erroralert= new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Song is already in the fav list");
+                erroralert.show();
+                return;
+            }
+        }
+        favSongs.add(song);
+        songlisttableview.refresh();
+        songlisttableview2.getItems().clear();
+        songlisttableview2.getItems().addAll(favSongs);
         confirmationtextarea.setText("Song has been marked as favourite");
         confirmationtextarea.setStyle("-fx-background-color: Green");
     }

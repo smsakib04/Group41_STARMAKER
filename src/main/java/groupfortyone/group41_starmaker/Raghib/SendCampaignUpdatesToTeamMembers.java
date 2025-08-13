@@ -5,26 +5,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class SearchACampaignPostByTitleController
+public class SendCampaignUpdatesToTeamMembers
 {
     @javafx.fxml.FXML
-    private TableView campaignlisttableview;
+    private ListView campaignnoteslistview;
     @javafx.fxml.FXML
-    private TextField titleofthecampaignposttextfield;
+    private TextArea confirmationtextarea;
     @javafx.fxml.FXML
-    private TableColumn tablecolumn;
-    @javafx.fxml.FXML
-    private TableColumn contentcolumn;
-    @javafx.fxml.FXML
-    private TableColumn datecolumn;
-    @javafx.fxml.FXML
-    private Label confirmationlabel;
+    private TextField sendcampaignupdatestextfield;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -46,6 +37,16 @@ public class SearchACampaignPostByTitleController
     }
 
     @javafx.fxml.FXML
-    public void searchOnAction(ActionEvent actionEvent) {
+    public void addcampaignnotesOnAction(ActionEvent actionEvent) {
+        if (sendcampaignupdatestextfield.getText().isEmpty()){
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Give some updates");
+            erroralert.show();
+            return;
+        }
+        campaignnoteslistview.getItems().addAll(sendcampaignupdatestextfield.getText());
+        confirmationtextarea.setText("Updates have been sent successfully");
+        confirmationtextarea.setStyle("-fx-background-color: green");
+        sendcampaignupdatestextfield.clear();
     }
 }
