@@ -11,6 +11,5 @@ public class AppendableObjectOutputStreamSong extends ObjectOutputStream {
 
     @Override
     protected void writeStreamHeader() throws IOException {
-        reset();
     }
 }

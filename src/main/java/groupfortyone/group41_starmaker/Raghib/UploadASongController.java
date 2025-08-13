@@ -31,6 +31,8 @@ public class UploadASongController {
     private TextArea confirmationtextarea;
     @javafx.fxml.FXML
     private TextField descriptiontextfield;
+    @javafx.fxml.FXML
+    private Label confirmationlabel;
 
 
     @javafx.fxml.FXML
@@ -41,26 +43,30 @@ public class UploadASongController {
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("genre"));
 
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("songinfo.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
 
-//        File file = new File("songInfo.bin");
-//
-//        if (!file.exists()) {
-//            return;
-//        }
-//
-//        FileInputStream fis = new FileInputStream(file);
-//        ObjectInputStream ois = new ObjectInputStream(fis);
-//
-//        try{
-//            while (true){
-//                Song song = (Song) ois.readObject();
-//                songs.add(song);
-//            }
-//        } catch (EOFException eof){
-//            System.out.println("End of file reached");
-//        } catch (ClassNotFoundException cnf) {
-//            System.out.println("Class not found");
-//        }
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                songlisttableview.getItems().add((Song) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
     }
 
     @javafx.fxml.FXML
@@ -76,6 +82,7 @@ public class UploadASongController {
             throw new RuntimeException(e);
         }
     }
+
     @javafx.fxml.FXML
     public void uploadasongOnAction(ActionEvent actionEvent) throws IOException {
         if (songtitletextfield.getText().isEmpty()) {
@@ -84,7 +91,7 @@ public class UploadASongController {
             erroralert.show();
             return;
         }
-        if (descriptiontextfield.getText().isEmpty()){
+        if (descriptiontextfield.getText().isEmpty()) {
             Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Fillup the song description");
             erroralert.show();
@@ -97,8 +104,8 @@ public class UploadASongController {
             return;
         }
 
-        for (Song s:songs){
-            if (s.getSongtitle().equals(songtitletextfield.getText())){
+        for (Song s : songs) {
+            if (s.getSongtitle().equals(songtitletextfield.getText())) {
                 Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
                 erroralert.setContentText("Song title should be unique");
                 erroralert.show();
@@ -111,20 +118,6 @@ public class UploadASongController {
                 descriptiontextfield.getText(),
                 genrecombobox.getValue());
 
-        File file = new File("songInfo.bin");
-        FileOutputStream fos;
-        ObjectOutputStream oos;
-
-        if (file.exists()) {
-            fos = new FileOutputStream(file, true);
-            oos = new AppendableObjectOutputStreamSong(fos);
-        } else {
-            fos = new FileOutputStream(file, true);
-            oos = new ObjectOutputStream(fos);
-        }
-        oos.writeObject(s);
-        oos.close();
-
         songs.add(s);
         songlisttableview.getItems().add(s);
         confirmationtextarea.setText("Song has been uploaded!");
@@ -133,5 +126,28 @@ public class UploadASongController {
         songtitletextfield.clear();
         descriptiontextfield.clear();
         genrecombobox.setValue(null);
+    }
+
+
+    @javafx.fxml.FXML
+    public void writeinbinfileOnAction(ActionEvent actionEvent) {
+        try {
+            File f = new File("songinfo.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            }
+            for (Song s : songs) {
+                oos.writeObject(s);
+            }
+            oos.close();
+        } catch (Exception e) {
+
+        }
     }
 }
