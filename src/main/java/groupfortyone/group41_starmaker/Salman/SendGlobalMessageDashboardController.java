@@ -36,5 +36,10 @@ public class SendGlobalMessageDashboardController
 
     @javafx.fxml.FXML
     public void sendOA(ActionEvent actionEvent) {
+        if (globalMessageTA.getText().isEmpty()) {
+            confirmationMessageLabel.setText("Please write any message!");
+        }else {
+            confirmationMessageLabel.setText("Message sent successfully!");
+        }
     }
 }

@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class ApproveSalarySheetDashboardController
@@ -23,6 +24,8 @@ public class ApproveSalarySheetDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        salaryAmountCol.setCellValueFactory(new PropertyValueFactory<>("salaryAmount"));
     }
 
     @javafx.fxml.FXML
