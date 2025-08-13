@@ -9,10 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
+import java.io.*;
 
 import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
@@ -37,13 +34,35 @@ public class UploadASongController {
 
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize() throws IOException {
         genrecombobox.getItems().addAll("Pop", "Rock", "Hip-Hop", "R&B", "Country", "Romantic");
 
         songtitlecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("songtitle"));
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("genre"));
+
+
+//        File file = new File("songInfo.bin");
+//
+//        if (!file.exists()) {
+//            return;
+//        }
+//
+//        FileInputStream fis = new FileInputStream(file);
+//        ObjectInputStream ois = new ObjectInputStream(fis);
+//
+//        try{
+//            while (true){
+//                Song song = (Song) ois.readObject();
+//                songs.add(song);
+//            }
+//        } catch (EOFException eof){
+//            System.out.println("End of file reached");
+//        } catch (ClassNotFoundException cnf) {
+//            System.out.println("Class not found");
+//        }
     }
+
     @javafx.fxml.FXML
     public void gobackOnAction(ActionEvent actionEvent) {
         try {
@@ -58,7 +77,7 @@ public class UploadASongController {
         }
     }
     @javafx.fxml.FXML
-    public void uploadasongOnAction(ActionEvent actionEvent) {
+    public void uploadasongOnAction(ActionEvent actionEvent) throws IOException {
         if (songtitletextfield.getText().isEmpty()) {
             Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Fillup the song title");
@@ -91,6 +110,21 @@ public class UploadASongController {
                 songtitletextfield.getText(),
                 descriptiontextfield.getText(),
                 genrecombobox.getValue());
+
+        File file = new File("songInfo.bin");
+        FileOutputStream fos;
+        ObjectOutputStream oos;
+
+        if (file.exists()) {
+            fos = new FileOutputStream(file, true);
+            oos = new AppendableObjectOutputStreamSong(fos);
+        } else {
+            fos = new FileOutputStream(file, true);
+            oos = new ObjectOutputStream(fos);
+        }
+        oos.writeObject(s);
+        oos.close();
+
         songs.add(s);
         songlisttableview.getItems().add(s);
         confirmationtextarea.setText("Song has been uploaded!");
