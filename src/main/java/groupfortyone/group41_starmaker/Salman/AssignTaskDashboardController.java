@@ -22,6 +22,7 @@ public class AssignTaskDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        selectEmployeeCB.getItems().addAll("Customer Service Officer", "Human Resource Manager", "Marketing Executive Officer");
     }
 
     @Deprecated
@@ -55,5 +56,16 @@ public class AssignTaskDashboardController
 
     @javafx.fxml.FXML
     public void sendOA(ActionEvent actionEvent) {
+        if (assignTaskTA.getText().isEmpty()){
+            confirmationLabel.setText("Please write any task!");
+
+        } else if (selectEmployeeCB.getValue() == null){
+            confirmationLabel.setText("Select any employee!");
+
+        } else {
+            confirmationLabel.setText("Task has been sent successfully!");
+        }
+
+
     }
 }
