@@ -74,8 +74,4 @@ public class ScheduleMeetingDashboardController
             throw new RuntimeException(e);
         }
     }
-
-    @Deprecated
-    public void confirmationMessageLabel(Event event) {
-    }
 }
