@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class ViewSolvedQueryDashboardController
@@ -20,6 +21,8 @@ public class ViewSolvedQueryDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
+        queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
     }
 
     @javafx.fxml.FXML

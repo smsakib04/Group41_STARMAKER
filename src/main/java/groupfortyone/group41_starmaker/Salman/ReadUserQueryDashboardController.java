@@ -8,28 +8,34 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Raghib.Query.queryList;
 
 public class ReadUserQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn<Query, String> QueryCol;
-    @javafx.fxml.FXML
     private TableColumn<Query, String> nameCol;
     @javafx.fxml.FXML
     private TextArea readQueryTA;
+    @javafx.fxml.FXML
+    private TableView<Query> userQueryTV;
+    @javafx.fxml.FXML
+    private TableColumn queryCol;
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
+        queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
     }
 
-    @javafx.fxml.FXML
-    public void userQueryTV(Event event) {
-    }
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
+//        userQueryTV.getItems().addAll(queryList);
     }
 
     @javafx.fxml.FXML

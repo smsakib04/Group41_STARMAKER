@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class MarkQuerySolvedDashboardController
@@ -25,6 +26,8 @@ public class MarkQuerySolvedDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
+        queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
     }
 
     @javafx.fxml.FXML

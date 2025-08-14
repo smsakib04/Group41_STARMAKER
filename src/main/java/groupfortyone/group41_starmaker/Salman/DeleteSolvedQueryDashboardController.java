@@ -24,6 +24,7 @@ public class DeleteSolvedQueryDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
         queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
     }
 
