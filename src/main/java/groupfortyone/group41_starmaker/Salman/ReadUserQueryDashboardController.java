@@ -35,7 +35,7 @@ public class ReadUserQueryDashboardController
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
-//        userQueryTV.getItems().addAll(queryList);
+        userQueryTV.getItems().addAll(queryList);
     }
 
     @javafx.fxml.FXML
