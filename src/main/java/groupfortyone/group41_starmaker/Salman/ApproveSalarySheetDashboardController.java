@@ -30,6 +30,8 @@ public class ApproveSalarySheetDashboardController
 
     @javafx.fxml.FXML
     public void approveOA(ActionEvent actionEvent) {
+
+        confirmationMessageLabel.setText("Salary has been approved!");
     }
 
     @javafx.fxml.FXML
@@ -47,5 +49,7 @@ public class ApproveSalarySheetDashboardController
 
     @javafx.fxml.FXML
     public void rejectOA(ActionEvent actionEvent) {
+
+        confirmationMessageLabel.setText("Salary has been rejected!");
     }
 }
