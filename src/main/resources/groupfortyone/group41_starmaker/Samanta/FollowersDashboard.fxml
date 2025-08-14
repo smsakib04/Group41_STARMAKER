@@ -14,15 +14,23 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="389.0" layoutY="206.0" mnemonicParsing="false" onAction="#messageFollowerOA" text="Message" />
-      <Button layoutX="389.0" layoutY="168.0" mnemonicParsing="false" onAction="#followOA" text="Follow" />
-      <TableView layoutX="41.0" layoutY="95.0" prefHeight="248.0" prefWidth="332.0">
+      <Button layoutX="512.0" layoutY="187.0" mnemonicParsing="false" onAction="#messageFollowerOA" text="Message" />
+      <Button layoutX="512.0" layoutY="155.0" mnemonicParsing="false" onAction="#followOA" text="Follow" />
+
+      <!-- TableView for Followers -->
+      <TableView fx:id="followersTable" layoutX="41.0" layoutY="93.0" prefHeight="250.0" prefWidth="432.0">
          <columns>
+
             <TableColumn fx:id="followerNameTC" prefWidth="182.0" text="Follower Name" />
-            <TableColumn fx:id="followerIDTC" prefWidth="149.0" text="Follower ID" />
+
+
+            <TableColumn fx:id="followerIDTC" prefWidth="91.0" text="Follower ID" />
+
+
+            <TableColumn fx:id="blockButtonTC" prefWidth="158.0" text="Block" />
          </columns>
       </TableView>
-      <Button layoutX="391.0" layoutY="133.0" mnemonicParsing="false" onAction="#blockOA" text="Block" />
-      <Button layoutX="526.0" layoutY="353.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
+
+      <Button layoutX="526.0" layoutY="353.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
    </children>
 </AnchorPane>

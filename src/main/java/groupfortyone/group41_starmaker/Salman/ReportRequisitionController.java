@@ -9,7 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class MarkQueryTopPriorityDashboardController
+public class ReportRequisitionController
 {
     @javafx.fxml.FXML
     private TableColumn queryNoCol;
@@ -24,7 +24,7 @@ public class MarkQueryTopPriorityDashboardController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void markAsPriorityOA(ActionEvent actionEvent) {
     }
 
@@ -43,5 +43,13 @@ public class MarkQueryTopPriorityDashboardController
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void approveOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void rejectOA(ActionEvent actionEvent) {
     }
 }

@@ -12,17 +12,16 @@
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="455.0" prefWidth="653.0">
          <children>
-            <Button layoutX="543.0" layoutY="385.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
+            <Button layoutX="548.0" layoutY="367.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
             <Label layoutX="168.0" layoutY="14.0" prefHeight="34.0" prefWidth="303.0" text="Search A Song By Title">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
             </Label>
-            <TableView layoutX="14.0" layoutY="156.0" prefHeight="200.0" prefWidth="520.0">
+            <TableView fx:id="tableView" layoutX="16.0" layoutY="155.0" prefHeight="449.0" prefWidth="508.0">
                <columns>
-                  <TableColumn fx:id="songtitlecolumn" prefWidth="173.99997329711914" text="Song Title" />
-                  <TableColumn fx:id="descriptioncolumn" prefWidth="182.0000457763672" text="Description" />
-                  <TableColumn fx:id="genrecolumn" prefWidth="170.00003051757812" text="Genre" />
+                  <TableColumn fx:id="songtitlecolumn" prefWidth="299.0" text="Song Title" />
+                  <TableColumn fx:id="genrecolumn" prefWidth="208.0" text="Genre" />
                </columns>
             </TableView>
             <Button layoutX="337.0" layoutY="118.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
