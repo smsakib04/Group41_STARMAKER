@@ -1,10 +1,11 @@
 package groupfortyone.group41_starmaker.Raghib;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 
-public class Campaign {
+public class Campaign implements Serializable {
     private String title;
     private String content;
     private LocalDate date;

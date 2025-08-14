@@ -23,5 +23,6 @@
       <Button layoutX="75.0" layoutY="328.0" mnemonicParsing="false" onAction="#sendOnAction" prefHeight="25.0" prefWidth="82.0" text="Send" />
       <Label layoutX="75.0" layoutY="377.0" prefHeight="17.0" prefWidth="143.0" text="Confirmation Message:" />
       <TextArea fx:id="confirmationtextarea" layoutX="200.0" layoutY="374.0" prefHeight="17.0" prefWidth="200.0" />
+      <Button layoutX="522.0" layoutY="328.0" mnemonicParsing="false" onAction="#writeinbinfileOnAction" text="Write in bin file" />
    </children>
 </AnchorPane>

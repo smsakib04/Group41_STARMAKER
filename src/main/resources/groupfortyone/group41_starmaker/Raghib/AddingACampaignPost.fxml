@@ -40,5 +40,6 @@
       <TextArea fx:id="confirmationtextarea" layoutX="165.0" layoutY="517.0" prefHeight="17.0" prefWidth="200.0" />
       <RadioButton fx:id="activeradiobutton" layoutX="108.0" layoutY="204.0" mnemonicParsing="false" text="Active" />
       <RadioButton fx:id="expiredradiobutton" layoutX="174.0" layoutY="204.0" mnemonicParsing="false" text="Expired" />
+      <Button layoutX="129.0" layoutY="476.0" mnemonicParsing="false" onAction="#writeinbinfileOnAction" prefHeight="25.0" prefWidth="102.0" text="Write in bin file" />
    </children>
 </AnchorPane>
