@@ -5,20 +5,24 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class MarkQueryTopPriorityDashboardController
+public class ReportRequisitionController
 {
+
     @javafx.fxml.FXML
-    private TableColumn queryNoCol;
+    private TableView reportRequisitionTV;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
+    private TableColumn commentCol;
     @javafx.fxml.FXML
-    private TableView markTopPriorityTV;
+    private Label confirmationMessageLabel;
     @javafx.fxml.FXML
-    private TableColumn queryCol;
+    private TableColumn categoryCol;
+    @javafx.fxml.FXML
+    private TableColumn singerUserNameCol;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -41,7 +45,7 @@ public class MarkQueryTopPriorityDashboardController
         }
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void viewOA(ActionEvent actionEvent) {
     }
 

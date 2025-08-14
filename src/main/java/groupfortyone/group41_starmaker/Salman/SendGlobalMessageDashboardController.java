@@ -7,8 +7,9 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Salman.GlobalMessage.globalMessages;
 
 public class SendGlobalMessageDashboardController
 {
@@ -38,8 +39,10 @@ public class SendGlobalMessageDashboardController
     public void sendOA(ActionEvent actionEvent) {
         if (globalMessageTA.getText().isEmpty()) {
             confirmationMessageLabel.setText("Please write any message!");
-        }else {
-            confirmationMessageLabel.setText("Message sent successfully!");
+            return;
         }
+        globalMessages.add(globalMessageTA.getText());
+        confirmationMessageLabel.setText("Message sent successfully!");
+
     }
 }

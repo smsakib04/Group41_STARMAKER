@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -38,8 +39,8 @@ public class AddingACampaignPostController
     private TableColumn<Campaign,String> datecolumn;
     @javafx.fxml.FXML
     private TextArea confirmationtextarea;
-
-
+    @javafx.fxml.FXML
+    private Label confirmationlabel;
 
 
     @javafx.fxml.FXML
@@ -52,12 +53,38 @@ public class AddingACampaignPostController
         contentcolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("content"));
         datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("date"));
         poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("status"));
+
+
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("campaigninfo.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
+
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin file does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                campaignlisttableview.getItems().add((Campaign) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
     }
 
     @javafx.fxml.FXML
     public void gobackOnAction(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/MarketingExecutiveDashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/MarketingExecutiveOfficerDashboard.fxml"));
 
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
@@ -129,4 +156,26 @@ public class AddingACampaignPostController
         activeradiobutton.setSelected(false);
         expiredradiobutton.setSelected(false);
     }
-}
+
+    @javafx.fxml.FXML
+    public void writeinbinfileOnAction(ActionEvent actionEvent) {
+        try {
+            File f = new File("campaigninfo.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            }
+            for (Campaign c : campaignList) {
+                oos.writeObject(c);
+            }
+            oos.close();
+        } catch (Exception e) {
+
+        }
+    }
+    }

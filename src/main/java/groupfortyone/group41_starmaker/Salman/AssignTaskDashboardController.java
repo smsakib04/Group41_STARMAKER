@@ -11,6 +11,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import static groupfortyone.group41_starmaker.Salman.Task.taskList;
+
 public class AssignTaskDashboardController
 {
     @javafx.fxml.FXML
@@ -18,23 +20,11 @@ public class AssignTaskDashboardController
     @javafx.fxml.FXML
     private TextArea assignTaskTA;
     @javafx.fxml.FXML
-    private ComboBox selectEmployeeCB;
+    private ComboBox<String> selectEmployeeCB;
 
     @javafx.fxml.FXML
     public void initialize() {
         selectEmployeeCB.getItems().addAll("Customer Service Officer", "Human Resource Manager", "Marketing Executive Officer");
-    }
-
-    @Deprecated
-    public void csoTaskOA(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void hrmTaskOA(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void marketingExecutiveOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -50,21 +40,23 @@ public class AssignTaskDashboardController
         }
     }
 
-    @Deprecated
-    public void acountantTaskOA(ActionEvent actionEvent) {
-    }
-
     @javafx.fxml.FXML
     public void sendOA(ActionEvent actionEvent) {
         if (assignTaskTA.getText().isEmpty()){
             confirmationLabel.setText("Please write any task!");
+            return;
 
         } else if (selectEmployeeCB.getValue() == null){
             confirmationLabel.setText("Select any employee!");
+            return;
 
-        } else {
-            confirmationLabel.setText("Task has been sent successfully!");
         }
+
+        Task assignTask = new Task(selectEmployeeCB.getValue(), assignTaskTA.getText());
+
+        taskList.add(assignTask);
+
+        confirmationLabel.setText("Task has been sent successfully!");
 
 
     }

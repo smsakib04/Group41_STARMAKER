@@ -14,8 +14,6 @@ import javafx.stage.Stage;
 public class ReplyToQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn queryNoCol;
-    @javafx.fxml.FXML
     private TableView replyQueryTV;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
