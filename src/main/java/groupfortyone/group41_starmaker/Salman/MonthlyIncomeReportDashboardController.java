@@ -28,9 +28,14 @@ public class MonthlyIncomeReportDashboardController
     public void viewMonthlyIncomeOA(ActionEvent actionEvent) {
         if (chooseMonthCB.getValue() == null) {
             monthlyIncomeReportLabel.setText("Please choose a month!");
-        }else {
-            monthlyIncomeReportLabel.setText("The Monthly Income of StarMaker for the chosen month is");
+            return;
         }
+
+//        for (MonthlyIncome a : monthlyIncomeReportList){
+//            if (chooseMonthCB.getValue() == a.getMonth()){
+//                monthlyIncomeReportLabel.setText("The Income for the month of " + a.getMonth()+" of StarMaker is: "+a.getIncome() + "TAKA");
+//            }
+//        }
     }
 
     @javafx.fxml.FXML
