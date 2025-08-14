@@ -9,7 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class MarkQueryTopPriorityDashboardController
+public class ReportRequisitionController
 {
     @javafx.fxml.FXML
     private TableColumn queryNoCol;
