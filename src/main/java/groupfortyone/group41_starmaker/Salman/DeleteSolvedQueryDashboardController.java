@@ -14,8 +14,6 @@ import javafx.stage.Stage;
 public class DeleteSolvedQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn queryNoCol;
-    @javafx.fxml.FXML
     private TableColumn nameCol;
     @javafx.fxml.FXML
     private TableView deleteQueryTV;

@@ -12,8 +12,6 @@ import javafx.stage.Stage;
 public class ViewSolvedQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn queryNoCol;
-    @javafx.fxml.FXML
     private TableView solvedQueryTV;
     @javafx.fxml.FXML
     private TableColumn nameCol;
