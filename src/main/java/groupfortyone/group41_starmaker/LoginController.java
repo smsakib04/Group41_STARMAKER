@@ -122,7 +122,7 @@ public class LoginController
             loginLabel.setText("Login Successful");
         }else if ((idTextField.getText().equals("00008")) && (passwordTextField.getText().equals("12345"))){
             try {
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/MarketingExecutiveDashboard.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/MarketingExecutiveOfficerDashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
                 nextStage.setTitle("Marketing Executive Dashboard");

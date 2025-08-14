@@ -7,12 +7,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Salman.DeleteSolvedQueryDashboardController">
    <children>
       <TableView fx:id="deleteQueryTV" layoutX="63.0" layoutY="127.0" prefHeight="200.0" prefWidth="447.0">
          <columns>
-            <TableColumn fx:id="queryNoCol" prefWidth="75.0" text="Query No" />
             <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
             <TableColumn fx:id="queryCol" prefWidth="75.0" text="Query" />
          </columns>
@@ -27,6 +25,6 @@
       </Label>
       <Button layoutX="483.0" layoutY="87.0" mnemonicParsing="false" onAction="#deleteOA" text="Delete" />
       <Button layoutX="494.0" layoutY="343.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
-      <Label fx:id="confirmationMessageLabel" layoutX="231.0" layoutY="92.0" prefHeight="17.0" prefWidth="140.0" text="Label" />
+      <Label fx:id="confirmationMessageLabel" layoutX="231.0" layoutY="92.0" prefHeight="17.0" prefWidth="140.0" />
    </children>
 </AnchorPane>

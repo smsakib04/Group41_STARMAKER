@@ -16,7 +16,6 @@
       </Label>
       <TableView fx:id="replyQueryTV" layoutX="77.0" layoutY="111.0" prefHeight="200.0" prefWidth="447.0">
         <columns>
-          <TableColumn fx:id="queryNoCol" prefWidth="75.0" text="Query No" />
           <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
             <TableColumn fx:id="queryCol" prefWidth="75.0" text="Query" />
         </columns>
