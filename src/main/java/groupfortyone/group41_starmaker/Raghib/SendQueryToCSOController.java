@@ -18,8 +18,6 @@ import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
 public class SendQueryToCSOController {
     @javafx.fxml.FXML
-    private AnchorPane querytextarea;
-    @javafx.fxml.FXML
     private TextField usernametextfield;
     @javafx.fxml.FXML
     private TextArea querytextArea;
@@ -44,7 +42,7 @@ public class SendQueryToCSOController {
                 ois = new ObjectInputStream(fis);
             }
             while (true) {
-                queryList.add((String) ois.readObject());
+                queryList.add((Query) ois.readObject());
             }
         } catch (Exception e) {
             try {
@@ -89,8 +87,8 @@ public class SendQueryToCSOController {
             erroralert.show();
             return;
         }
-        queryList.add(usernametextfield.getText());
-        queryList.add(querytextArea.getText());
+        Query q =new Query(usernametextfield.getText(),querytextArea.getText());
+        queryList.add(q);
         confirmationtextarea.setText("Query has been sent successfully!");
         confirmationtextarea.setStyle("-fx-background-color: Green");
 
@@ -111,7 +109,7 @@ public class SendQueryToCSOController {
                 fos = new FileOutputStream(f, true);
                 oos = new ObjectOutputStream(fos);
             }
-            for (String q : queryList) {
+            for (Query q : queryList) {
                 oos.writeObject(q);
             }
             oos.close();

@@ -1,13 +1,14 @@
 package groupfortyone.group41_starmaker.Raghib;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Query {
+public class Query implements Serializable {
     private String username;
     private String query;
 
 
-    public static ArrayList<String> queryList=new ArrayList<>();
+    public static ArrayList<Query> queryList=new ArrayList<>();
 
 
     public Query(String username, String query) {
