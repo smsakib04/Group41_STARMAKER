@@ -43,6 +43,7 @@ public class UploadASongController {
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("genre"));
 
+        //read code
         FileInputStream fis = null;
         ObjectInputStream ois = null;
         try {
@@ -52,7 +53,7 @@ public class UploadASongController {
 
             } else {
                 Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-                erroralert.setContentText("");
+                erroralert.setContentText("File does not exist.");
                 erroralert.show();
             }
             if (fis != null) {
@@ -131,6 +132,7 @@ public class UploadASongController {
 
     @javafx.fxml.FXML
     public void writeinbinfileOnAction(ActionEvent actionEvent) {
+        //write code
         try {
             File f = new File("songinfo.bin");
             FileOutputStream fos = null;
@@ -142,7 +144,7 @@ public class UploadASongController {
                 fos = new FileOutputStream(f, true);
                 oos = new ObjectOutputStream(fos);
             }
-            for (Song s : songs) {
+            for (Song s :songs ) {
                 oos.writeObject(s);
             }
             oos.close();

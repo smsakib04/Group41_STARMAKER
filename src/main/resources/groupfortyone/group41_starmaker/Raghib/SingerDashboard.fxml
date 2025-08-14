@@ -7,9 +7,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.SingerDashboardController">
    <children>
-      <Label layoutX="180.0" layoutY="14.0" prefHeight="81.0" prefWidth="345.0" text="Singer's Dashboard">
+      <Label layoutX="229.0" layoutY="14.0" prefHeight="81.0" prefWidth="279.0" text="Singer Dashboard">
          <font>
-            <Font name="System Bold" size="36.0" />
+            <Font name="System Bold" size="31.0" />
          </font>
       </Label>
       <Button layoutX="250.0" layoutY="149.0" mnemonicParsing="false" onAction="#uploadasongOnAction" prefHeight="32.0" prefWidth="216.0" text="Upload A Song">

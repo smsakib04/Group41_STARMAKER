@@ -7,7 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MarketingExecutiveDashboardController
+public class MarketingExecutiveOfficerDashboardController
 {
     @javafx.fxml.FXML
     public void initialize() {
