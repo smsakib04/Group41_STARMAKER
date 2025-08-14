@@ -77,6 +77,6 @@ public class RecruitmentRequisitionDashboardController
         employee.remove(approvals);
         recruitmentRequisitionTV.getItems().clear();
         recruitmentRequisitionTV.getItems().addAll(EmployeeList);
-        confirmationMessageLabel.setText("Requistion Rejected!");
+        confirmationMessageLabel.setText("Requisition Rejected!");
     }
 }
