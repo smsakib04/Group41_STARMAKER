@@ -56,7 +56,7 @@ public class AccountantDashboardController
     @javafx.fxml.FXML
     public void handleGenerateMonthlyIncome(ActionEvent actionEvent) {
         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/CreateandViewMonthlyIncomeDashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/CreateMonthlyIncomeDashboard.fxml"));
         Scene nextScene = new Scene(fxmlLoader.load());
         Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         nextStage.setScene(nextScene);
@@ -84,19 +84,6 @@ public class AccountantDashboardController
     }
 
     @javafx.fxml.FXML
-    public void handleArtistPayout(ActionEvent actionEvent) {
-        try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/ArtistPayoutDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
-    }
-
-    @javafx.fxml.FXML
     public void handleTransactionLog(ActionEvent actionEvent) {
         try {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/TransactionLogDashboard.fxml"));
@@ -110,10 +97,6 @@ public class AccountantDashboardController
     }
 
     @javafx.fxml.FXML
-    public void handleLoad(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
     public void handleLogOut(ActionEvent actionEvent) {
         try {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
@@ -124,5 +107,19 @@ public class AccountantDashboardController
     } catch (Exception e) {
         throw new RuntimeException(e);
     }
+    }
+
+    @javafx.fxml.FXML
+    public void handleExpenseApproval(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/ExpenseApprovalDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

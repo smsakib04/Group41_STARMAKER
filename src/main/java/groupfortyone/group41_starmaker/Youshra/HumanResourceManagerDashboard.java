@@ -13,7 +13,7 @@ public class HumanResourceManagerDashboard
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleReloadbutton(ActionEvent actionEvent) {
     }
 

@@ -15,7 +15,6 @@
          </font>
       </Label>
       <Button layoutX="27.0" layoutY="21.0" mnemonicParsing="false" onAction="#handlePreviousButton" text="Previous" />
-      <Button layoutX="635.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleLoadButton" text="Load" />
       <Button layoutX="617.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Search" />
       <ComboBox fx:id="SearchByComboBox" layoutX="39.0" layoutY="84.0" prefWidth="150.0" promptText="Search By" />
       <TextField fx:id="EnterTextField" layoutX="275.0" layoutY="84.0" prefHeight="26.0" prefWidth="255.0" />

@@ -1,6 +1,8 @@
 package groupfortyone.group41_starmaker.Salman;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Youshra.Employee;
+import groupfortyone.group41_starmaker.Youshra.EmployeeApproval;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,27 +15,34 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
+import static groupfortyone.group41_starmaker.Youshra.Employee.EmployeeList;
+import static groupfortyone.group41_starmaker.Youshra.EmployeeApproval.employee;
+
 public class RecruitmentRequisitionDashboardController
 {
     @javafx.fxml.FXML
-    private TableView recruitmentRequisitionTV;
+    private TableView<Employee> recruitmentRequisitionTV;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
     @javafx.fxml.FXML
-    private TableColumn employeeNameCol;
+    private TableColumn<Employee, Integer> idCol;
     @javafx.fxml.FXML
-    private TableColumn employeeDOBCol;
+    private TableColumn<Employee, String> departmentCol;
     @javafx.fxml.FXML
-    private TableColumn employeeEducationCol;
+    private TableColumn<Employee, String> nameCol;
+    @javafx.fxml.FXML
+    private TableColumn<Employee, String> roleCol;
 
-//    private ArrayList<Requisition> approvedList = new ArrayList<>();
+    private ArrayList<Employee> approvedList = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
-        employeeNameCol.setCellValueFactory(new PropertyValueFactory<>(""));
-        employeeDOBCol.setCellValueFactory(new PropertyValueFactory<>(""));
-        employeeEducationCol.setCellValueFactory(new PropertyValueFactory<>(""));
-        recruitmentRequisitionTV.getItems().addAll();
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        roleCol.setCellValueFactory(new PropertyValueFactory<>("role"));
+        departmentCol.setCellValueFactory(new PropertyValueFactory<>("department"));
+
+        recruitmentRequisitionTV.getItems().addAll(EmployeeList);
 
     }
 
@@ -54,20 +63,20 @@ public class RecruitmentRequisitionDashboardController
 
     @javafx.fxml.FXML
     public void approveOA(ActionEvent actionEvent) {
-//        Requisition approvals = recruitmentRequisitionTV.getSelectionModel().getSelectedItem();
-//        approvedList.add(approvals);
-//        approvalList.remove(approvals);
-//        recruitmentRequisitionTV.getItems().clear();
-//        recruitmentRequisitionTV.getItems().addAll();
-//        confirmationMessageLabel.setText("Requisition Accepted!");
+        Employee approvals = (Employee) recruitmentRequisitionTV.getSelectionModel().getSelectedItem();
+        approvedList.add(approvals);
+        employee.remove(approvals);
+        recruitmentRequisitionTV.getItems().clear();
+        recruitmentRequisitionTV.getItems().addAll(EmployeeList);
+        confirmationMessageLabel.setText("Requisition Accepted!");
     }
 
     @javafx.fxml.FXML
     public void rejectOA(ActionEvent actionEvent) {
-//        Requisition approvals = recruitmentRequisitionTV.getSelectionModel().getSelectedItem();
-//        approvalList.remove(approvals);
-//        recruitmentRequisitionTV.getItems().clear();
-//        recruitmentRequisitionTV.getItems().addAll(approvalList);
-//        confirmationMessageLabel.setText("Requistion Rejected!");
+        Employee approvals = recruitmentRequisitionTV.getSelectionModel().getSelectedItem();
+        employee.remove(approvals);
+        recruitmentRequisitionTV.getItems().clear();
+        recruitmentRequisitionTV.getItems().addAll(EmployeeList);
+        confirmationMessageLabel.setText("Requisition Rejected!");
     }
 }

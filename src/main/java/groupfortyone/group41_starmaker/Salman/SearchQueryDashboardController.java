@@ -1,6 +1,7 @@
 package groupfortyone.group41_starmaker.Salman;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Raghib.Query;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,23 +9,25 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class SearchQueryDashboardController
 {
-    @javafx.fxml.FXML
-    private TableColumn queryNoCol;
+
     @javafx.fxml.FXML
     private TextField searchQueryTF;
     @javafx.fxml.FXML
-    private TableView searchTV;
+    private TableView<Query> searchTV;
     @javafx.fxml.FXML
-    private TableColumn queryCol;
+    private TableColumn<Query, String> queryCol;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
+    private TableColumn<Query, String> nameCol;
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
+        queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
     }
 
     @javafx.fxml.FXML

@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="554.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.RemoveStaffDashboard">
    <children>
       <Label layoutX="204.0" layoutY="24.0" prefHeight="47.0" prefWidth="306.0" text="Remove Staff Dashboard">
@@ -16,25 +15,19 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="609.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleLoadbutton" prefHeight="26.0" prefWidth="107.0" text="Load" />
       <Button layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlePreviousbutton" prefHeight="26.0" prefWidth="107.0" text="Previous" />
       <TableView fx:id="StaffListTableView" layoutX="30.0" layoutY="119.0" prefHeight="249.0" prefWidth="662.0">
         <columns>
-          <TableColumn fx:id="StaffNameColumn" prefWidth="165.59997940063477" text="Staff Name" />
-          <TableColumn fx:id="StaffIDColumn" prefWidth="166.40000915527344" text="Staff ID" />
-            <TableColumn fx:id="StaffRoleColumn" prefWidth="180.0" text="Staff Role" />
-            <TableColumn fx:id="DepartmentColumn" prefWidth="148.79998779296875" text="Department" />
+          <TableColumn fx:id="StaffNameColumn" prefWidth="332.79997634887695" text="Staff Name" />
+          <TableColumn fx:id="StaffIDColumn" prefWidth="329.60003662109375" text="Staff ID" />
         </columns>
       </TableView>
-      <Label layoutX="30.0" layoutY="394.0" prefHeight="18.0" prefWidth="68.0" text="Staff Name:" />
-      <Label layoutX="30.0" layoutY="431.0" prefHeight="18.0" prefWidth="68.0" text="Staff ID: " />
-      <TextField fx:id="StaffNameLabel" layoutX="129.0" layoutY="390.0" />
-      <TextField fx:id="StaffIDLabel" layoutX="129.0" layoutY="436.0" />
-      <Button layoutX="597.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleRemovebutton" prefHeight="26.0" prefWidth="107.0" text="Remove" />
+      <Button layoutX="584.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleRemovebutton" prefHeight="26.0" prefWidth="107.0" text="Remove" />
       <Label layoutX="30.0" layoutY="89.0" prefHeight="18.0" prefWidth="100.0" text="Staff List:">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
+      <TextField fx:id="ConfirmationTextField" layoutX="30.0" layoutY="392.0" prefHeight="26.0" prefWidth="475.0" />
    </children>
 </AnchorPane>

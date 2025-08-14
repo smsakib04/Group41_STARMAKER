@@ -31,8 +31,8 @@
             <TableColumn fx:id="SalaryColumn" prefWidth="186.40008544921875" text="Salary" />
         </columns>
       </TableView>
-      <Button layoutX="594.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleLoadbutton" prefHeight="26.0" prefWidth="109.0" text="Load" />
       <Button layoutX="38.0" layoutY="21.0" mnemonicParsing="false" onAction="#handlePreviousPagebutton" prefHeight="26.0" prefWidth="109.0" text="Previous Page" />
       <Label fx:id="SuccessfulLabel" layoutX="44.0" layoutY="505.0" prefHeight="18.0" prefWidth="366.0" />
+      <TextField fx:id="SuccessfulTextField" layoutX="44.0" layoutY="486.0" prefHeight="43.0" prefWidth="366.0" />
    </children>
 </AnchorPane>
