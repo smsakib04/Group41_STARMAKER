@@ -5,6 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -12,6 +14,20 @@ public class CommentOnSongController
 {
     @javafx.fxml.FXML
     private TextField commentTF;
+    @javafx.fxml.FXML
+    private TableColumn songTitleTC;
+    @javafx.fxml.FXML
+    private TableView commentTV;
+    @javafx.fxml.FXML
+    private TextField yourNameTF;
+    @javafx.fxml.FXML
+    private TableColumn yourNameTC;
+    @javafx.fxml.FXML
+    private TableColumn genreTC;
+    @javafx.fxml.FXML
+    private TableColumn dateTC;
+    @javafx.fxml.FXML
+    private TableColumn commentTC;
 
     @javafx.fxml.FXML
     public void initialize() {
