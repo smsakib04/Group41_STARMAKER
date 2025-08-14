@@ -4,11 +4,13 @@ public class LiveBroadcast {
     private String title;
     private String description;
     private String date;
+    private int gift;
 
-    public LiveBroadcast(String title, String description, String date) {
+    public LiveBroadcast(String title, String description, String date, int gift) {
         this.title = title;
         this.description = description;
         this.date = date;
+        this.gift = gift;
     }
 
     public String getTitle() {
@@ -33,5 +35,23 @@ public class LiveBroadcast {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public int getGift() {
+        return gift;
+    }
+
+    public void setGift(int gift) {
+        this.gift = gift;
+    }
+
+    @Override
+    public String toString() {
+        return "LiveBroadcast{" +
+                "title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", date='" + date + '\'' +
+                ", gift=" + gift +
+                '}';
     }
 }
