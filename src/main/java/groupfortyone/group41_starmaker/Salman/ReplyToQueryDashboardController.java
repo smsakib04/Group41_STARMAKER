@@ -9,12 +9,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class ReplyToQueryDashboardController
 {
-    @javafx.fxml.FXML
-    private TableColumn queryNoCol;
     @javafx.fxml.FXML
     private TableView replyQueryTV;
     @javafx.fxml.FXML
@@ -28,6 +27,8 @@ public class ReplyToQueryDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
+        queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
     }
 
     @javafx.fxml.FXML

@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="554.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.ExpenseDashboard">
    <children>
       <Label layoutX="229.0" layoutY="33.0" prefHeight="38.0" prefWidth="243.0" text="Expense Dashboard">
@@ -17,11 +16,10 @@
          </font>
       </Label>
       <Button layoutX="27.0" layoutY="21.0" mnemonicParsing="false" onAction="#handlePreviousButton" prefHeight="26.0" prefWidth="150.0" text="Previous " />
-      <Button layoutX="520.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleLoadButton" prefHeight="26.0" prefWidth="150.0" text="Load" />
       <TableView layoutX="114.0" layoutY="215.0" onSort="#ExpenseRecordTableView" prefHeight="255.0" prefWidth="474.0">
         <columns>
           <TableColumn fx:id="AmountColumn" prefWidth="226.40003967285156" text="Amount" />
-          <TableColumn fx:id="ExpenseColumn" prefWidth="244.0" text="Expense" />
+          <TableColumn fx:id="ExpenseTypeColumn" prefWidth="244.0" text="Expense Type" />
         </columns>
       </TableView>
       <TextField fx:id="ExpenseTypeTextField" layoutX="140.0" layoutY="95.0" />

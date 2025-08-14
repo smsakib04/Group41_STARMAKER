@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -14,11 +15,10 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <TableView layoutX="29.0" layoutY="145.0" onSort="#userQueryTV" prefHeight="200.0" prefWidth="528.0">
+      <TableView fx:id="userQueryTV" layoutX="29.0" layoutY="145.0" prefHeight="200.0" prefWidth="266.0">
         <columns>
-          <TableColumn fx:id="queryNoCol" prefWidth="75.0" text="Query No" />
           <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
-            <TableColumn fx:id="QueryCol" prefWidth="75.0" text="Query" />
+            <TableColumn fx:id="queryCol" prefWidth="75.0" text="Query" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -26,5 +26,6 @@
       </TableView>
       <Button layoutX="279.0" layoutY="86.0" mnemonicParsing="false" onAction="#viewOA" text="View" />
       <Button layoutX="502.0" layoutY="353.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
+      <TextArea fx:id="readQueryTA" layoutX="366.0" layoutY="145.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
