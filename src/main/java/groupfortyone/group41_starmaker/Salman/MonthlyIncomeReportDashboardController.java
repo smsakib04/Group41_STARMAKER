@@ -18,10 +18,19 @@ public class MonthlyIncomeReportDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        chooseMonthCB.getItems().addAll("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+
+
+
     }
 
     @javafx.fxml.FXML
     public void viewMonthlyIncomeOA(ActionEvent actionEvent) {
+        if (chooseMonthCB.getValue() == null) {
+            monthlyIncomeReportLabel.setText("Please choose a month!");
+        }else {
+            monthlyIncomeReportLabel.setText("The Monthly Income of StarMaker for the chosen month is");
+        }
     }
 
     @javafx.fxml.FXML

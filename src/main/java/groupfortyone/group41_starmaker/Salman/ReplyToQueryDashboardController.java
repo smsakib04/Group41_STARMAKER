@@ -45,5 +45,10 @@ public class ReplyToQueryDashboardController
 
     @javafx.fxml.FXML
     public void sendOA(ActionEvent actionEvent) {
+        if (replyTA.getText().isEmpty()){
+            confirmationMessageLabel.setText("Please type your reply first!");
+        }else {
+            confirmationMessageLabel.setText("Reply sent successfully!");
+        }
     }
 }

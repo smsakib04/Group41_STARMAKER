@@ -1,14 +1,15 @@
 package groupfortyone.group41_starmaker.Raghib;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Song {
+public class Song implements Serializable{
     private String songtitle;
     private String description;
     private String genre;
 
-    public static ArrayList<Song>songs=new ArrayList<>();
-    public static ArrayList<Song> favSongs = new ArrayList<>();
+    public static  ArrayList<Song>songs=new ArrayList<>();
+    public static  ArrayList<Song> favSongs = new ArrayList<>();
 
     public Song(String songtitle, String description, String genre) {
         this.songtitle = songtitle;
@@ -42,6 +43,7 @@ public class Song {
     public void setGenre(String genre) {
         this.genre = genre;
     }
+
 
     @Override
     public String toString() {

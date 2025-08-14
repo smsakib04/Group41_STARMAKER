@@ -22,6 +22,7 @@ public class UpdateFAQDashboardController
 
     @javafx.fxml.FXML
     public void updateFAQOA(ActionEvent actionEvent) {
+
     }
 
     @javafx.fxml.FXML
