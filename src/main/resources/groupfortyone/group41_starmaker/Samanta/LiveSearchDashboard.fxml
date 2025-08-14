@@ -18,7 +18,7 @@
                   <Font name="Arial Bold" size="24.0" />
                </font>
             </Label>
-            <TableView layoutX="59.0" layoutY="173.0" prefHeight="200.0" prefWidth="520.0">
+            <TableView fx:id="livesearchTV" layoutX="59.0" layoutY="173.0" prefHeight="200.0" prefWidth="520.0">
                <columns>
                   <TableColumn fx:id="livetitleTC" prefWidth="173.99997329711914" text="Live Title" />
                   <TableColumn fx:id="descriptionTC" prefWidth="182.0000457763672" text="Description" />
@@ -32,3 +32,4 @@
       </AnchorPane>
    </children>
 </AnchorPane>
+

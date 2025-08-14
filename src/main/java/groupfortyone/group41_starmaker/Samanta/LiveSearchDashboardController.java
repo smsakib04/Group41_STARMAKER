@@ -58,16 +58,20 @@ public class LiveSearchDashboardController
     @javafx.fxml.FXML
     public void searchOA(ActionEvent actionEvent) {
         String searchQuery = nameoftheLiveTF.getText();
+        boolean found = false;
 
-        for (LiveBroadcast Broadcast : allBroadcastList) {
-            if (Broadcast.getTitle().toLowerCase().contains(searchQuery)) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Title: " + Broadcast.getTitle() + "\nDescription of the Stream: " + Broadcast.getDescription()+"\nBroadcast Date"+Broadcast.getDate(), ButtonType.OK);
+        for (LiveBroadcast broadcast : allBroadcastList) {
+            if (broadcast.getTitle().toLowerCase().contains(searchQuery.toLowerCase())) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Title: " + broadcast.getTitle() + "\nDescription of the Stream: " + broadcast.getDescription() + "\nBroadcast Date: " + broadcast.getDate(), ButtonType.OK);
                 alert.setTitle("Live Broadcast Found");
                 alert.showAndWait();
+                found = true;
                 break;
             }
+        }
+        if (!found) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "No Lives found matching your search.", ButtonType.OK);
-            alert.setTitle("No Search result Found");
+            alert.setTitle("No Search Result Found");
             alert.showAndWait();
         }
     }

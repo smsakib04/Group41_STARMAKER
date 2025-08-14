@@ -8,8 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class LiveBroadcasterDashboardController
-{
+public class LiveBroadcasterDashboardController {
 
 
     @javafx.fxml.FXML
@@ -17,7 +16,7 @@ public class LiveBroadcasterDashboardController
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/LiveSearchDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -30,7 +29,7 @@ public class LiveBroadcasterDashboardController
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/RankDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -39,13 +38,12 @@ public class LiveBroadcasterDashboardController
     }
 
 
-
     @javafx.fxml.FXML
     public void logoutOA(ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -58,7 +56,7 @@ public class LiveBroadcasterDashboardController
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/FollowersDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -71,7 +69,7 @@ public class LiveBroadcasterDashboardController
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MyStreamsDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
