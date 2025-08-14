@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="303.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.RecruitmentRequestDashboard">
    <children>
       <Label layoutX="244.0" layoutY="21.0" prefHeight="42.0" prefWidth="292.0" text="Recruitment Request Dashboard">
@@ -16,7 +15,6 @@
          </font>
       </Label>
       <Button layoutX="24.0" layoutY="21.0" mnemonicParsing="false" onAction="#handlePreviousButton" text="Previous" />
-      <Button layoutX="682.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleLoadButton" text="Load" />
       <Button layoutX="607.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleSendRequestButton" text="Send Request" />
       <TextField fx:id="EmployeeNameTextField" layoutX="145.0" layoutY="83.0" />
       <TextField fx:id="EmployeeRoleTextField" layoutX="145.0" layoutY="134.0" />
@@ -25,5 +23,6 @@
       <ComboBox fx:id="EmployeeTypeComboBox" layoutX="427.0" layoutY="87.0" prefWidth="150.0" promptText="Employee Type" />
       <ComboBox fx:id="DepartmentComboBox" layoutX="427.0" layoutY="135.0" prefWidth="150.0" promptText="Department" />
       <Label fx:id="RequestSentLabel" layoutX="48.0" layoutY="215.0" prefHeight="42.0" prefWidth="299.0" />
+      <TextField fx:id="SuccessfulTextField" layoutX="48.0" layoutY="215.0" prefHeight="42.0" prefWidth="292.0" />
    </children>
 </AnchorPane>

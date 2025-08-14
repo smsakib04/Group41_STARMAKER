@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="534.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.RefundRequestDashboard">
    <children>
       <Label layoutX="219.0" layoutY="26.0" prefHeight="55.0" prefWidth="279.0" text="Refund Request Dashboard" textFill="#0dbcec">
@@ -16,7 +15,6 @@
          </font>
       </Label>
       <Button layoutX="27.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlePreviousButton" prefHeight="26.0" prefWidth="137.0" text="Previous" />
-      <Button layoutX="555.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleLoadButton" prefHeight="26.0" prefWidth="137.0" text="Load" />
       <Label layoutX="57.0" layoutY="81.0" prefHeight="26.0" prefWidth="83.0" text="Requests:" />
       <Button layoutX="528.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleViewButton" prefHeight="26.0" prefWidth="137.0" text="View" />
       <TableView fx:id="RequestTableView" layoutX="34.0" layoutY="134.0" prefHeight="274.0" prefWidth="632.0">

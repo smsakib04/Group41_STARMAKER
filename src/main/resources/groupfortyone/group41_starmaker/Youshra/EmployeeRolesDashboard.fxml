@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="561.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.EmployeeRolesDashboard">
    <children>
       <Label layoutX="233.0" layoutY="23.0" prefHeight="36.0" prefWidth="239.0" text="Employee Roles Dashboard">
@@ -16,7 +15,6 @@
          </font>
       </Label>
       <Button layoutX="29.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlePreviousButton" prefHeight="26.0" prefWidth="67.0" text="Previous" />
-      <Button layoutX="621.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleLoadButton" prefHeight="26.0" prefWidth="67.0" text="Load" />
       <Button layoutX="552.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleAssignButton" prefHeight="26.0" prefWidth="128.0" text="Assign" />
       <TextField fx:id="EmployeeNameTextField" layoutX="233.0" layoutY="90.0" />
       <TextField fx:id="EmployeeRoleTextField" layoutX="233.0" layoutY="150.0" />
