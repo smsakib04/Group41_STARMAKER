@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="684.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.AddNewStaffDashboard">
+<AnchorPane prefHeight="684.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.AddNewStaffDashboardController">
    <children>
       <Label layoutX="259.0" layoutY="22.0" prefHeight="46.0" prefWidth="267.0" text="Add New Staff Dashboard">
          <font>
@@ -37,8 +36,8 @@
       <TextField fx:id="StaffIDTextField" layoutX="153.0" layoutY="489.0" />
       <TextField fx:id="StaffRoleTextField" layoutX="153.0" layoutY="530.0" />
       <TextField fx:id="DepartmentTextField" layoutX="153.0" layoutY="570.0" />
-      <Button layoutX="711.0" layoutY="22.0" mnemonicParsing="false" onAction="#handleLoadbutton" prefHeight="26.0" prefWidth="98.0" text="Load" />
       <Button layoutX="370.0" layoutY="569.0" mnemonicParsing="false" onAction="#handleAddbutton" prefHeight="26.0" prefWidth="98.0" text="Add" />
       <Label fx:id="SuccessfulLabel" layoutX="548.0" layoutY="551.0" prefHeight="40.0" prefWidth="250.0" />
+      <Button layoutX="26.0" layoutY="22.0" mnemonicParsing="false" onAction="#handlePreviousButton" prefHeight="26.0" prefWidth="98.0" text="Previous" />
    </children>
 </AnchorPane>

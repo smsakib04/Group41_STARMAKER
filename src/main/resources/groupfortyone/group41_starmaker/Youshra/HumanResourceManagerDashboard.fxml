@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="568.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.HumanResourceManagerDashboard">
    <children>
       <Label layoutX="173.0" layoutY="26.0" prefHeight="64.0" prefWidth="344.0" text="Human Resource Manager Dashboard" textFill="#0952fc">
@@ -51,11 +50,6 @@
       <Button layoutX="402.0" layoutY="280.0" mnemonicParsing="false" onAction="#handleAnnouncementbutton" prefHeight="38.0" prefWidth="171.0" text="Announcement" textFill="#f40e0e">
          <font>
             <Font name="System Bold Italic" size="12.0" />
-         </font>
-      </Button>
-      <Button layoutX="622.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleReloadbutton" prefHeight="26.0" prefWidth="85.0" text="Reload" textFill="#0f06fa">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
       <Button layoutX="560.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleLogOutbutton" prefHeight="26.0" prefWidth="145.0" text="Log Out" textFill="#4207f2">
