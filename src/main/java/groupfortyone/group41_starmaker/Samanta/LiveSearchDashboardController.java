@@ -1,12 +1,14 @@
 package groupfortyone.group41_starmaker.Samanta;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class LiveSearchDashboardController
@@ -19,9 +21,29 @@ public class LiveSearchDashboardController
     private TableColumn livetitleTC;
     @javafx.fxml.FXML
     private TableColumn descriptionTC;
+    private ObservableList<LiveBroadcast> allBroadcastList= FXCollections.observableArrayList();
+    @javafx.fxml.FXML
+    private TableView livesearchTV;
+
 
     @javafx.fxml.FXML
     public void initialize() {
+        allBroadcastList.add(new LiveBroadcast("PUBG LIVE STREAM", "a gaming stream of today's gameplay", "06/01/2025"));
+        allBroadcastList.add(new LiveBroadcast("Cooking Masterclass", "Learn new recipes and cooking tips live", "06/02/2025"));
+        allBroadcastList.add(new LiveBroadcast("Tech Talk", "Discussion on the latest tech trends and innovations", "06/03/2025"));
+        allBroadcastList.add(new LiveBroadcast("Music Festival Live", "A live broadcast of an outdoor music festival", "06/04/2025"));
+        allBroadcastList.add(new LiveBroadcast("Fitness Live", "Live workout session with fitness experts", "06/05/2025"));
+        allBroadcastList.add(new LiveBroadcast("Movie Night", "Watch a live screening of a popular movie", "06/06/2025"));
+        allBroadcastList.add(new LiveBroadcast("Travel Vlog", "Join the host on an exciting travel journey", "06/07/2025"));
+        allBroadcastList.add(new LiveBroadcast("Science Show", "Explore the wonders of science through live demonstrations", "06/08/2025"));
+        allBroadcastList.add(new LiveBroadcast("Art Workshop", "Live painting and art lessons from professional artists", "06/09/2025"));
+
+        livetitleTC.setCellValueFactory(new PropertyValueFactory<>("title"));
+        descriptionTC.setCellValueFactory(new PropertyValueFactory<>("description"));
+        livedateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
+        livesearchTV.setItems(allBroadcastList);
+
+
     }
 
     @javafx.fxml.FXML
@@ -35,6 +57,19 @@ public class LiveSearchDashboardController
 
     @javafx.fxml.FXML
     public void searchOA(ActionEvent actionEvent) {
+        String searchQuery = nameoftheLiveTF.getText();
+
+        for (LiveBroadcast Broadcast : allBroadcastList) {
+            if (Broadcast.getTitle().toLowerCase().contains(searchQuery)) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Title: " + Broadcast.getTitle() + "\nDescription of the Stream: " + Broadcast.getDescription()+"\nBroadcast Date"+Broadcast.getDate(), ButtonType.OK);
+                alert.setTitle("Live Broadcast Found");
+                alert.showAndWait();
+                break;
+            }
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "No Lives found matching your search.", ButtonType.OK);
+            alert.setTitle("No Search result Found");
+            alert.showAndWait();
+        }
     }
 
     @javafx.fxml.FXML

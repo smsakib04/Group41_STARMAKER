@@ -12,6 +12,11 @@ public class MoreOptionsDashboardController
 {
     @javafx.fxml.FXML
     private Label likeCountUpdateLB;
+    @javafx.fxml.FXML
+    private Label songGenreLB;
+    @javafx.fxml.FXML
+    private Label songTitleLB;
+    private Song currentSong;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -70,6 +75,14 @@ public class MoreOptionsDashboardController
             nextStage.show();
         } catch (Exception e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public void setSongDetails(Song selectedSong) {
+        this.currentSong= selectedSong;
+        if (currentSong != null) {
+            songTitleLB.setText(currentSong.getSongtitle());
+            songGenreLB.setText(currentSong.getGenre());
         }
     }
 }
