@@ -14,14 +14,15 @@
                 <Font name="Arial Bold" size="31.0" />
             </font>
         </Label>
-        <TableView layoutX="39.0" layoutY="113.0" prefHeight="200.0" prefWidth="362.0">
+        <TableView fx:id="streamsTV" layoutX="39.0" layoutY="113.0" prefHeight="200.0" prefWidth="362.0">
             <columns>
                 <TableColumn fx:id="StreamNameTC" prefWidth="96.0" text="Stream Name" />
                 <TableColumn fx:id="StreamDateTC" prefWidth="77.0" text="Steam Date" />
-                <TableColumn fx:id="totalGiftRecievedTC" prefWidth="186.0" text="Total gift recieved" />
+                <TableColumn fx:id="totalGiftReceivedTC" prefWidth="186.0" text="Total Gift Coins recieved " />
             </columns>
         </TableView>
-        <Button layoutX="418.0" layoutY="273.0" mnemonicParsing="false" onAction="#ShareStreamBT" text="Share" />
-        <Button layoutX="531.0" layoutY="361.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
+        <Button layoutX="417.0" layoutY="273.0" mnemonicParsing="false" onAction="#ShareStreamBT" text="Share" />
+        <Button layoutX="531.0" layoutY="361.0" mnemonicParsing="false" onAction="#previousBTOA" text="previous" />
+        <Button layoutX="415.0" layoutY="240.0" mnemonicParsing="false" onAction="#deleteStreamOA" text="Delete" />
     </children>
 </AnchorPane>

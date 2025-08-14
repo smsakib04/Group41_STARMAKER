@@ -81,10 +81,7 @@ public class SongSearchDashboardController
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MoreOptionsDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            // Get the controller of the next scene
             MoreOptionsDashboardController controller = fxmlLoader.getController();
-
-            // Pass the selected song to the next controller
             controller.setSongDetails(selectedSong);
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
