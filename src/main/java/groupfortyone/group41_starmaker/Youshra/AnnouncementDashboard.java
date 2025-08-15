@@ -8,8 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class AnnouncementDashboard
-{
+public class AnnouncementDashboard {
     @javafx.fxml.FXML
     private TextField AnnouncementTextField;
     @javafx.fxml.FXML
@@ -19,21 +18,20 @@ public class AnnouncementDashboard
 
     @javafx.fxml.FXML
     public void initialize() {
-
+        ConfirmationTextArea.setText("");
+        SentLabel.setText("");
     }
-
     @javafx.fxml.FXML
     public void handleSendButton(ActionEvent actionEvent) {
-        String announcement = AnnouncementTextField.getText();
-
         if (AnnouncementTextField.getText().isEmpty()) {
-            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-            erroralert.setContentText("Provide an announcement");
-            erroralert.show();
-            return;
-
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setContentText("Provide an announcement");
+            errorAlert.show();
+        } else {
             ConfirmationTextArea.setText("Sent successfully!");
             ConfirmationTextArea.setStyle("-fx-background-color:green");
+
+        }
     }
 
     @javafx.fxml.FXML
@@ -45,9 +43,9 @@ public class AnnouncementDashboard
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setContentText("Error loading the dashboard: " );
+            errorAlert.show();
         }
     }
-
-}
 }
