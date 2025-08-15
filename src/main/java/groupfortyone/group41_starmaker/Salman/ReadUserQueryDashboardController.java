@@ -32,11 +32,13 @@ public class ReadUserQueryDashboardController
         queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
 
         userQueryTV.getItems().addAll(queryList);
+
     }
 
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
+
 
     }
 

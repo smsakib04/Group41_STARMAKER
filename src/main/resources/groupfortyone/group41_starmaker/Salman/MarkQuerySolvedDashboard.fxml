@@ -25,6 +25,6 @@
       </TableView>
       <Button layoutX="472.0" layoutY="74.0" mnemonicParsing="false" onAction="#markAsSolvedOA" text="Mark As Solved" />
       <Button layoutX="510.0" layoutY="342.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
-      <Label fx:id="confirmationMessageLabel" layoutX="209.0" layoutY="79.0" prefHeight="17.0" prefWidth="207.0" text="Label" />
+      <Label fx:id="confirmationMessageLabel" layoutX="161.0" layoutY="79.0" prefHeight="17.0" prefWidth="279.0" />
    </children>
 </AnchorPane>
