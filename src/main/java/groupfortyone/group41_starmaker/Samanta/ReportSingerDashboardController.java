@@ -29,7 +29,7 @@ public class ReportSingerDashboardController
     private TableView<Report> reportTV;
     @javafx.fxml.FXML
     private TableColumn<Report, String> commentTC;
-    private ObservableList<Report> reportList = FXCollections.observableArrayList();
+    public static ObservableList<Report> reportList = FXCollections.observableArrayList();
 
 
     @javafx.fxml.FXML

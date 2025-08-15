@@ -14,7 +14,7 @@ public class UpdateFAQDashboardController
     @javafx.fxml.FXML
     private TextArea updateFAQTA;
     @javafx.fxml.FXML
-    private Label updateFAQLabel;
+    private TextArea updateFAQTA2;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -23,7 +23,8 @@ public class UpdateFAQDashboardController
     @javafx.fxml.FXML
     public void updateFAQOA(ActionEvent actionEvent) {
         String updatedFAQ = updateFAQTA.getText();
-        updateFAQLabel.setText(updatedFAQ);
+        updateFAQTA2.setText(updatedFAQ);
+        updateFAQTA.setText("");
 
     }
 

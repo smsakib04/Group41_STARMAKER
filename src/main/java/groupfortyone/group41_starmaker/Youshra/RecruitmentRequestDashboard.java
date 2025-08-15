@@ -21,11 +21,11 @@ public class RecruitmentRequestDashboard {
     @javafx.fxml.FXML
     private TextField EmployeeNameTextField;
     @javafx.fxml.FXML
-    private ComboBox DepartmentComboBox;
+    private ComboBox<String> DepartmentComboBox;
     @javafx.fxml.FXML
     private TextField SuccessfulTextField;
     @javafx.fxml.FXML
-    private ComboBox EmployeeTypeComboBox;
+    private ComboBox<String> EmployeeTypeComboBox;
 
     public static ArrayList<Employee> EmployeeList = new ArrayList<Employee>();
 
@@ -68,8 +68,13 @@ public class RecruitmentRequestDashboard {
             return;
 
         }
+
+        Employee e = new Employee(name, EmployeeList.size() ,id, DepartmentComboBox.getValue(), EmployeeTypeComboBox.getValue());
+        EmployeeList.add(e);
+
         SuccessfulTextField.setText("Request Sent successfully!");
         SuccessfulTextField.setStyle("-fx-background-color: white");
+
 
 
     }
