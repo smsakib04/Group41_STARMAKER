@@ -12,31 +12,31 @@
             <Font name="System Bold" size="31.0" />
          </font>
       </Label>
-      <Button layoutX="250.0" layoutY="149.0" mnemonicParsing="false" onAction="#uploadasongOnAction" prefHeight="32.0" prefWidth="216.0" text="Upload A Song">
+      <Button layoutX="39.0" layoutY="165.0" mnemonicParsing="false" onAction="#uploadasongOnAction" prefHeight="32.0" prefWidth="293.0" text="Upload A Song">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="477.0" layoutY="149.0" mnemonicParsing="false" onAction="#editsongtitleOnAction" prefHeight="32.0" prefWidth="209.0" text="Edit Song Title">
+      <Button layoutX="39.0" layoutY="257.0" mnemonicParsing="false" onAction="#editsongtitleOnAction" prefHeight="32.0" prefWidth="293.0" text="Edit Song Title">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="39.0" layoutY="213.0" mnemonicParsing="false" onAction="#deleteasongOnAction" prefHeight="32.0" prefWidth="201.0" text="Delete A Song">
+      <Button layoutX="39.0" layoutY="213.0" mnemonicParsing="false" onAction="#deleteasongOnAction" prefHeight="32.0" prefWidth="293.0" text="Delete A Song">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="213.0" layoutY="274.0" mnemonicParsing="false" onAction="#viewtotalnooflikesofasongOnAction" prefHeight="32.0" prefWidth="293.0" text="View Total Number Of Likes Of A Song">
+      <Button layoutX="39.0" layoutY="396.0" mnemonicParsing="false" onAction="#viewtotalnooflikesofasongOnAction" prefHeight="32.0" prefWidth="293.0" text="View Total Number Of Likes Of A Song">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="477.0" layoutY="213.0" mnemonicParsing="false" onAction="#markasongasfavouriteOnAction" prefHeight="32.0" prefWidth="209.0" text="Mark A Song As Favourite">
+      <Button layoutX="39.0" layoutY="351.0" mnemonicParsing="false" onAction="#markasongasfavouriteOnAction" prefHeight="32.0" prefWidth="293.0" text="Mark A Song As Favourite">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="216.0" layoutY="329.0" mnemonicParsing="false" onAction="#viewtotalnumberofsongsuploadedOnAction" prefHeight="32.0" prefWidth="293.0" text="Show All Songs Uploaded">
+      <Button layoutX="39.0" layoutY="444.0" mnemonicParsing="false" onAction="#viewtotalnumberofsongsuploadedOnAction" prefHeight="32.0" prefWidth="293.0" text="Show All Songs Uploaded">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="252.0" layoutY="213.0" mnemonicParsing="false" onAction="#searchasongbytitleOnAction" prefHeight="32.0" prefWidth="216.0" text="Search A Song By Title">
+      <Button layoutX="39.0" layoutY="305.0" mnemonicParsing="false" onAction="#searchasongbytitleOnAction" prefHeight="32.0" prefWidth="293.0" text="Search A Song By Title">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
@@ -44,7 +44,7 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="39.0" layoutY="149.0" mnemonicParsing="false" onAction="#sendquerytocsoOnAction" prefHeight="32.0" prefWidth="201.0" text="Send Query To CSO">
+      <Button layoutX="39.0" layoutY="117.0" mnemonicParsing="false" onAction="#sendquerytocsoOnAction" prefHeight="32.0" prefWidth="293.0" text="Send Query To CSO">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
