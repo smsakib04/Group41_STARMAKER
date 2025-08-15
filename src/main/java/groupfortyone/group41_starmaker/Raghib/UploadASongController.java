@@ -31,8 +31,6 @@ public class UploadASongController {
     private TextArea confirmationtextarea;
     @javafx.fxml.FXML
     private TextField descriptiontextfield;
-    @javafx.fxml.FXML
-    private Label confirmationlabel;
 
 
     @javafx.fxml.FXML
