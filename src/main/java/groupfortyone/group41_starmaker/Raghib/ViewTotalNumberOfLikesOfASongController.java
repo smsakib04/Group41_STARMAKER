@@ -31,7 +31,6 @@ public class ViewTotalNumberOfLikesOfASongController
         songtitlecolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("songtitle"));
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("genre"));
-        numberoflikescolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("likes"));
 
         songlisttableview.getItems().addAll(songs);
     }

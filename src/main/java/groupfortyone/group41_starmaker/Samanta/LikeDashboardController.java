@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import static groupfortyone.group41_starmaker.Raghib.Song.songs;
@@ -15,18 +16,24 @@ import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 public class LikeDashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn<SongS,String> likescolumn;
+    private TableColumn likescolumn;
     @javafx.fxml.FXML
-    private TableColumn <SongS,String>genrecolumn;
+    private TableColumn genrecolumn;
     @javafx.fxml.FXML
-    private TableView<SongS> tableView;
+    private TableView tableView;
     @javafx.fxml.FXML
-    private TableColumn <SongS,String>descriptioncolumn;
+    private TableColumn descriptioncolumn;
     @javafx.fxml.FXML
-    private TableColumn<SongS,String> songtitlecolumn;
+    private TableColumn songtitlecolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+        tableView.getItems().addAll(songs);
+
+
+        songtitlecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("songtitle"));
+        descriptioncolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("description"));
+        genrecolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("genre"));
     }
 
     @javafx.fxml.FXML
@@ -44,8 +51,5 @@ public class LikeDashboardController
 
     @javafx.fxml.FXML
     public void likeOA(ActionEvent actionEvent) {
-//        Song songlike= tableView.getSelectionModel().getSelectedItem();
-//        songlike.setLikes(true);
-//        //countLikes+=1;
     }
 }
