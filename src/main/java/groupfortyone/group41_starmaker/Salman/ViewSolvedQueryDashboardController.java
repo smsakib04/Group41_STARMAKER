@@ -1,6 +1,7 @@
 package groupfortyone.group41_starmaker.Salman;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Raghib.Query;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,23 +11,27 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import static groupfortyone.group41_starmaker.Salman.MarkQuerySolvedDashboardController.solvedList;
+
 public class ViewSolvedQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableView solvedQueryTV;
+    private TableView<Query> solvedQueryTV;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
+    private TableColumn<Query, String> nameCol;
     @javafx.fxml.FXML
-    private TableColumn queryCol;
+    private TableColumn<Query, String> queryCol;
 
     @javafx.fxml.FXML
     public void initialize() {
         nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
         queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
+
     }
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
+        solvedQueryTV.getItems().addAll(solvedList);
     }
 
     @javafx.fxml.FXML

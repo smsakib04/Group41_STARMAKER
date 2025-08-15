@@ -1,6 +1,7 @@
 package groupfortyone.group41_starmaker.Salman;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Raghib.Query;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,23 +13,27 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import static groupfortyone.group41_starmaker.Raghib.Query.queryList;
+
 public class ReplyToQueryDashboardController
 {
     @javafx.fxml.FXML
-    private TableView replyQueryTV;
+    private TableView<Query> replyQueryTV;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
     @javafx.fxml.FXML
     private TextArea replyTA;
     @javafx.fxml.FXML
-    private TableColumn queryCol;
+    private TableColumn<Query, String> queryCol;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
+    private TableColumn<Query, String> nameCol;
 
     @javafx.fxml.FXML
     public void initialize() {
         nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
         queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
+
+        replyQueryTV.getItems().addAll(queryList);
     }
 
     @javafx.fxml.FXML
@@ -48,8 +53,16 @@ public class ReplyToQueryDashboardController
     public void sendOA(ActionEvent actionEvent) {
         if (replyTA.getText().isEmpty()){
             confirmationMessageLabel.setText("Please type your reply first!");
-        }else {
-            confirmationMessageLabel.setText("Reply sent successfully!");
+            return;
         }
+        Query q = replyQueryTV.getSelectionModel().getSelectedItem();
+        if (q == null) {
+            confirmationMessageLabel.setText("");
+            return;
+        }
+
+
+        confirmationMessageLabel.setText("Reply sent successfully!");
+
     }
 }
