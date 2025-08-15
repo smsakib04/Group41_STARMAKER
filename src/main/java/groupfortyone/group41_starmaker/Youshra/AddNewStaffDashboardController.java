@@ -94,9 +94,7 @@ public class AddNewStaffDashboardController
                 StaffRoleTextField.getText());
 
         staffList.add(s);
-        StaffListTableView.getItems().clear();
-
-        StaffListTableView.getItems().addAll(staffList);
+        StaffListTableView.getItems().addAll(s);
         SuccessfulLabel.setText("Staff has been added successfully!");
         SuccessfulLabel.setStyle("-fx-background-color: white");
 

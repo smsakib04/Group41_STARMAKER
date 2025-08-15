@@ -1,6 +1,5 @@
 package groupfortyone.group41_starmaker.Samanta;
 
-import com.sun.jdi.ArrayReference;
 import groupfortyone.group41_starmaker.HelloApplication;
 import groupfortyone.group41_starmaker.Raghib.Song;
 import javafx.collections.FXCollections;
