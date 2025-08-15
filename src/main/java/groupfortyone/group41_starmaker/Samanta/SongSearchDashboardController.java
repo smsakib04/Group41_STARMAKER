@@ -27,9 +27,6 @@ public class SongSearchDashboardController
     private TableColumn songtitlecolumn;
     @javafx.fxml.FXML
     private TableView tableView;
-
-
-    //public static ObservableList<SongS> songs= FXCollections.observableArrayList();
     private SongS selectedSongS;
     @javafx.fxml.FXML
     private TableColumn descriptioncolumn;
@@ -39,19 +36,10 @@ public class SongSearchDashboardController
         tableView.getItems().addAll(songs);
 
 
-
-        //allSongsList.add(new SongS("Shape of You", "Pop"));
-        //allSongsList.add(new SongS("Blinding Lights", "Pop"));
-        //allSongsList.add(new SongS("Bohemian Rhapsody", "Rock"));
-        // allSongsList.add(new SongS("Imagine", "Pop"));
-        // allSongsList.add(new SongS("Hotel California", "Rock"));
-
         songtitlecolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("songtitle"));
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("genre"));
 
-
-        //tableView.setItems(songs);
 
         tableView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             selectedSongS = (SongS) newValue;
