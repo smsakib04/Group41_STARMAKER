@@ -6,7 +6,7 @@ module groupfortyone.group41_starmaker {
  //   requires groupfortyone.group41_starmaker;
     requires javafx.graphics;
     requires java.desktop;
-    requires groupfortyone.group41_starmaker;
+   // requires groupfortyone.group41_starmaker;
     //  requires groupfortyone.group41_starmaker;
     // requires groupfortyone.group41_starmaker;
     // requires groupfortyone.group41_starmaker;

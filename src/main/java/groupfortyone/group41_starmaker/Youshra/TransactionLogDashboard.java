@@ -16,7 +16,7 @@ public class TransactionLogDashboard {
     @javafx.fxml.FXML
     private Button handleAddButton;
     @javafx.fxml.FXML
-    private ComboBox TypeComboBox;
+    private ComboBox<String> TypeComboBox;
     @javafx.fxml.FXML
     private TableColumn<Transaction, String> TransactionAmountColumn;
     @javafx.fxml.FXML

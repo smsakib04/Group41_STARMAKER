@@ -5,9 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 public class AnnouncementDashboard
@@ -15,18 +13,27 @@ public class AnnouncementDashboard
     @javafx.fxml.FXML
     private TextField AnnouncementTextField;
     @javafx.fxml.FXML
-    private ComboBox EmployeeTypeComboBox;
-    @javafx.fxml.FXML
-    private ComboBox DepartmentComboBox;
-    @javafx.fxml.FXML
     private Label SentLabel;
+    @javafx.fxml.FXML
+    private TextArea ConfirmationTextArea;
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML
     public void handleSendButton(ActionEvent actionEvent) {
+        String announcement = AnnouncementTextField.getText();
+
+        if (AnnouncementTextField.getText().isEmpty()) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Provide an announcement");
+            erroralert.show();
+            return;
+
+            ConfirmationTextArea.setText("Sent successfully!");
+            ConfirmationTextArea.setStyle("-fx-background-color:green");
     }
 
     @javafx.fxml.FXML
@@ -42,4 +49,5 @@ public class AnnouncementDashboard
         }
     }
 
+}
 }

@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -16,7 +17,6 @@
       </Label>
       <Button layoutX="27.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlePreviousButton" prefHeight="26.0" prefWidth="137.0" text="Previous" />
       <Label layoutX="34.0" layoutY="87.0" prefHeight="26.0" prefWidth="83.0" text="Requests:" />
-      <Button layoutX="528.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleViewButton" prefHeight="26.0" prefWidth="137.0" text="View" />
       <TableView fx:id="RequestTableView" layoutX="34.0" layoutY="134.0" prefHeight="274.0" prefWidth="632.0">
         <columns>
           <TableColumn fx:id="UsernameColumn" prefWidth="210.39998626708984" text="Username" />
@@ -26,5 +26,6 @@
       </TableView>
       <Button layoutX="370.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleAcceptButton" prefHeight="26.0" prefWidth="137.0" text="Accept" />
       <Button layoutX="528.0" layoutY="429.0" mnemonicParsing="false" onAction="#handleDeclineButton" prefHeight="26.0" prefWidth="137.0" text="Decline" />
+      <TextField fx:id="ConfirmationTextField" layoutX="43.0" layoutY="430.0" prefHeight="48.0" prefWidth="246.0" />
    </children>
 </AnchorPane>
