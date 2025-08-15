@@ -7,25 +7,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="488.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.ViewTotalNumberOfLikesOfASongController">
+<AnchorPane prefHeight="488.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.ViewTotalNumberOfLikesOfASongController">
    <children>
-      <Button layoutX="532.0" layoutY="409.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
-      <Label layoutX="171.0" layoutY="53.0" text="View Total Number Of Likes Of A Song">
+      <Button layoutX="607.0" layoutY="408.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
+      <Label layoutX="192.0" layoutY="38.0" text="View Total Number Of Likes Of A Song">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="totallikesofasonglabel" layoutX="224.0" layoutY="150.0" prefHeight="25.0" prefWidth="180.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TableView fx:id="songlisttableview" layoutX="50.0" layoutY="118.0" prefHeight="200.0" prefWidth="617.0">
+      <TableView fx:id="songlisttableview" layoutX="48.0" layoutY="113.0" prefHeight="200.0" prefWidth="617.0">
         <columns>
           <TableColumn fx:id="songtitlecolumn" prefWidth="145.33337020874023" text="Song Title" />
-          <TableColumn fx:id="descriptioncolumn" prefWidth="162.66661071777344" text="Description" />
-            <TableColumn fx:id="genrecolumn" prefWidth="157.33340454101562" text="Genre" />
-            <TableColumn fx:id="numberoflikescolumn" prefWidth="159.33331298828125" text="Total Number Of Likes" />
+          <TableColumn fx:id="descriptioncolumn" prefWidth="172.6666717529297" text="Description" />
+            <TableColumn fx:id="genrecolumn" prefWidth="147.33334350585938" text="Genre" />
+            <TableColumn fx:id="numberoflikescolumn" prefWidth="160.66668701171875" text="Total Number Of Likes" />
         </columns>
       </TableView>
    </children>
