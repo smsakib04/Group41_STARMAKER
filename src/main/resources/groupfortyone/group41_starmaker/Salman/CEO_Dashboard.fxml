@@ -12,7 +12,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="76.0" layoutY="83.0" mnemonicParsing="false" onAction="#totalAppUser" prefHeight="26.0" prefWidth="147.0" text="Total App User" />
+      <Button layoutX="76.0" layoutY="83.0" mnemonicParsing="false" onAction="#totalAppUser" prefHeight="26.0" prefWidth="147.0" text="Total  Employee" />
       <Button layoutX="76.0" layoutY="118.0" mnemonicParsing="false" onAction="#monthlyIncomeReport" prefHeight="26.0" prefWidth="147.0" text="Monthly Income Report" />
       <Button layoutX="76.0" layoutY="187.0" mnemonicParsing="false" onAction="#recruitmentRequisition" prefHeight="26.0" prefWidth="147.0" text="Recruitment Requisition" />
       <Button layoutX="76.0" layoutY="220.0" mnemonicParsing="false" onAction="#viewAllEmployees" prefHeight="26.0" prefWidth="147.0" text="View All Employees" />

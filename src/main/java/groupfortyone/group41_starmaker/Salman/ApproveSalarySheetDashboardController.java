@@ -28,7 +28,7 @@ public class ApproveSalarySheetDashboardController
     @javafx.fxml.FXML
     public void initialize() {
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-        salaryAmountCol.setCellValueFactory(new PropertyValueFactory<>("salaryAmount"));
+        salaryAmountCol.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
         approveSalarySheetTV.getItems().addAll(salaryList);
     }
@@ -42,6 +42,8 @@ public class ApproveSalarySheetDashboardController
             return;
         }
         salaryList.remove(s);
+        approveSalarySheetTV.getItems().clear();
+        approveSalarySheetTV.getItems().addAll(salaryList);
 
         confirmationMessageLabel.setText("Salary has been approved!");
     }
@@ -68,6 +70,8 @@ public class ApproveSalarySheetDashboardController
             return;
         }
         salaryList.remove(s);
+        approveSalarySheetTV.getItems().clear();
+        approveSalarySheetTV.getItems().addAll(salaryList);
 
         confirmationMessageLabel.setText("Salary has been rejected!");
     }

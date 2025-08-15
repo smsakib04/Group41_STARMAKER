@@ -48,10 +48,17 @@ public class ScheduleMeetingDashboardController
             confirmationMessageLabel.setText("Please write meeting's topic and choose any date!");
 
         }
+        for (Meeting n : meetingList){
+            if (meetingDateDP.getValue() == n.getMeetingDate()){
+                confirmationMessageLabel.setText("Please pick a different date!");
+                return;
+            }
+        }
 
         Meeting meeting = new Meeting(
                 meetingTopicTF.getText(),
                 meetingDateDP.getValue()
+
         );
 
         meetingList.add(meeting);
