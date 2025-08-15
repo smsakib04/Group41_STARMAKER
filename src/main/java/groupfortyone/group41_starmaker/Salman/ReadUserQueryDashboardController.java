@@ -38,6 +38,13 @@ public class ReadUserQueryDashboardController
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
+        Query c = userQueryTV.getSelectionModel().getSelectedItem();
+
+        if (c == null){
+            return;
+        }
+
+        readQueryTA.setText(c.getQuery());
 
 
     }
