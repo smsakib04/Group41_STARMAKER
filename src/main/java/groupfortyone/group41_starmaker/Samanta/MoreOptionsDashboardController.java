@@ -16,7 +16,7 @@ public class MoreOptionsDashboardController
     private Label songGenreLB;
     @javafx.fxml.FXML
     private Label songTitleLB;
-    private Song currentSong;
+    private SongS currentSongS;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -78,11 +78,11 @@ public class MoreOptionsDashboardController
         }
     }
 
-    public void setSongDetails(Song selectedSong) {
-        this.currentSong= selectedSong;
-        if (currentSong != null) {
-            songTitleLB.setText(currentSong.getSongtitle());
-            songGenreLB.setText(currentSong.getGenre());
+    public void setSongDetails(SongS selectedSongS) {
+        this.currentSongS = selectedSongS;
+        if (currentSongS != null) {
+            songTitleLB.setText(currentSongS.getSongtitle());
+            songGenreLB.setText(currentSongS.getGenre());
         }
     }
 }

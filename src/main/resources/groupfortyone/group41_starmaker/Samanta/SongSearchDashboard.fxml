@@ -12,22 +12,23 @@
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="455.0" prefWidth="653.0">
          <children>
-            <Button layoutX="548.0" layoutY="367.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
+            <Button layoutX="516.0" layoutY="109.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
             <Label layoutX="168.0" layoutY="14.0" prefHeight="34.0" prefWidth="303.0" text="Search A Song By Title">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
             </Label>
-            <TableView fx:id="tableView" layoutX="16.0" layoutY="155.0" prefHeight="449.0" prefWidth="508.0">
+            <TableView fx:id="tableView" layoutX="11.0" layoutY="151.0" prefHeight="453.0" prefWidth="631.0">
                <columns>
                   <TableColumn fx:id="songtitlecolumn" prefWidth="299.0" text="Song Title" />
-                  <TableColumn fx:id="genrecolumn" prefWidth="208.0" text="Genre" />
+                  <TableColumn fx:id="genrecolumn" prefWidth="135.0" text="Genre" />
+                  <TableColumn fx:id="descriptioncolumn" prefWidth="196.0" text="Description" />
                </columns>
             </TableView>
             <Button layoutX="337.0" layoutY="118.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
-            <Label layoutX="59.0" layoutY="122.0" prefHeight="17.0" prefWidth="99.0" text="Name of the song:" />
+            <Label layoutX="59.0" layoutY="122.0" prefHeight="17.0" prefWidth="99.0" text="Name of the songS:" />
             <TextField fx:id="nameofthesongtextfield" layoutX="159.0" layoutY="118.0" />
-            <Button layoutX="548.0" layoutY="330.0" mnemonicParsing="false" onAction="#moreOptionsToLikeCommentShareOA" text="More Options" />
+            <Button layoutX="502.0" layoutY="59.0" mnemonicParsing="false" onAction="#moreOptionsToLikeCommentShareOA" text="More Options" />
          </children>
       </AnchorPane>
    </children>

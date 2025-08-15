@@ -1,11 +1,11 @@
 package groupfortyone.group41_starmaker.Samanta;
 
-public class Song {
+public class SongS {
     private String songtitle;
     private String genre;
 
 
-    public Song(String songtitle, String genre) {
+    public SongS(String songtitle, String genre) {
         this.songtitle = songtitle;
         this.genre = genre;
     }
