@@ -34,8 +34,9 @@ public class SearchQueryDashboardController
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
-
+        searchTV.getItems().clear();
         searchTV.getItems().addAll(queryList);
+
 
     }
 

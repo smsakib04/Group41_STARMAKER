@@ -10,9 +10,9 @@
 
 <AnchorPane prefHeight="469.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.SendCampaignUpdatesToTeamMembers">
    <children>
-      <Label layoutX="154.0" layoutY="14.0" prefHeight="49.0" prefWidth="363.0" text="Send Campaign Updates To Team Members">
+      <Label layoutX="151.0" layoutY="14.0" prefHeight="49.0" prefWidth="377.0" text="Send Campaign Updates To Team Members">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button layoutX="548.0" layoutY="392.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />

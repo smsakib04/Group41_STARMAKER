@@ -13,9 +13,9 @@
 <AnchorPane prefHeight="486.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.SearchACampaignPostByMonthAndStatusController">
    <children>
       <Button layoutX="569.0" layoutY="408.0" mnemonicParsing="false" onAction="#gobackOnAction" prefHeight="25.0" prefWidth="61.0" text="Go Back" />
-      <Label layoutX="166.0" layoutY="28.0" prefHeight="27.0" prefWidth="369.0" text="Search A Campaign Post By Month And Status">
+      <Label layoutX="153.0" layoutY="27.0" prefHeight="27.0" prefWidth="395.0" text="Search A Campaign Post By Month And Status">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <TableView fx:id="campaignlisttableview" layoutX="81.0" layoutY="175.0" prefHeight="200.0" prefWidth="550.0">

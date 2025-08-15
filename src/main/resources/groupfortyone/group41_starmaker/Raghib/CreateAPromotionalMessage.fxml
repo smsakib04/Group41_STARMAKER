@@ -15,9 +15,9 @@
       <Label layoutX="330.0" layoutY="118.0" text="Message Content:" />
       <Label layoutX="49.0" layoutY="214.0" prefHeight="17.0" prefWidth="127.0" text="Confirmation Message:" />
       <Label fx:id="confirmationmessagelabel" layoutX="176.0" layoutY="214.0" prefHeight="17.0" prefWidth="213.0" />
-      <Label layoutX="214.0" layoutY="30.0" prefHeight="43.0" prefWidth="310.0" text="Create A Promotional Message">
+      <Label layoutX="209.0" layoutY="26.0" prefHeight="43.0" prefWidth="310.0" text="Create A Promotional Message">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button layoutX="98.0" layoutY="295.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="25.0" prefWidth="72.0" text="Send" />

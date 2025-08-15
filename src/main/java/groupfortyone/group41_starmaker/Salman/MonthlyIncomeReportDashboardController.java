@@ -1,6 +1,7 @@
 package groupfortyone.group41_starmaker.Salman;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Youshra.MonthlyIncome;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Youshra.MonthlyIncome.monthlyIncomeList;
 
 public class MonthlyIncomeReportDashboardController
 {
@@ -31,11 +34,11 @@ public class MonthlyIncomeReportDashboardController
             return;
         }
 
-//        for (MonthlyIncome a : monthlyIncomeReportList){
-//            if (chooseMonthCB.getValue() == a.getMonth()){
-//                monthlyIncomeReportLabel.setText("The Income for the month of " + a.getMonth()+" of StarMaker is: "+a.getIncome() + "TAKA");
-//            }
-//        }
+        for (MonthlyIncome a : monthlyIncomeList){
+            if (chooseMonthCB.getValue() == a.getMonth()){
+                monthlyIncomeReportLabel.setText("The Income for the month of " + a.getMonth()+" of StarMaker is: "+a.getAmount() + " TAKA");
+            }
+        }
     }
 
     @javafx.fxml.FXML

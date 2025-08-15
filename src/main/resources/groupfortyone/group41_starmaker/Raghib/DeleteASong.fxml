@@ -10,9 +10,9 @@
 
 <AnchorPane prefHeight="450.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.DeleteASongController">
    <children>
-      <Label layoutX="251.0" layoutY="30.0" prefHeight="17.0" prefWidth="253.0" text="Delete A Song">
+      <Label layoutX="257.0" layoutY="30.0" prefHeight="27.0" prefWidth="122.0" text="Delete A Song">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button layoutX="529.0" layoutY="360.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />

@@ -12,14 +12,38 @@
             <Font name="System Bold" size="31.0" />
          </font>
       </Label>
-      <Button layoutX="60.0" layoutY="190.0" mnemonicParsing="false" onAction="#addingacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Add a Campaign Post" />
-      <Button layoutX="60.0" layoutY="228.0" mnemonicParsing="false" onAction="#deleteacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Delete a Campaign Post" />
-      <Button layoutX="60.0" layoutY="263.0" mnemonicParsing="false" onAction="#searchacampaignpostbytmonthandstatusOnAction" prefHeight="25.0" prefWidth="257.0" text="Search Campaign Posts By Month And Status" />
-      <Button layoutX="60.0" layoutY="335.0" mnemonicParsing="false" onAction="#createapromotionalmessageOnAction" prefHeight="25.0" prefWidth="257.0" text="Create a Promotional Message" />
-      <Button layoutX="60.0" layoutY="410.0" mnemonicParsing="false" onAction="#showallcampaignpostsOnAction" prefHeight="25.0" prefWidth="257.0" text="Show All Campaign Posts" />
-      <Button layoutX="60.0" layoutY="153.0" mnemonicParsing="false" onAction="#myprofileOnAction" prefHeight="25.0" prefWidth="257.0" text="Add A Team Member" />
-      <Button layoutX="60.0" layoutY="371.0" mnemonicParsing="false" onAction="#SendCampaignUpdatesOnAction" prefHeight="25.0" prefWidth="257.0" text="Send Campaign Updates To Team Members" />
+      <Button layoutX="41.0" layoutY="164.0" mnemonicParsing="false" onAction="#addingacampaignpostOnAction" prefHeight="32.0" prefWidth="341.0" text="Add a Campaign Post">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="41.0" layoutY="208.0" mnemonicParsing="false" onAction="#deleteacampaignpostOnAction" prefHeight="32.0" prefWidth="341.0" text="Delete a Campaign Post">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="41.0" layoutY="250.0" mnemonicParsing="false" onAction="#searchacampaignpostbytmonthandstatusOnAction" prefHeight="32.0" prefWidth="341.0" text="Search Campaign Posts By Month And Status">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="41.0" layoutY="336.0" mnemonicParsing="false" onAction="#createapromotionalmessageOnAction" prefHeight="32.0" prefWidth="341.0" text="Create a Promotional Message">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="41.0" layoutY="423.0" mnemonicParsing="false" onAction="#showallcampaignpostsOnAction" prefHeight="32.0" prefWidth="341.0" text="Show All Campaign Posts">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="41.0" layoutY="123.0" mnemonicParsing="false" onAction="#myprofileOnAction" prefHeight="32.0" prefWidth="341.0" text="Add A Team Member">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Button layoutX="41.0" layoutY="379.0" mnemonicParsing="false" onAction="#SendCampaignUpdatesOnAction" prefHeight="32.0" prefWidth="341.0" text="Send Campaign Updates To Team Members">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
       <Button layoutX="536.0" layoutY="449.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" />
-      <Button layoutX="60.0" layoutY="297.0" mnemonicParsing="false" onAction="#editacampaignpostOnAction" prefHeight="25.0" prefWidth="257.0" text="Edit a Campaign Post" />
+      <Button layoutX="41.0" layoutY="294.0" mnemonicParsing="false" onAction="#editacampaignpostOnAction" prefHeight="32.0" prefWidth="341.0" text="Edit a Campaign Post">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
    </children>
 </AnchorPane>

@@ -8,25 +8,31 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
 public class ViewTotalNumberOfLikesOfASongController
 {
     @javafx.fxml.FXML
-    private Label totallikesofasonglabel;
+    private TableView<Song>songlisttableview;
     @javafx.fxml.FXML
-    private TableView songlisttableview;
+    private TableColumn<Song, String> numberoflikescolumn;
     @javafx.fxml.FXML
-    private TableColumn numberoflikescolumn;
+    private TableColumn<Song,String> descriptioncolumn;
     @javafx.fxml.FXML
-    private TableColumn descriptioncolumn;
+    private TableColumn<Song,String> songtitlecolumn;
     @javafx.fxml.FXML
-    private TableColumn songtitlecolumn;
-    @javafx.fxml.FXML
-    private TableColumn genrecolumn;
+    private TableColumn<Song,String> genrecolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
+        songtitlecolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("songtitle"));
+        descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("description"));
+        genrecolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("genre"));
+
+        songlisttableview.getItems().addAll(songs);
     }
 
     @javafx.fxml.FXML
@@ -41,9 +47,5 @@ public class ViewTotalNumberOfLikesOfASongController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Deprecated
-    public void showOnAction(ActionEvent actionEvent) {
     }
 }

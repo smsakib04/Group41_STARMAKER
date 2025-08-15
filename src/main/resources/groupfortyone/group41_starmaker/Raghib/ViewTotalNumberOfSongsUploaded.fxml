@@ -11,9 +11,9 @@
 <AnchorPane prefHeight="488.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.ViewTotalNumberOfSongsUploadedController">
    <children>
       <Button layoutX="513.0" layoutY="407.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
-      <Label layoutX="143.0" layoutY="27.0" prefHeight="39.0" prefWidth="337.0" text="View Total Number Of Songs Uploaded">
+      <Label layoutX="143.0" layoutY="27.0" prefHeight="39.0" prefWidth="338.0" text="View Total Number Of Songs Uploaded">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Label fx:id="totalnoofsongsuploadedlabel1" layoutX="47.0" layoutY="411.0" prefHeight="17.0" prefWidth="125.0" text="Confirmation Message:" />
