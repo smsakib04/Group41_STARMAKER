@@ -32,6 +32,8 @@ public class UploadASongController {
     private TextArea confirmationtextarea;
     @javafx.fxml.FXML
     private TextField descriptiontextfield;
+    @javafx.fxml.FXML
+    private Label confirmationlabel;
 
 
     @javafx.fxml.FXML
@@ -128,6 +130,7 @@ public class UploadASongController {
         descriptiontextfield.clear();
         genrecombobox.setValue(null);
 
+        //write code
         try {
             File f = new File("songinfo.bin");
             FileOutputStream fos = null;
@@ -139,37 +142,11 @@ public class UploadASongController {
                 fos = new FileOutputStream(f, true);
                 oos = new ObjectOutputStream(fos);
             }
-            for (Song a :songs ) {
+            for (Song a : songs) {
                 oos.writeObject(a);
             }
             oos.close();
         } catch (Exception e) {
-
         }
-
-    }
-
-
-    @javafx.fxml.FXML
-    public void writeinbinfileOnAction(ActionEvent actionEvent) {
-        //write code
-//        try {
-//            File f = new File("songinfo.bin");
-//            FileOutputStream fos = null;
-//            ObjectOutputStream oos = null;
-//            if (f.exists()) {
-//                fos = new FileOutputStream(f, true);
-//                oos = new ObjectOutputStream(fos);
-//            } else {
-//                fos = new FileOutputStream(f, true);
-//                oos = new ObjectOutputStream(fos);
-//            }
-//            for (Song s :songs ) {
-//                oos.writeObject(s);
-//            }
-//            oos.close();
-//        } catch (Exception e) {
-//
-//        }
     }
 }
