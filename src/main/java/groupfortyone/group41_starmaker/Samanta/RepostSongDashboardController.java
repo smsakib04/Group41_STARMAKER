@@ -1,46 +1,46 @@
 package groupfortyone.group41_starmaker.Samanta;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Raghib.Song;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class CommentOnSongController
+public class RepostSongDashboardController
 {
     @javafx.fxml.FXML
-    private TextField commentTF;
+    private TextField repostCaptionTF;
     @javafx.fxml.FXML
-    private TableColumn songTitleTC;
+    private ComboBox privacyCB;
     @javafx.fxml.FXML
-    private TableView commentTV;
+    private TextField usernameTF;
     @javafx.fxml.FXML
-    private TextField yourNameTF;
+    private RadioButton yesornoRB;
     @javafx.fxml.FXML
-    private TableColumn yourNameTC;
-    @javafx.fxml.FXML
-    private TableColumn genreTC;
-    @javafx.fxml.FXML
-    private TableColumn dateTC;
-    @javafx.fxml.FXML
-    private TableColumn commentTC;
+    private Label repostSummaryLB;
+
+    private Song selectedSong;
+
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
+
     @javafx.fxml.FXML
-    public void sendCommentOA(ActionEvent actionEvent) {
+    public void repostToProfileOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void previousOA(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MoreOptionsDashboard.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/CommentDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
@@ -48,5 +48,10 @@ public class CommentOnSongController
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
+    }
+
+    public void setSongDetails(Song selectedSong) {
+        this.selectedSong = selectedSong;
     }
 }

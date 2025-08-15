@@ -10,25 +10,27 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Samanta.SongSearchDashboardController">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="455.0" prefWidth="653.0">
+      <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="735.0" prefWidth="646.0">
          <children>
-            <Button layoutX="516.0" layoutY="109.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
+            <Button layoutX="538.0" layoutY="595.0" mnemonicParsing="false" onAction="#previousOA" text="previous" />
             <Label layoutX="168.0" layoutY="14.0" prefHeight="34.0" prefWidth="303.0" text="Search A Song By Title">
                <font>
                   <Font name="System Bold" size="28.0" />
                </font>
             </Label>
-            <TableView fx:id="tableView" layoutX="11.0" layoutY="151.0" prefHeight="453.0" prefWidth="631.0">
+            <TableView fx:id="tableView" layoutX="35.0" layoutY="165.0" prefHeight="423.0" prefWidth="567.0">
                <columns>
-                  <TableColumn fx:id="songtitlecolumn" prefWidth="299.0" text="Song Title" />
-                  <TableColumn fx:id="genrecolumn" prefWidth="135.0" text="Genre" />
-                  <TableColumn fx:id="descriptioncolumn" prefWidth="196.0" text="Description" />
+                  <TableColumn fx:id="songtitlecolumn" prefWidth="183.0" text="Song Title" />
+                  <TableColumn fx:id="genrecolumn" prefWidth="131.0" text="Genre" />
+                  <TableColumn fx:id="descriptioncolumn" prefWidth="252.0" text="Description" />
                </columns>
             </TableView>
             <Button layoutX="337.0" layoutY="118.0" mnemonicParsing="false" onAction="#searchOnAction" text="Search" />
-            <Label layoutX="59.0" layoutY="122.0" prefHeight="17.0" prefWidth="99.0" text="Name of the songS:" />
+            <Label layoutX="39.0" layoutY="123.0" prefHeight="17.0" prefWidth="113.0" text="Name of the song:" />
             <TextField fx:id="nameofthesongtextfield" layoutX="159.0" layoutY="118.0" />
-            <Button layoutX="502.0" layoutY="59.0" mnemonicParsing="false" onAction="#moreOptionsToLikeCommentShareOA" text="More Options" />
+            <Button layoutX="169.0" layoutY="595.0" mnemonicParsing="false" onAction="#commentOA" prefHeight="26.0" prefWidth="92.0" text="Comment" />
+            <Label layoutX="482.0" layoutY="206.0" />
+            <Button layoutX="311.0" layoutY="596.0" mnemonicParsing="false" onAction="#repostDbOA" text="Repost to Profile" />
          </children>
       </AnchorPane>
    </children>
