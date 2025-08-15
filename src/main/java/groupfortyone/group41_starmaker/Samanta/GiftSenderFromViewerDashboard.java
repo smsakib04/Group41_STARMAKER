@@ -52,10 +52,7 @@ public class GiftSenderFromViewerDashboard
             alert.showAndWait();
             return;
         }
-        // Get the current date
         String currentDate = java.time.LocalDate.now().toString();
-
-        // Create a new Gift object with the selected data
         Gift newGift = new Gift(selectedSinger.getSingerName(), giftAmount, currentDate);
         giftTV.getItems().add(newGift);
         giftCB.getSelectionModel().clearSelection();;

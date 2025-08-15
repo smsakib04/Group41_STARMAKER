@@ -70,7 +70,6 @@ public class ReportSingerDashboardController
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Report Submitted");
-        alert.setHeaderText(null);
         alert.setContentText("The report has been successfully submitted.");
         alert.showAndWait();
 
