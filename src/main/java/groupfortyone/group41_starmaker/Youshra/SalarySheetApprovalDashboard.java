@@ -9,25 +9,32 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+
+import static groupfortyone.group41_starmaker.Youshra.Salary.salaryList;
+import static groupfortyone.group41_starmaker.Youshra.Staff.staffList;
 
 public class SalarySheetApprovalDashboard
 {
     @javafx.fxml.FXML
-    private TableColumn EmployeeRoleColumn;
+    private TableColumn<Salary,String> EmployeeRoleColumn;
     @javafx.fxml.FXML
-    private Label SuccessfulLabel;
+    private TableColumn<Salary,String> SalaryColumn;
     @javafx.fxml.FXML
-    private TableColumn SalaryColumn;
+    private TableColumn<Salary,String> EmployeeNameColumn;
     @javafx.fxml.FXML
-    private TableColumn EmployeeNameColumn;
-    @javafx.fxml.FXML
-    private TableView SalarySheetTableView;
+    private TableView<Salary> SalarySheetTableView;
     @javafx.fxml.FXML
     private TextField SuccessfulTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
+        EmployeeRoleColumn.setCellValueFactory(new PropertyValueFactory<Salary, String>("role"));
+        EmployeeNameColumn.setCellValueFactory(new PropertyValueFactory<Salary, String>("name"));
+        SalaryColumn.setCellValueFactory(new PropertyValueFactory<Salary, String>("salary"));
+
+        SalarySheetTableView.getItems().addAll(salaryList);
     }
 
     @javafx.fxml.FXML
@@ -46,5 +53,7 @@ public class SalarySheetApprovalDashboard
 
     @javafx.fxml.FXML
     public void handleSentToCEObutton(ActionEvent actionEvent) {
+        SuccessfulTextField.setText("Request Sent successfully!");
+        SuccessfulTextField.setStyle("-fx-background-color: white");
     }
 }

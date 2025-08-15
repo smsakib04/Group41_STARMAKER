@@ -49,6 +49,8 @@ public class CreateMonthlyIncomeDashboard {
         SuccessfulTextField.setText("Staff has been added successfully!");
         SuccessfulTextField.setStyle("-fx-background-color:green");
 
+        IncomeAmountTextField.clear();
+
 
     }
 
