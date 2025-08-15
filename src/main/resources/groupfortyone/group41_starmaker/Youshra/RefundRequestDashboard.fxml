@@ -15,7 +15,7 @@
          </font>
       </Label>
       <Button layoutX="27.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlePreviousButton" prefHeight="26.0" prefWidth="137.0" text="Previous" />
-      <Label layoutX="57.0" layoutY="81.0" prefHeight="26.0" prefWidth="83.0" text="Requests:" />
+      <Label layoutX="34.0" layoutY="87.0" prefHeight="26.0" prefWidth="83.0" text="Requests:" />
       <Button layoutX="528.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleViewButton" prefHeight="26.0" prefWidth="137.0" text="View" />
       <TableView fx:id="RequestTableView" layoutX="34.0" layoutY="134.0" prefHeight="274.0" prefWidth="632.0">
         <columns>
