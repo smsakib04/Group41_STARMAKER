@@ -16,15 +16,15 @@ import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 public class LikeDashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn likescolumn;
+    private TableColumn<Song,Integer> likescolumn;
     @javafx.fxml.FXML
-    private TableColumn genrecolumn;
+    private TableColumn<Song,String> genrecolumn;
     @javafx.fxml.FXML
-    private TableView tableView;
+    private TableView<Song> tableView;
     @javafx.fxml.FXML
-    private TableColumn descriptioncolumn;
+    private TableColumn<Song,String> descriptioncolumn;
     @javafx.fxml.FXML
-    private TableColumn songtitlecolumn;
+    private TableColumn<Song,String> songtitlecolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -34,6 +34,7 @@ public class LikeDashboardController
         songtitlecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("songtitle"));
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("genre"));
+        likescolumn.setCellValueFactory(new PropertyValueFactory<Song,Integer>("likes"));
     }
 
     @javafx.fxml.FXML
@@ -51,5 +52,8 @@ public class LikeDashboardController
 
     @javafx.fxml.FXML
     public void likeOA(ActionEvent actionEvent) {
+        Song likesong= tableView.getSelectionModel().getSelectedItem();
+        likesong.setLikes(likesong.getLikes()+1);
+        tableView.refresh();
     }
 }
