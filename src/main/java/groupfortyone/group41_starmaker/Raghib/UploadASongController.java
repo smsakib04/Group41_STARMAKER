@@ -108,7 +108,7 @@ public class UploadASongController {
         for (Song s : songs) {
             if (s.getSongtitle().equals(songtitletextfield.getText())) {
                 Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-                erroralert.setContentText("Song title should be unique");
+                erroralert.setContentText("SongS title should be unique");
                 erroralert.show();
                 return;
             }
@@ -121,7 +121,7 @@ public class UploadASongController {
 
         songs.add(s);
         songlisttableview.getItems().add(s);
-        confirmationtextarea.setText("Song has been uploaded!");
+        confirmationtextarea.setText("SongS has been uploaded!");
         confirmationtextarea.setStyle("-fx-background-color: green");
 
         songtitletextfield.clear();
