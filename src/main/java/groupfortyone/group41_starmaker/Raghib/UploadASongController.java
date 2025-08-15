@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 
+import static groupfortyone.group41_starmaker.Raghib.Song.countLikes;
 import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
 
@@ -31,6 +32,8 @@ public class UploadASongController {
     private TextArea confirmationtextarea;
     @javafx.fxml.FXML
     private TextField descriptiontextfield;
+    @javafx.fxml.FXML
+    private Label confirmationlabel;
 
 
     @javafx.fxml.FXML
@@ -51,7 +54,7 @@ public class UploadASongController {
 
             } else {
                 Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-                erroralert.setContentText("File does not exist.");
+                erroralert.setContentText("Bin File does not exist.");
                 erroralert.show();
             }
             if (fis != null) {
@@ -115,7 +118,8 @@ public class UploadASongController {
         Song s = new Song(
                 songtitletextfield.getText(),
                 descriptiontextfield.getText(),
-                genrecombobox.getValue());
+                genrecombobox.getValue(),
+                countLikes);
 
         songs.add(s);
         songlisttableview.getItems().add(s);
@@ -125,11 +129,7 @@ public class UploadASongController {
         songtitletextfield.clear();
         descriptiontextfield.clear();
         genrecombobox.setValue(null);
-    }
 
-
-    @javafx.fxml.FXML
-    public void writeinbinfileOnAction(ActionEvent actionEvent) {
         //write code
         try {
             File f = new File("songinfo.bin");
@@ -142,12 +142,11 @@ public class UploadASongController {
                 fos = new FileOutputStream(f, true);
                 oos = new ObjectOutputStream(fos);
             }
-            for (Song s :songs ) {
-                oos.writeObject(s);
+            for (Song a : songs) {
+                oos.writeObject(a);
             }
             oos.close();
         } catch (Exception e) {
-
         }
     }
 }

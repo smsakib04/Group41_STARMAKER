@@ -22,6 +22,8 @@ public class UpdateFAQDashboardController
 
     @javafx.fxml.FXML
     public void updateFAQOA(ActionEvent actionEvent) {
+        String updatedFAQ = updateFAQTA.getText();
+        updateFAQLabel.setText(updatedFAQ);
 
     }
 

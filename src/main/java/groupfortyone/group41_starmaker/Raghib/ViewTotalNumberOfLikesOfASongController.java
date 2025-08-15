@@ -16,21 +16,22 @@ import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 public class ViewTotalNumberOfLikesOfASongController
 {
     @javafx.fxml.FXML
-    private TableView songlisttableview;
+    private TableView<Song>songlisttableview;
     @javafx.fxml.FXML
-    private TableColumn numberoflikescolumn;
+    private TableColumn<Song, Integer> numberoflikescolumn;
     @javafx.fxml.FXML
-    private TableColumn descriptioncolumn;
+    private TableColumn<Song,String> descriptioncolumn;
     @javafx.fxml.FXML
-    private TableColumn songtitlecolumn;
+    private TableColumn<Song,String> songtitlecolumn;
     @javafx.fxml.FXML
-    private TableColumn genrecolumn;
+    private TableColumn<Song,String> genrecolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
         songtitlecolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("songtitle"));
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("genre"));
+        numberoflikescolumn.setCellValueFactory(new PropertyValueFactory<Song,Integer>("likes"));
 
         songlisttableview.getItems().addAll(songs);
     }

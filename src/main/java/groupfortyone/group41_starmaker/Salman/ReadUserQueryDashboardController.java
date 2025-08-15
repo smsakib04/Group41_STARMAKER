@@ -24,18 +24,29 @@ public class ReadUserQueryDashboardController
     @javafx.fxml.FXML
     private TableView<Query> userQueryTV;
     @javafx.fxml.FXML
-    private TableColumn queryCol;
+    private TableColumn<Query, String> queryCol;
 
     @javafx.fxml.FXML
     public void initialize() {
         nameCol.setCellValueFactory(new PropertyValueFactory<>("username"));
         queryCol.setCellValueFactory(new PropertyValueFactory<>("query"));
+
+        userQueryTV.getItems().addAll(queryList);
+
     }
 
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
-        userQueryTV.getItems().addAll(queryList);
+        Query c = userQueryTV.getSelectionModel().getSelectedItem();
+
+        if (c == null){
+            return;
+        }
+
+        readQueryTA.setText(c.getQuery());
+
+
     }
 
     @javafx.fxml.FXML
