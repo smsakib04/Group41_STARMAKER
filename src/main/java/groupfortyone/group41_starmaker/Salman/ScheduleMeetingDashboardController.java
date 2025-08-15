@@ -1,6 +1,7 @@
 package groupfortyone.group41_starmaker.Salman;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Raghib.Song;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +11,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.time.LocalDate;
 import java.util.Locale;
 
+import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 import static groupfortyone.group41_starmaker.Salman.Meeting.meetingList;
 
 public class ScheduleMeetingDashboardController
@@ -34,6 +37,33 @@ public class ScheduleMeetingDashboardController
     public void initialize() {
         meetingTopicCol.setCellValueFactory(new PropertyValueFactory<>("meetingTopic"));
         meetingDateCol.setCellValueFactory(new PropertyValueFactory<>("meetingDate"));
+
+        //read
+
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("Data/MeetingSchedule.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
+
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin File does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                meetingTV.getItems().add((Meeting) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
     }
 
     @javafx.fxml.FXML
@@ -66,6 +96,26 @@ public class ScheduleMeetingDashboardController
         meetingTV.getItems().addAll(meetingList);
 
         confirmationMessageLabel.setText("Meeting has been created successfully!");
+
+        //write
+
+        try {
+            File f = new File("Data/MeetingSchedule.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            }
+            for (Meeting a : meetingList) {
+                oos.writeObject(a);
+            }
+            oos.close();
+        } catch (Exception e) {
+        }
 
     }
 
