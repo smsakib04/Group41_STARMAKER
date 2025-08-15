@@ -18,7 +18,7 @@ public class ViewTotalNumberOfLikesOfASongController
     @javafx.fxml.FXML
     private TableView<Song>songlisttableview;
     @javafx.fxml.FXML
-    private TableColumn<Song, String> numberoflikescolumn;
+    private TableColumn<Song, Integer> numberoflikescolumn;
     @javafx.fxml.FXML
     private TableColumn<Song,String> descriptioncolumn;
     @javafx.fxml.FXML
@@ -31,6 +31,7 @@ public class ViewTotalNumberOfLikesOfASongController
         songtitlecolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("songtitle"));
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<Song,String>("genre"));
+        numberoflikescolumn.setCellValueFactory(new PropertyValueFactory<Song,Integer>("likes"));
 
         songlisttableview.getItems().addAll(songs);
     }

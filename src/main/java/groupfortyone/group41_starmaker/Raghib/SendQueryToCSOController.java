@@ -23,6 +23,8 @@ public class SendQueryToCSOController {
     private TextArea querytextArea;
     @javafx.fxml.FXML
     private TextArea confirmationtextarea;
+    @javafx.fxml.FXML
+    private AnchorPane querytextarea;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -87,17 +89,14 @@ public class SendQueryToCSOController {
             erroralert.show();
             return;
         }
-        Query q =new Query(usernametextfield.getText(),querytextArea.getText());
+        Query q = new Query(usernametextfield.getText(), querytextArea.getText());
         queryList.add(q);
         confirmationtextarea.setText("Query has been sent successfully!");
         confirmationtextarea.setStyle("-fx-background-color: Green");
 
         usernametextfield.clear();
         querytextArea.clear();
-    }
 
-    @javafx.fxml.FXML
-    public void writeinbinfileOnAction(ActionEvent actionEvent) {
         try {
             File f = new File("queryinfo.bin");
             FileOutputStream fos = null;
@@ -109,8 +108,8 @@ public class SendQueryToCSOController {
                 fos = new FileOutputStream(f, true);
                 oos = new ObjectOutputStream(fos);
             }
-            for (Query q : queryList) {
-                oos.writeObject(q);
+            for (Query e : queryList) {
+                oos.writeObject(e);
             }
             oos.close();
         } catch (Exception e) {

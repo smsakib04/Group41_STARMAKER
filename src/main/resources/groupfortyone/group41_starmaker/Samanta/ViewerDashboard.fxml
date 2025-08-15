@@ -20,11 +20,16 @@
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Button>
-      <Button layoutX="39.0" layoutY="226.0" mnemonicParsing="false" onAction="#reportSingerOA" prefHeight="38.0" prefWidth="178.0" text="Report A Singer">
+      <Button layoutX="244.0" layoutY="162.0" mnemonicParsing="false" onAction="#reportSingerOA" prefHeight="38.0" prefWidth="171.0" text="Report A Singer">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
       <Button layoutX="503.0" layoutY="350.0" mnemonicParsing="false" onAction="#logoutOA" prefHeight="28.0" prefWidth="59.0" text="Logout" />
+      <Button layoutX="244.0" layoutY="104.0" mnemonicParsing="false" onAction="#likeSongOA" prefHeight="38.0" prefWidth="164.0" text="Like A Song">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

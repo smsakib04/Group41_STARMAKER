@@ -7,14 +7,17 @@ public class Song implements Serializable{
     private String songtitle;
     private String description;
     private String genre;
+    private int likes;
 
     public static  ArrayList<Song>songs=new ArrayList<>();
     public static  ArrayList<Song> favSongs = new ArrayList<>();
+    public static  int countLikes;
 
-    public Song(String songtitle, String description, String genre) {
+    public Song(String songtitle, String description, String genre, int likes) {
         this.songtitle = songtitle;
         this.description = description;
         this.genre = genre;
+        this.likes=likes;
     }
 
     public Song() {
@@ -44,6 +47,12 @@ public class Song implements Serializable{
         this.genre = genre;
     }
 
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {this.likes=likes;}
+
 
     @Override
     public String toString() {
@@ -51,6 +60,7 @@ public class Song implements Serializable{
                 "songtitle='" + songtitle + '\'' +
                 ", description='" + description + '\'' +
                 ", genre='" + genre + '\'' +
+                ", likes='" + likes + '\'' +
                 '}';
     }
 }
