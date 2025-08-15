@@ -15,7 +15,7 @@
    <children>
       <Label layoutX="193.0" layoutY="21.0" prefHeight="27.0" prefWidth="251.0" text="Adding A Campaign Post">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button layoutX="504.0" layoutY="482.0" mnemonicParsing="false" onAction="#gobackOnAction" prefHeight="25.0" prefWidth="65.0" text="Go Back" />

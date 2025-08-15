@@ -20,9 +20,9 @@
       </TableView>
       <Button layoutX="53.0" layoutY="330.0" mnemonicParsing="false" onAction="#showOnAction" prefHeight="25.0" prefWidth="100.0" text="Show All Posts" />
       <Button layoutX="483.0" layoutY="374.0" mnemonicParsing="false" onAction="#gobackOnAction" prefHeight="25.0" prefWidth="63.0" text="Go Back" />
-      <Label layoutX="191.0" layoutY="33.0" prefHeight="17.0" prefWidth="266.0" text="Show All Campaign Posts">
+      <Label layoutX="191.0" layoutY="33.0" prefHeight="27.0" prefWidth="223.0" text="Show All Campaign Posts">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Label layoutX="51.0" layoutY="378.0" prefHeight="17.0" prefWidth="129.0" text="Confirmation Message:" />

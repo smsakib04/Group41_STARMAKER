@@ -12,7 +12,7 @@
       <Button layoutX="607.0" layoutY="408.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
       <Label layoutX="192.0" layoutY="38.0" text="View Total Number Of Likes Of A Song">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <TableView fx:id="songlisttableview" layoutX="48.0" layoutY="113.0" prefHeight="200.0" prefWidth="617.0">
