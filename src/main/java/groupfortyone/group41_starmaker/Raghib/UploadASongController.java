@@ -54,7 +54,7 @@ public class UploadASongController {
 
             } else {
                 Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-                erroralert.setContentText("File does not exist.");
+                erroralert.setContentText("Bin File does not exist.");
                 erroralert.show();
             }
             if (fis != null) {
