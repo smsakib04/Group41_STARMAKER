@@ -24,7 +24,7 @@ public class ReadUserQueryDashboardController
     @javafx.fxml.FXML
     private TableView<Query> userQueryTV;
     @javafx.fxml.FXML
-    private TableColumn queryCol;
+    private TableColumn<Query, String> queryCol;
 
     @javafx.fxml.FXML
     public void initialize() {
