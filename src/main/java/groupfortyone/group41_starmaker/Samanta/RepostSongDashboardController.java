@@ -17,7 +17,7 @@ public class RepostSongDashboardController
     @javafx.fxml.FXML
     private TextField repostCaptionTF;
     @javafx.fxml.FXML
-    private ComboBox privacyCB;
+    private ComboBox<String> privacyCB;
     @javafx.fxml.FXML
     private TextField usernameTF;
     @javafx.fxml.FXML
@@ -30,11 +30,27 @@ public class RepostSongDashboardController
 
     @javafx.fxml.FXML
     public void initialize() {
+        privacyCB.getItems().addAll("Public", "Private", "Friends");
+
     }
 
 
     @javafx.fxml.FXML
     public void repostToProfileOA(ActionEvent actionEvent) {
+        String username = usernameTF.getText();
+        String caption = repostCaptionTF.getText();
+        String privacy = privacyCB.getValue();
+        boolean isAnonymous = yesornoRB.isSelected();
+
+        if (isAnonymous) {
+            username = "Anonymous";
+        }
+
+        String repostSummary = "Song: " + selectedSong.getSongtitle() + "\n" +
+                "Caption: " + caption + "\n" +
+                "Privacy: " + privacy + "\n" +
+                "User: " + username;
+        repostSummaryLB.setText(repostSummary + "\nReposted successfully!");
     }
 
     @javafx.fxml.FXML

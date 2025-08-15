@@ -100,7 +100,7 @@ public class SongSearchDashboardController {
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/RepostSongDashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 RepostSongDashboardController controller = fxmlLoader.getController();
-                controller.setSongDetails(selectedSong); // Pass the selectedSong to CommentDashboardController
+                controller.setSongDetails(selectedSong);
                 Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 nextStage.setScene(nextScene);
                 nextStage.show();
