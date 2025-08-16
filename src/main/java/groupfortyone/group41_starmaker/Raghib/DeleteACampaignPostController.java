@@ -9,9 +9,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.util.ArrayList;
 
 import static groupfortyone.group41_starmaker.Raghib.Campaign.campaignList;
+import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
 public class DeleteACampaignPostController
 {
@@ -36,6 +38,32 @@ public class DeleteACampaignPostController
         poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("status"));
 
         campaignlisttableview.getItems().addAll(campaignList);
+
+
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("deletecampaigninfo.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
+
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin File does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                campaignlisttableview.getItems().add((Campaign) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
     }
 
     @javafx.fxml.FXML
@@ -67,5 +95,16 @@ public class DeleteACampaignPostController
         campaignlisttableview.getItems().addAll(campaignList);
         confirmationtextarea.setText("Campaign post has been removed");
         confirmationtextarea.setStyle("-fx-background-color: green");
+
+
+        try (FileOutputStream fos = new FileOutputStream("deletecampaigninfo.bin");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+
+            for (Campaign i : campaignList) {
+                oos.writeObject(i);
+            }
+
+        } catch (Exception e) {
+        }
     }
 }
