@@ -66,7 +66,7 @@ public class ReportRequisitionController
             return;
 
         }
-        r.setStatus("Aprroved");
+        r.setStatus("Approved");
         reportRequisitionTV.getItems().clear();
 
         for (Report x : reportList){
