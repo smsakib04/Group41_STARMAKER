@@ -1,9 +1,7 @@
 package groupfortyone.group41_starmaker.Samanta;
 
 import groupfortyone.group41_starmaker.HelloApplication;
-import groupfortyone.group41_starmaker.Raghib.Song;
-import groupfortyone.group41_starmaker.Samanta.LiveBroadcast;
-import groupfortyone.group41_starmaker.Samanta.LiveSearchDashboardController;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -65,14 +63,12 @@ public class MyStreamsDashboardController extends LiveSearchDashboardController 
         }
         if (selectedStream.getPlatform().equals("Not shared")) {
             selectedStream.setPlatform(selectedPlatform);
-            streamsTV.refresh();  // Refresh the table to show the updated platform
+            streamsTV.refresh();
 
-            // Show a confirmation alert
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Stream has been shared on " + selectedPlatform, ButtonType.OK);
             alert.setTitle("Share Confirmation");
             alert.showAndWait();
         } else {
-            // If it's already shared, show a message
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "This stream has already been shared.", ButtonType.OK);
             alert.setTitle("Already Shared");
             alert.showAndWait();
