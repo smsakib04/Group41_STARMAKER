@@ -1,6 +1,7 @@
 package groupfortyone.group41_starmaker.Salman;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Youshra.Salary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,25 +12,38 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import static groupfortyone.group41_starmaker.Youshra.Salary.salaryList;
+
 public class ApproveSalarySheetDashboardController
 {
     @javafx.fxml.FXML
-    private TableColumn salaryAmountCol;
+    private TableColumn<Salary, String> salaryAmountCol;
     @javafx.fxml.FXML
-    private TableColumn nameCol;
+    private TableColumn<Salary, String> nameCol;
     @javafx.fxml.FXML
     private Label confirmationMessageLabel;
     @javafx.fxml.FXML
-    private TableView approveSalarySheetTV;
+    private TableView<Salary> approveSalarySheetTV;
 
     @javafx.fxml.FXML
     public void initialize() {
         nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-        salaryAmountCol.setCellValueFactory(new PropertyValueFactory<>("salaryAmount"));
+        salaryAmountCol.setCellValueFactory(new PropertyValueFactory<>("salary"));
+
+        approveSalarySheetTV.getItems().addAll(salaryList);
     }
 
     @javafx.fxml.FXML
     public void approveOA(ActionEvent actionEvent) {
+        Salary s = approveSalarySheetTV.getSelectionModel().getSelectedItem();
+
+        if (s == null) {
+            confirmationMessageLabel.setText("Please select an item!");
+            return;
+        }
+        salaryList.remove(s);
+        approveSalarySheetTV.getItems().clear();
+        approveSalarySheetTV.getItems().addAll(salaryList);
 
         confirmationMessageLabel.setText("Salary has been approved!");
     }
@@ -49,6 +63,15 @@ public class ApproveSalarySheetDashboardController
 
     @javafx.fxml.FXML
     public void rejectOA(ActionEvent actionEvent) {
+        Salary s = approveSalarySheetTV.getSelectionModel().getSelectedItem();
+
+        if (s == null) {
+            confirmationMessageLabel.setText("Please select an item!");
+            return;
+        }
+        salaryList.remove(s);
+        approveSalarySheetTV.getItems().clear();
+        approveSalarySheetTV.getItems().addAll(salaryList);
 
         confirmationMessageLabel.setText("Salary has been rejected!");
     }

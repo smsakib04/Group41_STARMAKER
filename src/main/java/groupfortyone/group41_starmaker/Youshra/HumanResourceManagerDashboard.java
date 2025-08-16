@@ -32,7 +32,7 @@ public class HumanResourceManagerDashboard {
     @javafx.fxml.FXML
     public void handleLogOutbutton(ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/Login.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);

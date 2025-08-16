@@ -29,7 +29,7 @@ public class ReportSingerDashboardController
     private TableView<Report> reportTV;
     @javafx.fxml.FXML
     private TableColumn<Report, String> commentTC;
-    private ObservableList<Report> reportList = FXCollections.observableArrayList();
+    public static ObservableList<Report> reportList = FXCollections.observableArrayList();
 
 
     @javafx.fxml.FXML
@@ -70,7 +70,6 @@ public class ReportSingerDashboardController
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Report Submitted");
-        alert.setHeaderText(null);
         alert.setContentText("The report has been successfully submitted.");
         alert.showAndWait();
 

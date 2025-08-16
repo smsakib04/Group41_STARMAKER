@@ -83,9 +83,14 @@ public class SearchSingerToFollowGiftController
 
     @javafx.fxml.FXML
     public void giftOA(ActionEvent actionEvent) {
+        Singer selectedSinger = (Singer) singerTV.getSelectionModel().getSelectedItem();
+
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/GiftSenderFromViewerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
+
+            GiftSenderFromViewerDashboard controller = fxmlLoader.getController();
+            controller.setSelectedSinger(selectedSinger);
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();

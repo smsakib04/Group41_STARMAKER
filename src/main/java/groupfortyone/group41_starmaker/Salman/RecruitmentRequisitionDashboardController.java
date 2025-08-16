@@ -61,7 +61,7 @@ public class RecruitmentRequisitionDashboardController
 
     @javafx.fxml.FXML
     public void approveOA(ActionEvent actionEvent) {
-        Employee approvals = (Employee) recruitmentRequisitionTV.getSelectionModel().getSelectedItem();
+        Employee approvals = recruitmentRequisitionTV.getSelectionModel().getSelectedItem();
         approvedList.add(approvals);
         EmployeeList.remove(approvals);
         recruitmentRequisitionTV.getItems().clear();

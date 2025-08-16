@@ -15,7 +15,7 @@
       </Label>
       <TextArea fx:id="updateFAQTA" layoutX="100.0" layoutY="78.0" prefHeight="133.0" prefWidth="200.0" promptText="Type Updated FAQ here..." />
       <Button layoutX="509.0" layoutY="338.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
-      <Label fx:id="updateFAQLabel" layoutX="116.0" layoutY="240.0" prefHeight="124.0" prefWidth="327.0" />
       <Button layoutX="401.0" layoutY="132.0" mnemonicParsing="false" onAction="#updateFAQOA" text="Update FAQ" />
+      <TextArea fx:id="updateFAQTA2" layoutX="31.0" layoutY="227.0" prefHeight="150.0" prefWidth="471.0" text="What is StarMaker? – A karaoke app to sing and share songs.&#10;&#10;Is StarMaker free? – Yes, with optional in-app purchases.&#10;&#10;Can I collaborate? – Yes, via duets and sharing." />
    </children>
 </AnchorPane>

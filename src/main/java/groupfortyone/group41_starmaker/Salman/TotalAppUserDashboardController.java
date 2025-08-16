@@ -8,6 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import static groupfortyone.group41_starmaker.Youshra.Employee.EmployeeList;
+import static groupfortyone.group41_starmaker.Youshra.Staff.staffList;
+
 public class TotalAppUserDashboardController
 {
     @javafx.fxml.FXML
@@ -19,6 +22,7 @@ public class TotalAppUserDashboardController
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
+        totalAppUserLabel.setText("Total employee of the company is "+ staffList.size()+ " persons.");
 
     }
 

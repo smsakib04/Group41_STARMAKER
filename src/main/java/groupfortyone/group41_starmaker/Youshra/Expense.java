@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class Expense {
     private String type;
-    private Integer amount;
+    private String amount;
 
     public static ArrayList<Expense> expense = new ArrayList<Expense>();
-    public Expense(String type, int id) {
+    public Expense(String type, String amount) {
         this.type = type;
         this.amount = amount;
     }
 
-    public Integer getAmount() {
+    public String getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
+    public void setAmount(String amount) {
         this.amount = amount;
     }
 

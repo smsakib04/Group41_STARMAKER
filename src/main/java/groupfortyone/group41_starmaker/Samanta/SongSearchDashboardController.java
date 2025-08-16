@@ -12,23 +12,21 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
 
 import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
-public class SongSearchDashboardController
-{
+public class SongSearchDashboardController {
     @javafx.fxml.FXML
-    private TableColumn genrecolumn;
+    private TableColumn<Song, String> genrecolumn;
     @javafx.fxml.FXML
     private TextField nameofthesongtextfield;
     @javafx.fxml.FXML
-    private TableColumn songtitlecolumn;
+    private TableColumn<Song, String> songtitlecolumn;
     @javafx.fxml.FXML
-    private TableView tableView;
-    private SongS selectedSongS;
+    private TableView<Song> tableView;
+    private Song selectedSong;
     @javafx.fxml.FXML
-    private TableColumn descriptioncolumn;
+    private TableColumn<Song, String> descriptioncolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -41,7 +39,7 @@ public class SongSearchDashboardController
 
 
         tableView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            selectedSongS = (SongS) newValue;
+            selectedSong = (Song) newValue;
         });
 
     }
@@ -52,13 +50,13 @@ public class SongSearchDashboardController
 
         for (Song songS : songs) {
             if (songS.getSongtitle().toLowerCase().contains(searchQuery)) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "SongS: " + songS.getSongtitle() + "\nGenre: " + songS.getGenre(), ButtonType.OK);
-                alert.setTitle("SongS Found");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Song: " + songS.getSongtitle() + "\nGenre: " + songS.getGenre(), ButtonType.OK);
+                alert.setTitle("Song Found");
                 alert.showAndWait();
                 break;
             }
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "No songS found matching your search.", ButtonType.OK);
-            alert.setTitle("No SongS Found");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "No song found matching your search.", ButtonType.OK);
+            alert.setTitle("No Song Found");
             alert.showAndWait();
         }
     }
@@ -68,7 +66,7 @@ public class SongSearchDashboardController
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/ViewerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -76,18 +74,40 @@ public class SongSearchDashboardController
         }
     }
 
+
     @javafx.fxml.FXML
-    public void moreOptionsToLikeCommentShareOA(ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MoreOptionsDashboard.fxml"));
-            Scene nextScene = new Scene(fxmlLoader.load());
-            MoreOptionsDashboardController controller = fxmlLoader.getController();
-            controller.setSongDetails(selectedSongS);
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setScene(nextScene);
-            nextStage.show();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+    public void commentOA(ActionEvent actionEvent) {
+        if (selectedSong != null) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/CommentDashboard.fxml"));
+                Scene nextScene = new Scene(fxmlLoader.load());
+                CommentDashboardController controller = fxmlLoader.getController();
+                controller.setSongDetails(selectedSong); // Pass the selectedSong to CommentDashboardController
+                Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                nextStage.setScene(nextScene);
+                nextStage.show();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
+
+    }
+
+    @javafx.fxml.FXML
+    public void repostDbOA(ActionEvent actionEvent) {
+        if (selectedSong != null) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/RepostSongDashboard.fxml"));
+                Scene nextScene = new Scene(fxmlLoader.load());
+                RepostSongDashboardController controller = fxmlLoader.getController();
+                controller.setSongDetails(selectedSong);
+                Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                nextStage.setScene(nextScene);
+                nextStage.show();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 }

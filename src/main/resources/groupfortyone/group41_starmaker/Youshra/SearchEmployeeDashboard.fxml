@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="394.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.SearchEmployeeDashboard">
+<AnchorPane prefHeight="457.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Youshra.SearchEmployeeDashboard">
    <children>
       <Label layoutX="212.0" layoutY="21.0" prefHeight="42.0" prefWidth="284.0" text="Search Employee Dashboard">
          <font>
@@ -16,9 +17,17 @@
       </Label>
       <Button layoutX="27.0" layoutY="21.0" mnemonicParsing="false" onAction="#handlePreviousButton" text="Previous" />
       <Button layoutX="617.0" layoutY="84.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Search" />
-      <ComboBox fx:id="SearchByComboBox" layoutX="39.0" layoutY="84.0" prefWidth="150.0" promptText="Search By" />
       <TextField fx:id="EnterTextField" layoutX="275.0" layoutY="84.0" prefHeight="26.0" prefWidth="255.0" />
-      <Label layoutX="233.0" layoutY="88.0" prefHeight="18.0" prefWidth="42.0" text="Enter: " />
-      <Label fx:id="DetailsLabel" layoutX="39.0" layoutY="163.0" prefHeight="222.0" prefWidth="642.0" />
+      <Label layoutX="142.0" layoutY="88.0" prefHeight="18.0" prefWidth="133.0" text="Employee Name:" />
+      <TableView fx:id="EmployeeListTableView" layoutX="39.0" layoutY="139.0" prefHeight="219.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="EmployeeNameColumn" prefWidth="108.79993438720703" text="Employee Name" />
+          <TableColumn fx:id="EmployeeIDColumn" prefWidth="113.5999755859375" text="Employee ID" />
+            <TableColumn fx:id="EmployeeRoleColumn" prefWidth="157.60003662109375" text="Employee Role" />
+            <TableColumn fx:id="EmployeeTypeColumn" prefWidth="135.19992065429688" text="Employee Type" />
+            <TableColumn fx:id="DepartmentColumn" prefWidth="136.0" text="Department" />
+        </columns>
+      </TableView>
+      <TextField fx:id="ConfirmationTextField" layoutX="39.0" layoutY="386.0" prefHeight="42.0" prefWidth="400.0" />
    </children>
 </AnchorPane>
