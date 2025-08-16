@@ -40,7 +40,10 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="536.0" layoutY="449.0" mnemonicParsing="false" onAction="#logoutOnAction" text="Logout" />
+      <Button layoutX="527.0" layoutY="449.0" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="32.0" prefWidth="80.0" text="Logout">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
       <Button layoutX="41.0" layoutY="294.0" mnemonicParsing="false" onAction="#editacampaignpostOnAction" prefHeight="32.0" prefWidth="341.0" text="Edit a Campaign Post">
          <font>
             <Font name="System Bold" size="15.0" />
