@@ -53,6 +53,15 @@ public class LiveSearchDashboardController
 
 
     @javafx.fxml.FXML
+    public void nameoftheLiveOA(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void gobackOA(ActionEvent actionEvent) {
+
+    }
+
+    @javafx.fxml.FXML
     public void searchOA(ActionEvent actionEvent) {
         String searchQuery = nameoftheLiveTF.getText();
         boolean found = false;
