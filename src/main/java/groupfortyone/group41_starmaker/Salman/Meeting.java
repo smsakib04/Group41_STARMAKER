@@ -1,9 +1,10 @@
 package groupfortyone.group41_starmaker.Salman;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Meeting {
+public class Meeting implements Serializable {
     public String meetingTopic;
     public LocalDate meetingDate;
 
