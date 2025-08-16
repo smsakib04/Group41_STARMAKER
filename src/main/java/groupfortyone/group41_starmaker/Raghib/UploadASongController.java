@@ -123,7 +123,7 @@ public class UploadASongController {
 
         songs.add(s);
         songlisttableview.getItems().add(s);
-        confirmationtextarea.setText("SongS has been uploaded!");
+        confirmationtextarea.setText("Song has been uploaded!");
         confirmationtextarea.setStyle("-fx-background-color: green");
 
         songtitletextfield.clear();
