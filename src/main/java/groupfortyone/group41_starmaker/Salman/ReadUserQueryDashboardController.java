@@ -33,6 +33,7 @@ public class ReadUserQueryDashboardController
 
         userQueryTV.getItems().addAll(queryList);
 
+
     }
 
 
