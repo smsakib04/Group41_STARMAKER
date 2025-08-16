@@ -91,18 +91,16 @@ public class FollowersDashboardController
             Alert alert = new Alert(Alert.AlertType.WARNING, "Please select a follower before proceeding.", ButtonType.OK);
             alert.setTitle("No Follower Selected");
             alert.showAndWait();
-            return;  // Exit the method if no follower is selected
+            return;
         }
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MessageFollowerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
 
-            // Get the controller of the next scene
             MessageFollowerDashboardController controller = fxmlLoader.getController();
-            controller.setfollowerName(selectedfollower);  // Pass the selected follower to the next controller
+            controller.setfollowerName(selectedfollower);
 
-            // Switch to the new scene
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();

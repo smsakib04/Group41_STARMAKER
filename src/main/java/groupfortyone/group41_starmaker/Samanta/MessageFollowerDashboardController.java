@@ -34,16 +34,12 @@ public class MessageFollowerDashboardController
         if (followerName != null ) {
             String message = messageBodyTF.getText();
 
-            // Create a Message object with the follower's name and the message content
             Message newMessage = new Message("null because the from row doesnt exist", followerName, message);
 
-            // Add the Message object to the TableView
             messageTV.getItems().add(newMessage);
 
-            // Clear the message body text field
             messageBodyTF.clear();
         } else {
-            // Show an alert if no message is entered
             Alert alert = new Alert(Alert.AlertType.WARNING, "Please write a message before sending.", ButtonType.OK);
             alert.setTitle("Message Error");
             alert.showAndWait();
