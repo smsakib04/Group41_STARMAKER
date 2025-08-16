@@ -40,17 +40,26 @@ public class LiveSearchDashboardController
     }
 
     protected void broadcastData() {
-        allBroadcastList.add(new LiveBroadcast("PUBG LIVE STREAM", "a gaming stream of today's gameplay", "06/01/2025", 23));
-        allBroadcastList.add(new LiveBroadcast("Cooking Masterclass", "Learn new recipes and cooking tips live", "06/02/2025", 778));
-        allBroadcastList.add(new LiveBroadcast("Tech Talk", "Discussion on the latest tech trends and innovations", "06/03/2025", 54));
-        allBroadcastList.add(new LiveBroadcast("Music Festival Live", "A live broadcast of an outdoor music festival", "06/04/2025", 304));
-        allBroadcastList.add(new LiveBroadcast("Fitness Live", "Live workout session with fitness experts", "06/05/2025", 43));
-        allBroadcastList.add(new LiveBroadcast("Movie Night", "Watch a live screening of a popular movie", "06/06/2025", 0));
-        allBroadcastList.add(new LiveBroadcast("Travel Vlog", "Join the host on an exciting travel journey", "06/07/2025", 4244));
-        allBroadcastList.add(new LiveBroadcast("Science Show", "Explore the wonders of science through live demonstrations", "06/08/2025", 423));
-        allBroadcastList.add(new LiveBroadcast("Art Workshop", "Live painting and art lessons from professional artists", "06/09/2025", 44));
+        allBroadcastList.add(new LiveBroadcast("PUBG LIVE STREAM", "a gaming stream of today's gameplay", "06/01/2025", 23,"Not shared"));
+        allBroadcastList.add(new LiveBroadcast("Cooking Masterclass", "Learn new recipes and cooking tips live", "06/02/2025", 778,"Not shared"));
+        allBroadcastList.add(new LiveBroadcast("Tech Talk", "Discussion on the latest tech trends and innovations", "06/03/2025", 54,"Not shared"));
+        allBroadcastList.add(new LiveBroadcast("Music Festival Live", "A live broadcast of an outdoor music festival", "06/04/2025", 304,"Not shared"));
+        allBroadcastList.add(new LiveBroadcast("Fitness Live", "Live workout session with fitness experts", "06/05/2025", 43, "Not shared"));
+        allBroadcastList.add(new LiveBroadcast("Movie Night", "Watch a live screening of a popular movie", "06/06/2025", 0,"Not shared"));
+        allBroadcastList.add(new LiveBroadcast("Travel Vlog", "Join the host on an exciting travel journey", "06/07/2025", 4244,"Not shared"));
+        allBroadcastList.add(new LiveBroadcast("Science Show", "Explore the wonders of science through live demonstrations", "06/08/2025", 423,"Not shared"));
+        allBroadcastList.add(new LiveBroadcast("Art Workshop", "Live painting and art lessons from professional artists", "06/09/2025", 44,"Not shared"));
     }
 
+
+    @javafx.fxml.FXML
+    public void nameoftheLiveOA(ActionEvent actionEvent) {
+    }
+
+    @Deprecated
+    public void gobackOA(ActionEvent actionEvent) {
+
+    }
 
     @javafx.fxml.FXML
     public void searchOA(ActionEvent actionEvent) {

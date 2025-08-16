@@ -4,6 +4,7 @@ import groupfortyone.group41_starmaker.HelloApplication;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -26,6 +27,7 @@ public class FollowersDashboardController
     private TableColumn<String, Follower>  followingFollowerIDTC;
     @javafx.fxml.FXML
     private TableView <Follower> followingFollowerTC;
+    private Follower selectedfollower;
     private ObservableList<Follower> followersList = FXCollections.observableArrayList();
     private ObservableList<Follower> followingFollowerList = FXCollections.observableArrayList();
 
@@ -83,16 +85,29 @@ public class FollowersDashboardController
 
     @javafx.fxml.FXML
     public void messageFollowerOA(ActionEvent actionEvent) {
+        Follower selectedfollower = followersTable.getSelectionModel().getSelectedItem();
+
+        if (selectedfollower == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Please select a follower before proceeding.", ButtonType.OK);
+            alert.setTitle("No Follower Selected");
+            alert.showAndWait();
+            return;
+        }
+
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/MessageFollowerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
+
+            MessageFollowerDashboardController controller = fxmlLoader.getController();
+            controller.setfollowerName(selectedfollower);
+
             Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            throw new RuntimeException("Error navigating to the message follower dashboard.", e);
         }
-
     }
 
     @javafx.fxml.FXML
