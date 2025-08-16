@@ -7,8 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class HumanResourceManagerDashboard
-{
+public class HumanResourceManagerDashboard {
     @javafx.fxml.FXML
     public void initialize() {
     }
@@ -20,117 +19,118 @@ public class HumanResourceManagerDashboard
     @javafx.fxml.FXML
     public void handleSearchEmployeebutton(ActionEvent actionEvent) {
         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/SearchEmployeeDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/SearchEmployeeDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
     public void handleLogOutbutton(ActionEvent actionEvent) {
         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/Login.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
-    }
-
-    @javafx.fxml.FXML
-    public void handleViewEmployeebutton(ActionEvent actionEvent) {
-        try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/ViewEmployeeListDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    @javafx.fxml.FXML
-    public void handleRolesofEmployeesbutton(ActionEvent actionEvent) {
-        try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/EmployeeRolesDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
-    }
 
     @javafx.fxml.FXML
     public void handleAddNewStaffbutton(ActionEvent actionEvent) {
         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/AddNewStaffDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/AddNewStaffDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
-    public void handleUpdateEmployeeDetailsbutton(ActionEvent actionEvent) {
+    public void handleFilterStaffbutton(ActionEvent actionEvent) {
         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/UpdateEmployeeDetailsDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/FilterStaffDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
     public void handleNewRecruitmentRequestbutton(ActionEvent actionEvent) {
         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/RecruitmentRequestDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/RecruitmentRequestDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
     public void handleAnnouncementbutton(ActionEvent actionEvent) {
         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/AnnouncementDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
-    }
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/AnnouncementDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @javafx.fxml.FXML
     public void handleRemoveStaffbutton(ActionEvent actionEvent) {
         try {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/RemoveStaffDashboard.fxml"));
-        Scene nextScene = new Scene(fxmlLoader.load());
-        Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        nextStage.setScene(nextScene);
-        nextStage.show();
-    } catch (Exception e) {
-        throw new RuntimeException(e);
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/RemoveStaffDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
+
+    @javafx.fxml.FXML
+    public void handleUpdateStaffRolesbutton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/UpdateStaffRolesDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @javafx.fxml.FXML
+    public void handleViewStaffbutton(ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/ViewStaffListDashboard.fxml"));
+            Scene nextScene = new Scene(fxmlLoader.load());
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setScene(nextScene);
+            nextStage.show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

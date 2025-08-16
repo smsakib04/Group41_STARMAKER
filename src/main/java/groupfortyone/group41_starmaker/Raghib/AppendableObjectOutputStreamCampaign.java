@@ -13,4 +13,3 @@ public class AppendableObjectOutputStreamCampaign extends ObjectOutputStream {
     protected void writeStreamHeader() throws IOException {
     }
 }
-

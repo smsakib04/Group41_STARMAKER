@@ -29,7 +29,6 @@
         </columns>
       </TableView>
       <Button layoutX="543.0" layoutY="521.0" mnemonicParsing="false" onAction="#handleSentToCEObutton" prefHeight="26.0" prefWidth="126.0" text="Send to CEO" />
-      <Label fx:id="SuccessfulLabel" layoutX="43.0" layoutY="526.0" prefHeight="26.0" prefWidth="218.0" />
-      <TextField fx:id="SuccessfulTextField" layoutX="46.0" layoutY="513.0" prefHeight="26.0" prefWidth="382.0" />
+      <TextField fx:id="SuccessfulTextField" layoutX="43.0" layoutY="521.0" prefHeight="26.0" prefWidth="382.0" />
    </children>
 </AnchorPane>

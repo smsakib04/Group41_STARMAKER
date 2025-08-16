@@ -74,7 +74,7 @@ public class MarkASongAsFavouriteController
         for (Song s : favSongs) {
             if (s == song) {
                 Alert erroralert= new Alert(Alert.AlertType.INFORMATION);
-                erroralert.setContentText("Song is already in the fav list");
+                erroralert.setContentText("SongS is already in the fav list");
                 erroralert.show();
                 return;
             }
@@ -83,7 +83,7 @@ public class MarkASongAsFavouriteController
         songlisttableview.refresh();
         songlisttableview2.getItems().clear();
         songlisttableview2.getItems().addAll(favSongs);
-        confirmationtextarea.setText("Song has been marked as favourite");
+        confirmationtextarea.setText("SongS has been marked as favourite");
         confirmationtextarea.setStyle("-fx-background-color: Green");
     }
 }

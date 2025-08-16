@@ -8,6 +8,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.io.*;
+
+import static groupfortyone.group41_starmaker.Raghib.Campaign.campaignupdatesList;
+import static groupfortyone.group41_starmaker.Raghib.Song.songs;
+
 public class SendCampaignUpdatesToTeamMembers
 {
     @javafx.fxml.FXML
@@ -19,6 +24,30 @@ public class SendCampaignUpdatesToTeamMembers
 
     @javafx.fxml.FXML
     public void initialize() {
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("campaignupdatesinfo.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
+
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin File does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                campaignnoteslistview.getItems().add((Campaign) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
     }
 
     @javafx.fxml.FXML
@@ -28,7 +57,7 @@ public class SendCampaignUpdatesToTeamMembers
 
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Marketing Executive Dashboard");
+            nextStage.setTitle("Marketing Executive Officer Dashboard");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -38,15 +67,35 @@ public class SendCampaignUpdatesToTeamMembers
 
     @javafx.fxml.FXML
     public void addcampaignnotesOnAction(ActionEvent actionEvent) {
-        if (sendcampaignupdatestextfield.getText().isEmpty()){
+        String q=sendcampaignupdatestextfield.getText();
+        if (q.isEmpty()){
             Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Give some updates");
             erroralert.show();
             return;
         }
-        campaignnoteslistview.getItems().addAll(sendcampaignupdatestextfield.getText());
+        campaignupdatesList.add(q);
+        campaignnoteslistview.getItems().addAll(q);
         confirmationtextarea.setText("Updates have been sent successfully");
         confirmationtextarea.setStyle("-fx-background-color: green");
         sendcampaignupdatestextfield.clear();
+
+        try {
+            File f = new File("campaignupdatesinfo.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            }
+            for (String g : campaignupdatesList) {
+                oos.writeObject(g);
+            }
+            oos.close();
+        } catch (Exception e) {
+        }
     }
 }

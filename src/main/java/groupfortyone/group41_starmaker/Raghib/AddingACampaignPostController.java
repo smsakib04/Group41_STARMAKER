@@ -15,8 +15,7 @@ import java.util.ArrayList;
 
 import static groupfortyone.group41_starmaker.Raghib.Campaign.campaignList;
 
-public class AddingACampaignPostController
-{
+public class AddingACampaignPostController {
     @javafx.fxml.FXML
     private TextField titletextfield;
     @javafx.fxml.FXML
@@ -26,17 +25,17 @@ public class AddingACampaignPostController
     @javafx.fxml.FXML
     private TextField contenttextfield;
     @javafx.fxml.FXML
-    private TableColumn<Campaign,String> titlecolumn;
+    private TableColumn<Campaign, String> titlecolumn;
     @javafx.fxml.FXML
-    private TableColumn<Campaign,String> contentcolumn;
+    private TableColumn<Campaign, String> contentcolumn;
     @javafx.fxml.FXML
-    private TableColumn<Campaign,String> poststatuscolumn;
+    private TableColumn<Campaign, String> poststatuscolumn;
     @javafx.fxml.FXML
     private RadioButton expiredradiobutton;
     @javafx.fxml.FXML
     private RadioButton activeradiobutton;
     @javafx.fxml.FXML
-    private TableColumn<Campaign,String> datecolumn;
+    private TableColumn<Campaign, String> datecolumn;
     @javafx.fxml.FXML
     private TextArea confirmationtextarea;
     @javafx.fxml.FXML
@@ -45,14 +44,14 @@ public class AddingACampaignPostController
 
     @javafx.fxml.FXML
     public void initialize() {
-        ToggleGroup tg=new ToggleGroup();
+        ToggleGroup tg = new ToggleGroup();
         activeradiobutton.setToggleGroup(tg);
         expiredradiobutton.setToggleGroup(tg);
 
-        titlecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("title"));
-        contentcolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("content"));
-        datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("date"));
-        poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign,String>("status"));
+        titlecolumn.setCellValueFactory(new PropertyValueFactory<Campaign, String>("title"));
+        contentcolumn.setCellValueFactory(new PropertyValueFactory<Campaign, String>("content"));
+        datecolumn.setCellValueFactory(new PropertyValueFactory<Campaign, String>("date"));
+        poststatuscolumn.setCellValueFactory(new PropertyValueFactory<Campaign, String>("status"));
 
 
         FileInputStream fis = null;
@@ -87,8 +86,8 @@ public class AddingACampaignPostController
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/MarketingExecutiveOfficerDashboard.fxml"));
 
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Marketing Executive Dashboard");
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            nextStage.setTitle("Marketing Executive Officer Dashboard");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -98,47 +97,47 @@ public class AddingACampaignPostController
 
     @javafx.fxml.FXML
     public void saveOnaction(ActionEvent actionEvent) {
-        String SelectStatus=" ";
-        if (activeradiobutton.isSelected()){
-            SelectStatus="Active";
+        String SelectStatus = " ";
+        if (activeradiobutton.isSelected()) {
+            SelectStatus = "Active";
         }
-        if (expiredradiobutton.isSelected()){
-            SelectStatus="Expired";
+        if (expiredradiobutton.isSelected()) {
+            SelectStatus = "Expired";
         }
 
-        if (titletextfield.getText().isEmpty()){
-            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+        if (titletextfield.getText().isEmpty()) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Provide a title");
             erroralert.show();
             return;
         }
-        if (contenttextfield.getText().isEmpty()){
-            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+        if (contenttextfield.getText().isEmpty()) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Provide a content");
             erroralert.show();
             return;
         }
-        if (datedatepicker.getValue()==null){
-            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+        if (datedatepicker.getValue() == null) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Provide a date");
             erroralert.show();
             return;
         }
-        if ((!activeradiobutton.isSelected()) && (!expiredradiobutton.isSelected())){
-            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+        if ((!activeradiobutton.isSelected()) && (!expiredradiobutton.isSelected())) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Provide status");
             erroralert.show();
             return;
         }
-        for (Campaign c:campaignList){
-            if (c.getTitle().equals(titletextfield.getText())){
+        for (Campaign c : campaignList) {
+            if (c.getTitle().equals(titletextfield.getText())) {
                 Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
                 erroralert.setContentText("Post title should be unique");
                 erroralert.show();
                 return;
             }
         }
-        Campaign c= new Campaign(
+        Campaign c = new Campaign(
                 titletextfield.getText(),
                 contenttextfield.getText(),
                 datedatepicker.getValue(),
@@ -155,10 +154,8 @@ public class AddingACampaignPostController
         datedatepicker.setValue(null);
         activeradiobutton.setSelected(false);
         expiredradiobutton.setSelected(false);
-    }
 
-    @javafx.fxml.FXML
-    public void writeinbinfileOnAction(ActionEvent actionEvent) {
+
         try {
             File f = new File("campaigninfo.bin");
             FileOutputStream fos = null;
@@ -170,12 +167,11 @@ public class AddingACampaignPostController
                 fos = new FileOutputStream(f, true);
                 oos = new ObjectOutputStream(fos);
             }
-            for (Campaign c : campaignList) {
-                oos.writeObject(c);
+            for (Campaign b : campaignList) {
+                oos.writeObject(b);
             }
             oos.close();
         } catch (Exception e) {
-
         }
     }
-    }
+}

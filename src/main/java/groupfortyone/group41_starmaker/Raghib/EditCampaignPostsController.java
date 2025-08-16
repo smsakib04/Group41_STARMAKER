@@ -56,7 +56,7 @@ public class EditCampaignPostsController
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/MarketingExecutiveOfficerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Marketing Executive Dashboard");
+            nextStage.setTitle("Marketing Executive Officer Dashboard");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {

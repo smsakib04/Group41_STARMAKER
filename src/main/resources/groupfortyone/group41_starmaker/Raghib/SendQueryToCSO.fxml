@@ -10,9 +10,9 @@
 <AnchorPane fx:id="querytextarea" prefHeight="464.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.SendQueryToCSOController">
    <children>
       <Button layoutX="561.0" layoutY="373.0" mnemonicParsing="false" onAction="#gobackOnAction" text="Go Back" />
-      <Label layoutX="247.0" layoutY="33.0" prefHeight="46.0" prefWidth="291.0" text="Send Query To CSO">
+      <Label layoutX="256.0" layoutY="14.0" prefHeight="46.0" prefWidth="165.0" text="Send Query To CSO">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <TextField fx:id="usernametextfield" layoutX="172.0" layoutY="100.0" />
@@ -23,6 +23,5 @@
       <Button layoutX="75.0" layoutY="328.0" mnemonicParsing="false" onAction="#sendOnAction" prefHeight="25.0" prefWidth="82.0" text="Send" />
       <Label layoutX="75.0" layoutY="377.0" prefHeight="17.0" prefWidth="143.0" text="Confirmation Message:" />
       <TextArea fx:id="confirmationtextarea" layoutX="200.0" layoutY="374.0" prefHeight="17.0" prefWidth="200.0" />
-      <Button layoutX="522.0" layoutY="328.0" mnemonicParsing="false" onAction="#writeinbinfileOnAction" text="Write in bin file" />
    </children>
 </AnchorPane>

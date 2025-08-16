@@ -12,6 +12,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import static groupfortyone.group41_starmaker.Raghib.Query.queryList;
+
 public class SearchQueryDashboardController
 {
 
@@ -32,6 +34,10 @@ public class SearchQueryDashboardController
 
     @javafx.fxml.FXML
     public void viewOA(ActionEvent actionEvent) {
+        searchTV.getItems().clear();
+        searchTV.getItems().addAll(queryList);
+
+
     }
 
     @javafx.fxml.FXML
@@ -49,5 +55,11 @@ public class SearchQueryDashboardController
 
     @javafx.fxml.FXML
     public void searchOA(ActionEvent actionEvent) {
+        searchTV.getItems().clear();
+        for (Query x: queryList){
+            if (searchQueryTF.getText().equals(x.getUsername())){
+                searchTV.getItems().add(x);
+            }
+        }
     }
 }

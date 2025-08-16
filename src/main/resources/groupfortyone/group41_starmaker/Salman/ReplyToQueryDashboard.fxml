@@ -27,6 +27,6 @@
       <TextArea fx:id="replyTA" layoutX="365.0" layoutY="117.0" prefHeight="200.0" prefWidth="200.0" promptText="Type yor reply here..." />
       <Button layoutX="438.0" layoutY="332.0" mnemonicParsing="false" onAction="#sendOA" prefHeight="26.0" prefWidth="64.0" text="Send" />
       <Button layoutX="511.0" layoutY="332.0" mnemonicParsing="false" onAction="#previousOA" text="Previous" />
-      <Label fx:id="confirmationMessageLabel" layoutX="193.0" layoutY="77.0" prefHeight="17.0" prefWidth="200.0" text="Label" />
+      <Label fx:id="confirmationMessageLabel" layoutX="193.0" layoutY="77.0" prefHeight="17.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

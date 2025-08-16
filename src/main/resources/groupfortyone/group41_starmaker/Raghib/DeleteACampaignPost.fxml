@@ -11,9 +11,9 @@
 <AnchorPane prefHeight="468.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupfortyone.group41_starmaker.Raghib.DeleteACampaignPostController">
    <children>
       <Button layoutX="551.0" layoutY="395.0" mnemonicParsing="false" onAction="#gobackOnAction" prefHeight="25.0" prefWidth="61.0" text="Go Back" />
-      <Label layoutX="228.0" layoutY="25.0" prefHeight="17.0" prefWidth="278.0" text="Delete A Campaign Post">
+      <Label layoutX="214.0" layoutY="24.0" prefHeight="27.0" prefWidth="215.0" text="Delete A Campaign Post">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <TableView fx:id="campaignlisttableview" layoutX="81.0" layoutY="157.0" prefHeight="200.0" prefWidth="525.0">

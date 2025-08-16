@@ -9,9 +9,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.*;
 import java.time.LocalDate;
 
 import static groupfortyone.group41_starmaker.Raghib.Profile.profileList;
+import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
 public class AddATeamMemberController
 {
@@ -60,6 +62,32 @@ public class AddATeamMemberController
         dobcolumn.setCellValueFactory(new PropertyValueFactory<Profile,String>("dob"));
         bloodgroupcolumn.setCellValueFactory(new PropertyValueFactory<Profile,String>("bloodgroup"));
         maritalstatuscolumn.setCellValueFactory(new PropertyValueFactory<Profile,String>("maritalstatus"));
+
+
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("newmemberinfo.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
+
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin File does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                profiletableview.getItems().add((Profile) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
     }
 
     @javafx.fxml.FXML
@@ -69,7 +97,7 @@ public class AddATeamMemberController
 
             Scene nextScene = new Scene(fxmlLoader.load());
             Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-            nextStage.setTitle("Marketing Executive Dashboard");
+            nextStage.setTitle("Marketing Executive Officer Dashboard");
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -155,7 +183,7 @@ public class AddATeamMemberController
                 bloodgroupcombobox.getValue(),
                 maritalStatus);
         profileList.add(p);
-        profiletableview.getItems().addAll(profileList);
+        profiletableview.getItems().add(p);
         confirmationtextarea.setText("Profile has been added successfully");
         confirmationtextarea.setStyle("-fx-background-color: green");
 
@@ -166,5 +194,23 @@ public class AddATeamMemberController
         bloodgroupcombobox.setValue(null);
         marriedradiobutton.setSelected(false);
         unmarriedradiobutton.setSelected(false);
+
+        try {
+            File f = new File("newmemberinfo.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            }
+            for (Profile k : profileList) {
+                oos.writeObject(k);
+            }
+            oos.close();
+        } catch (Exception e) {
+        }
     }
 }

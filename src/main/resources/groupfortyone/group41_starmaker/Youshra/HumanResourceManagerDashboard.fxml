@@ -22,17 +22,17 @@
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="65.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleUpdateEmployeeDetailsbutton" prefHeight="34.0" prefWidth="171.0" text="Update Employee Details" textFill="#fa1212">
+      <Button layoutX="65.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleFilterStaffbutton" prefHeight="34.0" prefWidth="171.0" text="Filter Staff" textFill="#fa1212">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="65.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleRolesofEmployeesbutton" prefHeight="34.0" prefWidth="171.0" text="Roles of Employees" textFill="#f40808">
+      <Button layoutX="65.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleUpdateStaffRolesbutton" prefHeight="34.0" prefWidth="171.0" text="Update Staff Roles" textFill="#f40808">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="402.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleViewEmployeebutton" prefHeight="34.0" prefWidth="171.0" text="View Employee List" textFill="#f20b0b">
+      <Button layoutX="402.0" layoutY="104.0" mnemonicParsing="false" onAction="#handleViewStaffbutton" prefHeight="34.0" prefWidth="171.0" text="View Staff List" textFill="#f20b0b">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>

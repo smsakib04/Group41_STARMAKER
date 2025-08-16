@@ -18,9 +18,9 @@
             <TableColumn fx:id="genrecolumn" prefWidth="152.00003051757812" text="Genre" />
         </columns>
       </TableView>
-      <Label layoutX="217.0" layoutY="14.0" prefHeight="27.0" prefWidth="212.0" text="Mark A Song As Favourite">
+      <Label layoutX="217.0" layoutY="14.0" prefHeight="27.0" prefWidth="223.0" text="Mark A Song As Favourite">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button layoutX="253.0" layoutY="286.0" mnemonicParsing="false" onAction="#markasfavouriteOnAction" prefHeight="25.0" prefWidth="139.0" text="Mark As Favourite" />
@@ -33,9 +33,9 @@
             <TableColumn fx:id="genrecolumn2" prefWidth="152.00003051757812" text="Genre" />
          </columns>
       </TableView>
-      <Label layoutX="226.0" layoutY="324.0" prefHeight="27.0" prefWidth="212.0" text="Favourite Songs Table">
+      <Label layoutX="228.0" layoutY="324.0" prefHeight="27.0" prefWidth="189.0" text="Favourite Songs Table">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
    </children>

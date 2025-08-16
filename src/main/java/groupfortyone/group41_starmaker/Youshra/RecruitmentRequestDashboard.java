@@ -5,13 +5,15 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class RecruitmentRequestDashboard
-{
+import java.util.ArrayList;
+
+public class RecruitmentRequestDashboard {
     @javafx.fxml.FXML
     private TextField EmployeeRoleTextField;
     @javafx.fxml.FXML
@@ -19,14 +21,18 @@ public class RecruitmentRequestDashboard
     @javafx.fxml.FXML
     private TextField EmployeeNameTextField;
     @javafx.fxml.FXML
-    private ComboBox EmployeeTypeComboBox;
-    @javafx.fxml.FXML
-    private ComboBox DepartmentComboBox;
+    private ComboBox<String> DepartmentComboBox;
     @javafx.fxml.FXML
     private TextField SuccessfulTextField;
+    @javafx.fxml.FXML
+    private ComboBox<String> EmployeeTypeComboBox;
+
+    public static ArrayList<Employee> EmployeeList = new ArrayList<Employee>();
 
     @javafx.fxml.FXML
     public void initialize() {
+        DepartmentComboBox.getItems().addAll("Accounts", "Customer Care");
+        EmployeeTypeComboBox.getItems().addAll("Intern", "Junior", "Senior");
     }
 
     @javafx.fxml.FXML
@@ -34,7 +40,7 @@ public class RecruitmentRequestDashboard
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Youshra/HumanResourceManagerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -44,6 +50,32 @@ public class RecruitmentRequestDashboard
 
     @javafx.fxml.FXML
     public void handleSendRequestButton(ActionEvent actionEvent) {
-    }
 
+        String name = EmployeeNameTextField.getText();
+        String id = EmployeeRoleTextField.getText();
+
+        if (EmployeeNameTextField.getText().isEmpty()) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Provide a name");
+            erroralert.show();
+            return;
+
+        }
+        if (EmployeeRoleTextField.getText().isEmpty()) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Provide a name");
+            erroralert.show();
+            return;
+
+        }
+
+        Employee e = new Employee(name, EmployeeList.size() ,id, DepartmentComboBox.getValue(), EmployeeTypeComboBox.getValue());
+        EmployeeList.add(e);
+
+        SuccessfulTextField.setText("Request Sent successfully!");
+        SuccessfulTextField.setStyle("-fx-background-color: white");
+
+
+
+    }
 }

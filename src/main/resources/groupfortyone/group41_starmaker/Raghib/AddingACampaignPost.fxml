@@ -15,7 +15,7 @@
    <children>
       <Label layoutX="193.0" layoutY="21.0" prefHeight="27.0" prefWidth="251.0" text="Adding A Campaign Post">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <Button layoutX="504.0" layoutY="482.0" mnemonicParsing="false" onAction="#gobackOnAction" prefHeight="25.0" prefWidth="65.0" text="Go Back" />
@@ -40,6 +40,5 @@
       <TextArea fx:id="confirmationtextarea" layoutX="165.0" layoutY="517.0" prefHeight="17.0" prefWidth="200.0" />
       <RadioButton fx:id="activeradiobutton" layoutX="108.0" layoutY="204.0" mnemonicParsing="false" text="Active" />
       <RadioButton fx:id="expiredradiobutton" layoutX="174.0" layoutY="204.0" mnemonicParsing="false" text="Expired" />
-      <Button layoutX="129.0" layoutY="476.0" mnemonicParsing="false" onAction="#writeinbinfileOnAction" prefHeight="25.0" prefWidth="102.0" text="Write in bin file" />
    </children>
 </AnchorPane>
