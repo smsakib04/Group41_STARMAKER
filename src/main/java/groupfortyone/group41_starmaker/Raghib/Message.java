@@ -1,68 +1,53 @@
 package groupfortyone.group41_starmaker.Raghib;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Message {
-    private String title;
-    private String content;
-    private LocalDate date;
-    private String status;
+public class Message implements Serializable {
+    private String username;
+    private String messagecontent;
 
-    public static ArrayList<String> messageList= new ArrayList<>();
+    public static ArrayList<Message> messageList = new ArrayList<>();
 
-    public Message(String title, String content, LocalDate date, String status) {
-        this.title = title;
-        this.content = content;
-        this.date = date;
-        this.status = status;
-    }
 
     public Message() {
     }
 
-    public String getTitle() {
-        return title;
+    public Message(String username, String messagecontent) {
+        this.username = username;
+        this.messagecontent = messagecontent;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getUsername() {
+        return username;
     }
 
-    public String getContent() {
-        return content;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public String getMessagecontent() {
+        return messagecontent;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public void setMessagecontent(String messagecontent) {
+        this.messagecontent = messagecontent;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public static ArrayList<Message> getMessageList() {
+        return messageList;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public static void setMessageList(ArrayList<Message> messageList) {
+        Message.messageList = messageList;
     }
 
     @Override
     public String toString() {
-        return "Campaign{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", date=" + date +
-                ", status='" + status + '\'' +
+        return "Message{" +
+                "username='" + username + '\'' +
+                ", messagecontent='" + messagecontent + '\'' +
                 '}';
     }
-
-
-
 }
