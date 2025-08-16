@@ -1,9 +1,10 @@
 package groupfortyone.group41_starmaker.Raghib;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Profile {
+public class Profile implements Serializable {
     private String name;
     private String email;
     private int age;

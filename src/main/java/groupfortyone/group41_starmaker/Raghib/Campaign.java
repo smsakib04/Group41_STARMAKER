@@ -12,6 +12,7 @@ public class Campaign implements Serializable {
     private String status;
 
     public static ArrayList<Campaign>campaignList=new ArrayList<>();
+    public static ArrayList<String>campaignupdatesList=new ArrayList<>();
 
 
     public Campaign(String title, String content, LocalDate date, String status) {

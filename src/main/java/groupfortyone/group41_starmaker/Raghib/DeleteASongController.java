@@ -9,20 +9,21 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.*;
+
 import static groupfortyone.group41_starmaker.Raghib.Song.songs;
 
-public class DeleteASongController
-{
+public class DeleteASongController {
     @javafx.fxml.FXML
     private TableView<Song> songlisttableview;
     @javafx.fxml.FXML
-    private TableColumn<Song,String> genrecolumn;
+    private TableColumn<Song, String> genrecolumn;
     @javafx.fxml.FXML
     private Label confirmationlabel;
     @javafx.fxml.FXML
-    private TableColumn<Song,String> descriptioncolumn;
+    private TableColumn<Song, String> descriptioncolumn;
     @javafx.fxml.FXML
-    private TableColumn<Song,String> songtitlecolumn;
+    private TableColumn<Song, String> songtitlecolumn;
     @javafx.fxml.FXML
     private TextArea confirmationtextarea;
 
@@ -33,6 +34,31 @@ public class DeleteASongController
         genrecolumn.setCellValueFactory(new PropertyValueFactory<Song, String>("genre"));
 
         songlisttableview.getItems().addAll(songs);
+
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("deletesonginfo.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
+
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin File does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                songlisttableview.getItems().add((Song) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
     }
 
     @javafx.fxml.FXML
@@ -40,7 +66,7 @@ public class DeleteASongController
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Raghib/SingerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setTitle("Singer Dashboard");
             nextStage.setScene(nextScene);
             nextStage.show();
@@ -52,9 +78,9 @@ public class DeleteASongController
 
     @javafx.fxml.FXML
     public void deleteOnAction(ActionEvent actionEvent) {
-        Song song=songlisttableview.getSelectionModel().getSelectedItem();
-        if (song==null){
-            Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
+        Song song = songlisttableview.getSelectionModel().getSelectedItem();
+        if (song == null) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
             erroralert.setContentText("Select a song to delete");
             erroralert.show();
             return;
@@ -62,7 +88,18 @@ public class DeleteASongController
         songs.remove(song);
         songlisttableview.getItems().clear();
         songlisttableview.getItems().addAll(songs);
-        confirmationtextarea.setText("SongS has been deleted");
+        confirmationtextarea.setText("Song has been deleted");
         confirmationtextarea.setStyle("-fx-background-color: green");
+
+
+        try (FileOutputStream fos = new FileOutputStream("deletesonginfo.bin");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+
+            for (Song b : songs) {
+                oos.writeObject(b);
+            }
+
+        } catch (Exception e) {
+        }
     }
 }
