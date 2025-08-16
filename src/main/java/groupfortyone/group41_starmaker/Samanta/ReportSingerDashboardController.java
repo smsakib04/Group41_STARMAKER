@@ -1,6 +1,7 @@
 package groupfortyone.group41_starmaker.Samanta;
 
 import groupfortyone.group41_starmaker.HelloApplication;
+import groupfortyone.group41_starmaker.Raghib.Query;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.*;
+
+import static groupfortyone.group41_starmaker.Raghib.Query.queryList;
 
 public class ReportSingerDashboardController {
     @javafx.fxml.FXML
@@ -43,6 +46,30 @@ public class ReportSingerDashboardController {
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         reportTV.setItems(reportList);
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            File f = new File("ReportFile.bin");
+            if (f.exists()) {
+                fis = new FileInputStream(f);
+
+            } else {
+                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+                erroralert.setContentText("Bin file does not exist.");
+                erroralert.show();
+            }
+            if (fis != null) {
+                ois = new ObjectInputStream(fis);
+            }
+            while (true) {
+                queryList.add((Query) ois.readObject());
+            }
+        } catch (Exception e) {
+            try {
+                if (ois != null) ois.close();
+            } catch (Exception e2) {
+            }
+        }
 
     }
 
@@ -72,6 +99,24 @@ public class ReportSingerDashboardController {
         alert.setTitle("Report Submitted");
         alert.setContentText("The report has been successfully submitted.");
         alert.showAndWait();
+        try {
+            File f = new File("ReportFile.bin");
+            FileOutputStream fos = null;
+            ObjectOutputStream oos = null;
+            if (f.exists()) {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            } else {
+                fos = new FileOutputStream(f, true);
+                oos = new ObjectOutputStream(fos);
+            }
+            for (Report q : reportList) {
+                oos.writeObject(q);
+            }
+            oos.close();
+        } catch (Exception e) {
+
+        }
 
     }
 }
