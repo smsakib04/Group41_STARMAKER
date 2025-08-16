@@ -11,10 +11,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-public class ReportSingerDashboardController
-{
+import java.io.*;
+
+public class ReportSingerDashboardController {
     @javafx.fxml.FXML
-    private ComboBox <String>reportCategoryCB;
+    private ComboBox<String> reportCategoryCB;
     @javafx.fxml.FXML
     private TextField reportSingerUsernameTF;
     @javafx.fxml.FXML
@@ -24,13 +25,13 @@ public class ReportSingerDashboardController
     @javafx.fxml.FXML
     private TableColumn<Report, String> reportCtgTC;
     @javafx.fxml.FXML
-    private TableColumn <Report, String>statusTC;
+    private TableColumn<Report, String> statusTC;
     @javafx.fxml.FXML
     private TableView<Report> reportTV;
     @javafx.fxml.FXML
     private TableColumn<Report, String> commentTC;
-    public static ObservableList<Report> reportList = FXCollections.observableArrayList();
 
+    public static ObservableList<Report> reportList = FXCollections.observableArrayList();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -50,7 +51,7 @@ public class ReportSingerDashboardController
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/ViewerDashboard.fxml"));
             Scene nextScene = new Scene(fxmlLoader.load());
-            Stage nextStage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             nextStage.setScene(nextScene);
             nextStage.show();
         } catch (Exception e) {
@@ -63,7 +64,6 @@ public class ReportSingerDashboardController
         String singerUsername = reportSingerUsernameTF.getText();
         String reportCategory = reportCategoryCB.getValue();
         String comment = reportCommentTF.getText();
-
 
         Report report = new Report(singerUsername, reportCategory, comment, "Pending");
         reportList.add(report);
