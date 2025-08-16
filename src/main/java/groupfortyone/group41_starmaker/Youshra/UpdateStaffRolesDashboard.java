@@ -55,6 +55,8 @@ public class UpdateStaffRolesDashboard
 
     @javafx.fxml.FXML
     public void handleAssignButton(ActionEvent actionEvent) {
+        String role = StaffRoleTextField.getText();
+
         Staff selectedStaff = StaffListTableView.getSelectionModel().getSelectedItem();
         if (selectedStaff==null){
             Alert erroralert=new Alert(Alert.AlertType.INFORMATION);
@@ -62,20 +64,16 @@ public class UpdateStaffRolesDashboard
             erroralert.show();
             return;
         }
-        Staff selectedStaffRole = StaffListTableView.getSelectionModel().getSelectedItem();
-        if (selectedStaffRole != null) {
-            String newRole = StaffRoleTextField.getText().trim();
-            if (!newRole.isEmpty()) {
-                selectedStaffRole.setRole(newRole);
-                StaffListTableView.refresh();
-            } else {
-                Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
-                erroralert.setContentText("Provide a role");
-                erroralert.show();
-                return;
-            }
-            SuccessfulLabel.setText("Staff has been added successfully!");
-            SuccessfulLabel.setStyle("-fx-background-color: green");
+
+        if (StaffRoleTextField.getText().isEmpty()) {
+            Alert erroralert = new Alert(Alert.AlertType.INFORMATION);
+            erroralert.setContentText("Provide a name");
+            erroralert.show();
+            return;
+        }
+
+            ConfirmationText.setText("Staff Role has been updated successfully!");
+            ConfirmationText.setStyle("-fx-background-color: green");
         }
         }
-}
+
