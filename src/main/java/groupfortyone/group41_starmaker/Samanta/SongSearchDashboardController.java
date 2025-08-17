@@ -2,8 +2,6 @@ package groupfortyone.group41_starmaker.Samanta;
 
 import groupfortyone.group41_starmaker.HelloApplication;
 import groupfortyone.group41_starmaker.Raghib.Song;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -24,23 +22,16 @@ public class SongSearchDashboardController {
     private TableColumn<Song, String> songtitlecolumn;
     @javafx.fxml.FXML
     private TableView<Song> tableView;
-    private Song selectedSong;
     @javafx.fxml.FXML
     private TableColumn<Song, String> descriptioncolumn;
 
     @javafx.fxml.FXML
     public void initialize() {
-        tableView.getItems().addAll(songs);
-
-
         songtitlecolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("songtitle"));
         descriptioncolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("description"));
         genrecolumn.setCellValueFactory(new PropertyValueFactory<groupfortyone.group41_starmaker.Raghib.Song, String>("genre"));
 
-
-        tableView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            selectedSong = (Song) newValue;
-        });
+        tableView.getItems().addAll(songs);
 
     }
 
@@ -77,12 +68,13 @@ public class SongSearchDashboardController {
 
     @javafx.fxml.FXML
     public void commentOA(ActionEvent actionEvent) {
+        Song selectedSong= tableView.getSelectionModel().getSelectedItem();
         if (selectedSong != null) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/CommentDashboard.fxml"));
                 Scene nextScene = new Scene(fxmlLoader.load());
                 CommentDashboardController controller = fxmlLoader.getController();
-                controller.setSongDetails(selectedSong); // Pass the selectedSong to CommentDashboardController
+                controller.setSongDetails(selectedSong);
                 Stage nextStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 nextStage.setScene(nextScene);
                 nextStage.show();
@@ -95,6 +87,7 @@ public class SongSearchDashboardController {
 
     @javafx.fxml.FXML
     public void repostDbOA(ActionEvent actionEvent) {
+        Song selectedSong= tableView.getSelectionModel().getSelectedItem();
         if (selectedSong != null) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Samanta/RepostSongDashboard.fxml"));
